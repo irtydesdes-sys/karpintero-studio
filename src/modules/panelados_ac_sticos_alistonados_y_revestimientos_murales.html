@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.24)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-unit-md min-w-0"><div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary-container"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] uppercase font-bold shrink-0">En Taller</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Proyecto: Mueble TV Nórdico</h1></div></div><div class="flex items-center gap-unit-sm shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-2">Piezas reales — Panelados Acústicos</div>
+    <div id="kp-piezas-lista" class="flex flex-col gap-1 mb-3 text-sm"></div>
+    <form id="kp-form-pieza" class="grid grid-cols-2 gap-2 text-xs">
+      <input required name="descripcion" placeholder="Descripción" class="col-span-2 bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <input required name="largo_mm" type="number" step="0.1" placeholder="Largo mm" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <input required name="ancho_mm" type="number" step="0.1" placeholder="Ancho mm" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <input required name="espesor_mm" type="number" step="0.1" placeholder="Espesor mm" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <input required name="material" placeholder="Material" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <button type="submit" class="col-span-2 mt-1 py-2 rounded bg-primary-container text-on-primary-container font-bold">+ Agregar pieza real</button>
+    </form>
+  </div>
+</section>
+<script>
+(function(){
+  var MODULO = "Panelados Acústicos";
+  function render(){
+    var piezas = window.KarpinteroDB.listPiezas(null, MODULO);
+    var cont = document.getElementById('kp-piezas-lista');
+    cont.innerHTML = '';
+    if (piezas.length === 0) cont.innerHTML = '<div class="text-on-surface-variant text-xs italic">Sin piezas cargadas todavía en este módulo.</div>';
+    piezas.forEach(function(pz){
+      var row = document.createElement('div');
+      row.className = 'flex items-center justify-between bg-surface-container-lowest rounded px-2 py-1.5';
+      row.innerHTML = '<span>' + pz.descripcion + ' — ' + pz.largo_mm + '×' + pz.ancho_mm + '×' + pz.espesor_mm + 'mm (' + pz.material + ')</span>' +
+        '<button data-id="' + pz.id + '" class="kp-del text-error text-xs">✕</button>';
+      cont.appendChild(row);
+    });
+    cont.querySelectorAll('.kp-del').forEach(function(btn){
+      btn.addEventListener('click', function(){ window.KarpinteroDB.removePieza(btn.getAttribute('data-id')); render(); });
+    });
+  }
+  document.getElementById('kp-form-pieza').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = e.target;
+    window.KarpinteroDB.addPieza({
+      descripcion: f.descripcion.value, largo_mm: parseFloat(f.largo_mm.value),
+      ancho_mm: parseFloat(f.ancho_mm.value), espesor_mm: parseFloat(f.espesor_mm.value),
+      material: f.material.value, modulo: MODULO
+    });
+    f.reset(); render();
+  });
+  document.addEventListener('DOMContentLoaded', render);
+  if (document.readyState !== 'loading') render();
+})();
+</script><div class="flex flex-col w-full px-gutter-mobile py-unit-md gap-unit-lg text-on-surface">
+<!-- ENCABEZADO TÉCNICO -->
+<section class="flex flex-col gap-unit-xs bg-surface-container-low p-unit-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between gap-unit-xs">
+<div class="flex items-center gap-unit-xs min-w-0">
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase truncate">Revestimientos &amp; Acústica • EN-13501</span>
+</div>
+<span class="px-unit-xs py-unit-2xs bg-primary-container/20 text-primary-container font-label-caps text-[10px] uppercase font-bold rounded-DEFAULT shrink-0">Módulo Ruteado 3D</span>
+</div>
+<h2 class="font-title-lg text-title-lg text-on-surface leading-snug">Panelados Alistonados Ranurados &amp; Baño Rasante LED</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Absorción sonora clase B (αw 0.85) • Disipación térmica oculta integrada en perfilería</p>
+</section>
+<!-- SELECTOR DE TIPOLOGÍA DE PANEL -->
+<section class="flex flex-col gap-unit-xs">
+<div class="flex items-center justify-between px-unit-2xs">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Tipología de Revestimiento</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Mod. 01 / 03</span>
+</div>
+<!-- Carrusel táctil con snapping horizontal -->
+<div class="flex gap-unit-sm overflow-x-auto pb-unit-xs no-scrollbar -mx-gutter-mobile px-gutter-mobile" id="panelSelector">
+<!-- Opción 1: Activa -->
+<button class="panel-type-card shrink-0 w-72 p-unit-md bg-surface-container text-left rounded-lg shadow-md flex flex-col gap-unit-xs transition-all relative overflow-hidden group" type="button">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-primary-container"></div>
+<div class="flex items-center justify-between">
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container text-on-primary-container font-label-caps text-[10px] font-bold uppercase">Activo para Taller</span>
+<span class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
+</div>
+<div class="font-title-lg text-body-lg font-semibold text-on-surface leading-tight mt-unit-2xs">Listón Macizo con Fieltro PET Acústico</div>
+<div class="flex items-center gap-unit-xs font-dimension-md text-dimension-md text-secondary">
+<span class="material-symbols-outlined text-[16px]">straighten</span>
+<span>2700 × 600 × 21 mm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Paso acústico 40mm: 27mm roble natural + 13mm canal negro. Fieltro PET reciclado 9mm ignífugo.</p>
+</button>
+<!-- Opción 2 -->
+<button class="panel-type-card shrink-0 w-64 p-unit-md bg-surface-container-low text-left rounded-lg flex flex-col gap-unit-xs transition-all opacity-80 hover:opacity-100" type="button">
+<div class="flex items-center justify-between">
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant font-label-caps text-[10px] uppercase">Fresado Continuo</span>
+<span class="material-symbols-outlined text-outline text-[18px]">radio_button_unchecked</span>
+</div>
+<div class="font-title-lg text-body-lg font-semibold text-on-surface leading-tight mt-unit-2xs">Panel Fresado CNC Acanalado V-Groove</div>
+<div class="flex items-center gap-unit-xs font-dimension-md text-dimension-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">straighten</span>
+<span>2440 × 1220 × 19 mm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Acanaladura 60° con fresa cónica V90, MDF negro hidrófugo con chapa de nogal americano.</p>
+</button>
+<!-- Opción 3 -->
+<button class="panel-type-card shrink-0 w-64 p-unit-md bg-surface-container-low text-left rounded-lg flex flex-col gap-unit-xs transition-all opacity-80 hover:opacity-100" type="button">
+<div class="flex items-center justify-between">
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant font-label-caps text-[10px] uppercase">Arquitectura 3D</span>
+<span class="material-symbols-outlined text-outline text-[18px]">radio_button_unchecked</span>
+</div>
+<div class="font-title-lg text-body-lg font-semibold text-on-surface leading-tight mt-unit-2xs">Muro Geométrico con Boiserie Enrasada</div>
+<div class="flex items-center gap-unit-xs font-dimension-md text-dimension-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">straighten</span>
+<span>2800 × Variable × 32 mm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Composición modular con juntas huecas de 8mm, iluminación rasante de microperfil en ángulo.</p>
+</button>
+</div>
+</section>
+<!-- ESQUEMA TÉCNICO 2D & ALZADO DE MODULACIÓN -->
+<section class="flex flex-col gap-unit-sm bg-surface-container p-unit-md rounded-lg shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">architecture</span>
+<span class="font-title-lg text-title-lg text-on-surface">Alzado de Modulación Técnica</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary bg-surface-container-high px-unit-xs py-unit-2xs rounded-DEFAULT">ESCALA 1:20</span>
+</div>
+<!-- Canvas Drafting Blueprint -->
+<div class="relative w-full bg-surface-container-lowest rounded-lg p-unit-sm overflow-hidden flex flex-col items-center">
+<!-- Rejilla técnica de fondo SVG -->
+<svg class="w-full h-72 block select-none" viewbox="0 0 340 288" xmlns="http://www.w3.org/2000/svg">
+<!-- Rejilla milimétrica azulada -->
+<defs>
+<pattern height="20" id="cadGrid" patternunits="userSpaceOnUse" width="20">
+<path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1c2530" stroke-width="0.75"></path>
+</pattern>
+<lineargradient id="ledGlow" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#f59e0b" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.2"></stop>
+</lineargradient>
+</defs>
+<rect fill="url(#cadGrid)" height="100%" width="100%"></rect>
+<!-- Cota superior de dilatación (8 mm libre) -->
+<line stroke="#ffb4ab" stroke-dasharray="3,3" stroke-width="1.2" x1="30" x2="310" y1="18" y2="18"></line>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" text-anchor="middle" x="170" y="14">Huelgo Techo 8.0 mm</text>
+<!-- Base Fieltro Acústico 9mm (Tramo 600mm) -->
+<rect fill="#181c20" height="236" rx="1" width="240" x="50" y="24"></rect>
+<!-- Listones macizos 27mm con hueco 13mm (paso 40mm) -->
+<!-- Listón 1 -->
+<rect fill="#653e00" height="236" rx="1" width="22" x="54" y="24"></rect>
+<rect fill="#855300" height="236" opacity="0.6" width="20" x="55" y="24"></rect>
+<!-- Listón 2 -->
+<rect fill="#855300" height="236" rx="1" width="22" x="86" y="24"></rect>
+<!-- Listón 3 -->
+<rect fill="#855300" height="236" rx="1" width="22" x="118" y="24"></rect>
+<!-- Listón 4 (con Sensor Capacitivo) -->
+<rect fill="#f59e0b" fill-opacity="0.25" height="236" rx="1" stroke="#f59e0b" stroke-width="1" width="22" x="150" y="24"></rect>
+<!-- Icono sensor en listón 4 -->
+<circle cx="161" cy="142" fill="#f59e0b" r="5"></circle>
+<path d="M 158 142 A 3 3 0 0 1 164 142" fill="none" stroke="#101418" stroke-width="1.2"></path>
+<!-- Listón 5 -->
+<rect fill="#855300" height="236" rx="1" width="22" x="182" y="24"></rect>
+<!-- Listón 6 -->
+<rect fill="#855300" height="236" rx="1" width="22" x="214" y="24"></rect>
+<!-- Listón 7 (Pivotante Neodimio Registro) -->
+<rect fill="#03b5d3" fill-opacity="0.25" height="236" rx="1" stroke="#4cd7f6" stroke-width="1" width="22" x="246" y="24"></rect>
+<!-- Listón 8 -->
+<rect fill="#855300" height="236" rx="1" width="12" x="278" y="24"></rect>
+<!-- Perfil LED Lateral Ángulo 45° bañado rasante -->
+<path d="M 44 24 L 50 24 L 50 260 L 44 260 Z" fill="#03b5d3" opacity="0.8"></path>
+<polygon fill="url(#ledGlow)" opacity="0.4" points="44,24 50,24 75,50 75,234 50,260 44,260"></polygon>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="8" text-anchor="middle" transform="rotate(-90 35 145)" x="35" y="145">CANAL LED RASANTE 45°</text>
+<!-- Cotas acotadas horizontales -->
+<line stroke="#4cd7f6" stroke-width="1" x1="54" x2="76" y1="266" y2="266"></line>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="65" y="275">27</text>
+<line stroke="#a08e7a" stroke-width="0.8" x1="76" x2="86" y1="266" y2="266"></line>
+<text fill="#a08e7a" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="81" y="275">13</text>
+<!-- Registro inferior driver imantado -->
+<rect fill="#101418" height="46" stroke="#4cd7f6" stroke-dasharray="2,2" stroke-width="0.8" width="26" x="244" y="210"></rect>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="257" y="236">DRIVER</text>
+<!-- Cota inferior suelo dilatación (8mm) -->
+<line stroke="#ffb4ab" stroke-dasharray="3,3" stroke-width="1.2" x1="30" x2="310" y1="262" y2="262"></line>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" text-anchor="middle" x="170" y="285">Dilatación Suelo 8.0 mm (Zócalo Retranqueado)</text>
+<!-- Indicador de cota vertical total (2700mm) -->
+<line stroke="#f59e0b" stroke-width="1.2" x1="320" x2="320" y1="24" y2="260"></line>
+<path d="M 318 26 L 320 24 L 322 26 M 318 258 L 320 260 L 322 258" fill="none" stroke="#f59e0b" stroke-width="1.2"></path>
+<text fill="#f59e0b" font-family="JetBrains Mono" font-size="9" text-anchor="middle" transform="rotate(90 328 145)" x="328" y="145">2700 mm</text>
+</svg>
+<!-- Resumen de Cotas Nominales -->
+<div class="w-full grid grid-cols-3 gap-unit-xs mt-unit-xs pt-unit-xs bg-surface-container-high p-unit-xs rounded-DEFAULT text-center">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase">Altura Libre</span>
+<span class="font-dimension-md text-dimension-md text-primary font-bold">2700 mm</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase">Ancho Tramo</span>
+<span class="font-dimension-md text-dimension-md text-secondary font-bold">600 mm</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase">Espesor Total</span>
+<span class="font-dimension-md text-dimension-md text-on-surface font-bold">21 mm</span>
+</div>
+</div>
+</div>
+<!-- Leyenda técnica inmediata -->
+<div class="flex flex-col gap-unit-2xs bg-surface-container-low p-unit-sm rounded-DEFAULT text-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Modulación de Paso:</span>
+<span class="font-dimension-md text-body-sm text-secondary">27mm Roble + 13mm Fieltro (Paso 40mm)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Holgura Dilatación:</span>
+<span class="font-dimension-md text-body-sm text-error">8.0 mm Techo &amp; Suelo (Zócalo Oculto)</span>
+</div>
+</div>
+</section>
+<!-- RUTEO LED RASANTE & CONEXIONES OCULTAS -->
+<section class="flex flex-col gap-unit-sm bg-surface-container p-unit-md rounded-lg shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">fluorescent</span>
+<span class="font-title-lg text-title-lg text-on-surface">Ruteo LED &amp; Disipación Rasante</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary-container bg-surface-container-high px-unit-xs py-unit-2xs rounded-DEFAULT">24V COB</span>
+</div>
+<!-- Fila 1: Canaleta CNC + Driver Oculto -->
+<div class="grid grid-cols-1 gap-unit-sm">
+<!-- Especificación del canal LED -->
+<div class="p-unit-sm bg-surface-container-low rounded-DEFAULT flex gap-unit-sm items-start">
+<div class="w-9 h-9 rounded bg-surface-container-high text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">carpenter</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md font-semibold text-on-surface">Canal Ruteado 15 × 8 mm</span>
+<span class="font-dimension-md text-secondary text-body-sm">45° Bañado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Canal fresado posterior para cinta LED COB continua sin micropuntos (2700K blanco cálido arquitectónico, 14.4 W/m, CRI&gt;92). Disipador de aluminio negro encastrado.
+          </p>
+</div>
+</div>
+<!-- Driver en Registro Ciego Imantado -->
+<div class="p-unit-sm bg-surface-container-low rounded-DEFAULT flex gap-unit-sm items-start">
+<div class="w-9 h-9 rounded bg-surface-container-high text-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">lock_open</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md font-semibold text-on-surface">Registro Pivotante Imantado</span>
+<span class="font-label-caps text-[10px] text-primary-container bg-surface-container-high px-unit-xs py-0.5 rounded-DEFAULT">Neodimio N52</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Listón #7 desmontable por atracción magnética inferior. Oculta fuente slim de 100W IP20 y pasacables hacia caja ciega sin tornillos visibles.
+          </p>
+</div>
+</div>
+<!-- Sensor de Toque Capacitivo -->
+<div class="p-unit-sm bg-surface-container-low rounded-DEFAULT flex gap-unit-sm items-start">
+<div class="w-9 h-9 rounded bg-surface-container-high text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">touch_app</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md font-semibold text-on-surface">Dimmer Táctil Sub-Madera</span>
+<span class="font-dimension-md text-secondary text-body-sm">Listón #4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Sensor capacitivo embutido en reverso ciego (madera rebajada a 2mm). Encendido, apagado y regulación progresiva con toque directo sobre la veta.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- DESPIECE OFICIAL DE PRODUCCIÓN EN TALLER -->
+<section class="flex flex-col gap-unit-sm bg-surface-container p-unit-md rounded-lg shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">inventory_2</span>
+<span class="font-title-lg text-title-lg text-on-surface">Despiece Oficial de Taller</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Lote 3 Paneles</span>
+</div>
+<!-- Lista de componentes de corte -->
+<div class="flex flex-col gap-unit-xs">
+<!-- Item 1: Listones Macizos -->
+<div class="flex items-center justify-between p-unit-sm bg-surface-container-low rounded-DEFAULT">
+<div class="flex items-center gap-unit-sm min-w-0">
+<div class="w-7 h-7 rounded bg-primary-container/20 text-primary-container flex items-center justify-center shrink-0 font-dimension-md font-bold text-body-sm">
+            45
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md font-semibold text-on-surface truncate">Listón Macizo Roble Natural</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Canto R1mm • Lijado P220 • Sin nudos</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-dimension-md text-dimension-md text-primary font-bold">2700×27×12</div>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase">mm (L×A×E)</span>
+</div>
+</div>
+<!-- Item 2: Fieltro PET Acústico -->
+<div class="flex items-center justify-between p-unit-sm bg-surface-container-low rounded-DEFAULT">
+<div class="flex items-center gap-unit-sm min-w-0">
+<div class="w-7 h-7 rounded bg-secondary/20 text-secondary flex items-center justify-center shrink-0 font-dimension-md font-bold text-body-sm">
+            3
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md font-semibold text-on-surface truncate">Placas Fieltro PET Grafito</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">9mm Ignífugo B-s1,d0 • 100% Reciclado</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-dimension-md text-dimension-md text-secondary font-bold">2700×600×9</div>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase">mm (L×A×E)</span>
+</div>
+</div>
+<!-- Item 3: Perfiles LED Aluminio -->
+<div class="flex items-center justify-between p-unit-sm bg-surface-container-low rounded-DEFAULT">
+<div class="flex items-center gap-unit-sm min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container-high text-on-surface flex items-center justify-center shrink-0 font-dimension-md font-bold text-body-sm">
+            6
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md font-semibold text-on-surface truncate">Perfiles Aluminio Anodizado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Negro mate • Difusor opal negro continuo</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-dimension-md text-dimension-md text-on-surface font-bold">2700×15×8</div>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase">mm (L×A×P)</span>
+</div>
+</div>
+<!-- Item 4: Rastreles French Cleat -->
+<div class="flex items-center justify-between p-unit-sm bg-surface-container-low rounded-DEFAULT">
+<div class="flex items-center gap-unit-sm min-w-0">
+<div class="w-7 h-7 rounded bg-primary-container/20 text-primary-container flex items-center justify-center shrink-0 font-dimension-md font-bold text-body-sm">
+            12
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md font-semibold text-on-surface truncate">Rastreles French Cleat 45°</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Contrachapado fenólico abedul 15mm</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-dimension-md text-dimension-md text-primary font-bold">580×70×15</div>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase">mm (Corte 45°)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- HERRAJES DE FIJACIÓN RÁPIDA & ABSORCIÓN -->
+<section class="flex flex-col gap-unit-sm bg-surface-container p-unit-md rounded-lg shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">build</span>
+<span class="font-title-lg text-title-lg text-on-surface">Herrajes &amp; Fijación de Obra</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary bg-surface-container-high px-unit-xs py-unit-2xs rounded-DEFAULT">Enrasado</span>
+</div>
+<div class="grid grid-cols-2 gap-unit-sm">
+<!-- Card Sistema Cuña Francesa -->
+<div class="flex flex-col gap-unit-xs bg-surface-container-low p-unit-sm rounded-DEFAULT">
+<div class="flex items-center gap-unit-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="font-body-md font-semibold text-on-surface">French Cleat</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Nivelación micrométrica mediante calzos de corrección de plomada ±3mm en paramento irregular.
+        </p>
+</div>
+<!-- Card Polímero Híbrido & Clavillo -->
+<div class="flex flex-col gap-unit-xs bg-surface-container-low p-unit-sm rounded-DEFAULT">
+<div class="flex items-center gap-unit-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">hardware</span>
+<span class="font-body-md font-semibold text-on-surface">MS Híbrido + 18G</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Adhesivo polímero elasticidad permanente + clavillo sin cabeza 18G oblicuo clavado en fieltro negro.
+        </p>
+</div>
+</div>
+<!-- Alerta de advertencia técnica de montaje -->
+<div class="flex items-center gap-unit-sm bg-surface-container-high p-unit-sm rounded-DEFAULT text-body-sm">
+<span class="material-symbols-outlined text-primary-container text-[20px] shrink-0">info</span>
+<span class="text-on-surface-variant">Comprobar planeidad de muro previa a fijación; desviación máx. admitida 2mm por cada 2m de regla.</span>
+</div>
+</section>
+<!-- FOTOGRAFÍA DE REFERENCIA TALLER (MOMENTO VISUAL) -->
+<section class="flex flex-col gap-unit-xs">
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container shadow-md">
+<img class="w-full h-full object-cover" data-alt="Close-up detail of luxury acoustic slatted natural oak wood panels mounted against a matte black felt backing with warm 2700K grazing architectural linear LED light washing down the vertical grain. Modern Scandinavian industrial workshop carpentry atmosphere, sharp shadows, high contrast, warm amber glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqHRj7t7RLOaUa_FKQo-pDgeMgVS1rhpBtHanhK5o6FUEiFQHNkbpcjJbNAeNARUgzuuco65_QFNhHti-Feig49_CPuIMtQw-dGaz6DEw5pwvh56rq1VWEy_ccciH7w5knY2utZcpzRV6F88wbB5j4srZTchnxxmcl7Yn49YPkzU2NW4InlXxF2kUxRGff2qdezE-XUvw6WPW6aC22ZAaOBj1yGDIPFPpqxJtNJS00y8rzH5r7OWbhaQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute bottom-unit-sm left-unit-sm right-unit-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary uppercase">Muestra Prototipo Taller #04</span>
+<span class="font-body-md text-on-surface font-semibold">Acabado Roble Aceite Cera Blanca Mate</span>
+</div>
+<span class="font-dimension-md text-dimension-md text-secondary bg-surface-container-lowest/80 px-unit-xs py-unit-2xs rounded-DEFAULT">3.8 m²</span>
+</div>
+</div>
+</section>
+<!-- ACCIONES CTA EN PIE -->
+<section class="flex flex-col gap-unit-sm pt-unit-xs pb-unit-sm">
+<!-- Botón Primario: Optimización de Corte -->
+<button class="w-full min-h-touch-target-min py-unit-md px-unit-lg bg-primary-container text-on-primary-container font-headline-md text-title-lg font-bold rounded-DEFAULT flex items-center justify-center gap-unit-sm shadow-md active:translate-y-0.5 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]">view_quilt</span>
+<span>Exportar a Optimizador de Placas</span>
+</button>
+<!-- Botones Secundarios: Plano & Presupuesto -->
+<div class="grid grid-cols-2 gap-unit-sm">
+<button class="min-h-touch-target-min py-unit-sm px-unit-sm bg-surface-container-high text-secondary hover:text-on-surface font-label-caps text-label-caps uppercase rounded-DEFAULT flex items-center justify-center gap-unit-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Plano 2D PDF</span>
+</button>
+<button class="min-h-touch-target-min py-unit-sm px-unit-sm bg-surface-container-high text-primary hover:text-on-surface font-label-caps text-label-caps uppercase rounded-DEFAULT flex items-center justify-center gap-unit-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>Añadir a Presupuesto</span>
+</button>
+</div>
+</section>
+</div>
+<script>
+  // Micro-interacción: cambio de panel seleccionado
+  const panelCards = document.querySelectorAll('.panel-type-card');
+  panelCards.forEach(card => {
+    card.addEventListener('click', () => {
+      panelCards.forEach(c => {
+        c.classList.remove('bg-surface-container', 'shadow-md');
+        c.classList.add('bg-surface-container-low', 'opacity-80');
+        const bar = c.querySelector('.bg-primary-container');
+        if (bar && bar.tagName === 'DIV') bar.remove();
+      });
+      card.classList.remove('bg-surface-container-low', 'opacity-80');
+      card.classList.add('bg-surface-container', 'shadow-md');
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.3)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="planos" href="plano_2d_fijaci_n_y_regulaci_n_de_frente.html"><span class="material-symbols-outlined text-[22px]">architecture</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Planos</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="placas" href="optimizador_de_corte_real.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Placas</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Presupuesto</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="ideas-ia" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Ideas IA</span></a></div></nav><script src="../core/store.js"></script></body></html>

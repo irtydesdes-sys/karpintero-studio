@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.45)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-unit-sm"><div class="flex items-center gap-unit-md min-w-0 flex-1"><div class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center shrink-0 text-primary-container shadow-[0_2px_0px_#0b0f12]"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[9px] uppercase font-bold shrink-0">Taller &amp; CNC</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Mantenimiento Cnc</h1></div></div><div class="flex items-center gap-unit-xs shrink-0"><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html" title="Gestor de Retales"><span class="material-symbols-outlined text-[20px]">grid_view</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="logistica-carga" href="proximamente.html" title="Logística de Carga y Furgoneta"><span class="material-symbols-outlined text-[20px]">local_shipping</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="mantenimiento-cnc" href="proximamente.html" title="Mantenimiento y Discos CNC"><span class="material-symbols-outlined text-[20px]">build_circle</span></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter-mobile gap-unit-md pb-unit-2xl select-none">
+<!-- BARRA DE CONTEXTO / PROYECTO ACTIVO -->
+<section class="flex flex-col w-full bg-surface-container-high rounded-xl p-unit-md shadow-md gap-unit-sm">
+<div class="flex items-center justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">inventory</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider truncate">Proyecto en Curso</span>
+</div>
+<!-- Indicador Online/Offline Taller -->
+<div class="flex items-center gap-unit-2xs bg-surface-container px-unit-xs py-0.5 rounded-full shrink-0 shadow-inner">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-[10px] text-secondary tracking-tight font-semibold">Taller Sincronizado</span>
+</div>
+</div>
+<!-- Selector de Proyecto Dropdown Visual -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-unit-sm rounded-lg cursor-pointer transition-colors active:scale-[0.99]" id="project-selector-btn">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-dimension-md text-[13px] text-primary-container font-semibold">#PRJ-2024-88</span>
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-surface-container text-on-surface-variant font-label-caps text-[9px]">FASE 03: CORTE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight mt-0.5">
+          Cocina Roble Halifax &amp; Dekton Laurent
+        </p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] shrink-0 ml-unit-xs">unfold_more</span>
+</div>
+<!-- Buscador en Vivo de Módulos & Herramientas -->
+<div class="relative w-full mt-unit-2xs">
+<div class="absolute inset-y-0 left-0 pl-unit-sm flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/50 font-body-sm text-body-sm pl-9 pr-8 py-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary transition-all" id="module-search-input" placeholder="Buscar módulo, plano 2D, CNC o cálculo..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-unit-sm flex items-center cursor-pointer text-on-surface-variant hidden" id="clear-search-btn">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</div>
+</div>
+</section>
+<!-- FILTROS DE ACCESO RÁPIDO (TABS HORIZONTALES) -->
+<section class="flex items-center gap-unit-xs overflow-x-auto w-full py-1 -my-1 no-scrollbar">
+<button class="category-filter-btn flex items-center gap-unit-2xs px-unit-md py-2 rounded-lg bg-primary-container text-on-primary-container font-label-caps text-label-caps shrink-0 font-bold shadow-sm transition-all" data-filter="all">
+<span class="material-symbols-outlined text-[16px]">apps</span>
+<span>TODOS (46)</span>
+</button>
+<button class="category-filter-btn flex items-center gap-unit-2xs px-unit-md py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps shrink-0 hover:text-on-surface transition-all" data-filter="corte">
+<span class="material-symbols-outlined text-[16px]">precision_manufacturing</span>
+<span>TALLER &amp; CORTE</span>
+</button>
+<button class="category-filter-btn flex items-center gap-unit-2xs px-unit-md py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps shrink-0 hover:text-on-surface transition-all" data-filter="muebles">
+<span class="material-symbols-outlined text-[16px]">countertops</span>
+<span>MOBILIARIO</span>
+</button>
+<button class="category-filter-btn flex items-center gap-unit-2xs px-unit-md py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps shrink-0 hover:text-on-surface transition-all" data-filter="mep">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>INSTALACIÓN &amp; MEP</span>
+</button>
+<button class="category-filter-btn flex items-center gap-unit-2xs px-unit-md py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps shrink-0 hover:text-on-surface transition-all" data-filter="gestion">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>GESTIÓN &amp; SALIDA</span>
+</button>
+</section>
+<!-- ACCESOS FRECUENTES / BARRA FAVORITOS DEL MAESTRO DE TALLER -->
+<section class="flex flex-col w-full bg-surface-container-low rounded-xl p-unit-md shadow-sm gap-unit-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest flex items-center gap-unit-2xs">
+<span class="material-symbols-outlined text-[14px]">star</span>
+        Mesa Rápida del Maestro
+      </span>
+<span class="font-label-caps text-[10px] text-on-surface-variant/60">5 fijados</span>
+</div>
+<div class="grid grid-cols-5 gap-unit-xs pt-unit-2xs">
+<a class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-high hover:bg-surface-bright active:scale-95 transition-all text-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-secondary text-[22px] group-hover:scale-110 transition-transform">view_in_ar</span>
+<span class="font-label-caps text-[9px] text-on-surface leading-tight truncate w-full">Despiece</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-high hover:bg-surface-bright active:scale-95 transition-all text-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-primary-container text-[22px] group-hover:scale-110 transition-transform">dashboard_customize</span>
+<span class="font-label-caps text-[9px] text-on-surface leading-tight truncate w-full">Corte IA</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-high hover:bg-surface-bright active:scale-95 transition-all text-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[22px] group-hover:scale-110 transition-transform">qr_code_scanner</span>
+<span class="font-label-caps text-[9px] text-on-surface leading-tight truncate w-full">Retales</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-high hover:bg-surface-bright active:scale-95 transition-all text-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-tertiary-container text-[22px] group-hover:scale-110 transition-transform">offline_bolt</span>
+<span class="font-label-caps text-[9px] text-on-surface leading-tight truncate w-full">LED 24V</span>
+</a>
+<a class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-high hover:bg-surface-bright active:scale-95 transition-all text-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-secondary text-[22px] group-hover:scale-110 transition-transform">share</span>
+<span class="font-label-caps text-[9px] text-on-surface leading-tight truncate w-full">Export</span>
+</a>
+</div>
+</section>
+<!-- BANNER TALLER EN VIVO (VISUAL RICHNESS / FOTO INFORMATIVA) -->
+<section class="relative w-full rounded-xl overflow-hidden shadow-lg bg-surface-container-lowest">
+<div class="bg-cover bg-center w-full h-28 flex flex-col justify-end p-unit-md relative" data-alt="Modern industrial woodworking CNC flatbed router milling precision oak joinery, ambient amber dust illumination, high contrast technical blueprints on a tablet workbench foreground, workshop dark tones with cyan laser line overlay." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpRuOxTimBr7n-LXDuXXuIA57DO3I6H_gap4bmoQCBLDvFYyAeJK2u5N0VXOkn4qlcPnrxtgNlnaHr7_0jj7tyi0Q2I2-1c5JsuktgP7CTBX99xOFtCMijX-INMlK1J0V7cjRW2GTmHxLWWTqS-2TemrztKmol7ZxUR88LUHKg6l5YcUO2TY8TYuhtm5TMefifxj-7TXDgeBg32hpWBk5bVUV4zQWx6VF42voy07pXeSaPuAUQ2p_oSg')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-secondary font-bold uppercase tracking-wider">Centro de Maquinado &amp; Control</span>
+<h2 class="font-title-lg text-title-lg text-on-surface leading-tight">Hub de Módulos Técnicos</h2>
+</div>
+<span class="px-2 py-1 rounded-DEFAULT bg-primary-container text-on-primary-container font-label-caps text-[10px] font-bold">V4.8 ROBUSTO</span>
+</div>
+</div>
+</section>
+<!-- LISTADO CATEGORIZADO DE MÓDULOS -->
+<div class="flex flex-col gap-unit-lg w-full" id="modules-container">
+<!-- CATEGORÍA 1: RECEPCIÓN, MEDICIÓN & REPLANTEO -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="mep">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">straighten</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">1. Recepción, Medición &amp; Replanteo</h3>
+</div>
+<span class="font-label-caps text-[11px] text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">3 Módulos</span>
+</div>
+<div class="flex flex-col gap-unit-xs">
+<!-- Tarjeta 1.1 -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Escáner Fotográfico &amp; Cotas 2D/3D ImageMeter AR">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">photo_camera_front</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-2xs">
+<span class="font-label-caps text-[10px] text-secondary font-semibold">AR / FOTOGRAMETRÍA</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Escáner Fotográfico &amp; Cotas 2D/3D</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">ImageMeter, calibración láser y nubes de puntos</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- Tarjeta 1.2 -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Calculadora de Falsa Escuadra &amp; Ajustes en Obra">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">square_foot</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-2xs">
+<span class="font-label-caps text-[10px] text-primary-container font-semibold">TRIGONOMETRÍA</span>
+<span class="px-1 py-0.2 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[9px]">±0.2mm</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Calculadora de Falsa Escuadra</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Desviación en paredes, hipotenusa y cuñas de ajuste</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- Tarjeta 1.3 -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Cajeados Técnicos: Fontanería, Desagües y Tomas Eléctricas">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">plumbing</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-tertiary-container font-semibold">INTERFERENCIAS MEP</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Cajeados Técnicos &amp; Pasantes</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Fontanería, bajantes, sifón y cajas de enchufe</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- CATEGORÍA 2: ESPECIALIDADES DE CARPINTERÍA & MOBILIARIO -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="muebles">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">countertops</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">2. Mobiliario &amp; Especialidades</h3>
+</div>
+<span class="font-label-caps text-[11px] text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">7 Módulos</span>
+</div>
+<div class="flex flex-col gap-unit-xs">
+<!-- 2.1 Cocinas -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Cocinas Integrales Muebles Bajos Altos Columnas e Islas LED">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">kitchen</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-2xs">
+<span class="font-label-caps text-[10px] text-primary-container font-semibold">MODULAR 72/80CM</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-secondary font-label-caps text-[9px]">GOLA / LED</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Cocinas Integrales</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Bajos, columnas de hornos, altos abatibles e islas</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 2.2 Clósets & Vestidores -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Clósets Vestidores a Medida &amp; Barras LED">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">door_sliding</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-secondary font-semibold">ARMARIOS &amp; ORGANIZACIÓN</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Clósets &amp; Vestidores a Medida</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Barras iluminadas, pantaloneros y zapateros extraíbles</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 2.3 Muebles de Baño -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Muebles de Baño Suspendidos &amp; Sifón Salva-Desagüe">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">bathtub</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-tertiary font-semibold">HIDRÓFUGO &amp; SUSPENDIDO</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Baño &amp; Sifón Salva-Desagüe</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Cajones en U, anclajes ocultos y frentes ingletados</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 2.4 TV & Lambrines -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Muebles TV Escritorios Ergonómicos Recámaras y Lambrines">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">tv</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-primary font-semibold">HOGAR &amp; LIVING</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Muebles TV, Lambrines &amp; Mesas</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Pasacables acústicos, escritorios y cabeceros</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 2.5 Puertas de Paso & Cercos -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Puertas de Paso Enrasadas Correderas y Marcos Cercos Galces">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">meeting_room</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-secondary font-semibold">PASO &amp; CARPINTERÍA</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Puertas Enrasadas &amp; Galces</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Bisagras 3D ocultas, picaportes magnéticos y cercos</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 2.6 Alta Ebanistería -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Alta Ebanistería Ensambles Maestros Sillas y Escaleras a Medida">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">carpenter</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-primary-container font-semibold">MADERA MACIZA</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Alta Ebanistería &amp; Escaleras</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Cola de milano, caja y espiga, zancas milimétricas</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 2.7 Panelados & Resina -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Panelados Acústicos Alistonados Pérgolas Decks Mesas de Resina y Restauración">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">texture</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-tertiary-container font-semibold">EXTERIOR &amp; DECORATIVO</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Alistonados, Decks &amp; Resinas</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Absorción acústica, pérgolas exteriores y epoxi</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- CATEGORÍA 3: DESPIECE PARAMÉTRICO & HERRAJES -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="muebles">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">format_list_bulleted</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">3. Despiece Paramétrico &amp; Herrajes</h3>
+</div>
+<span class="font-label-caps text-[11px] text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">4 Módulos</span>
+</div>
+<div class="flex flex-col gap-unit-xs">
+<!-- 3.1 Cajones -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Despiece Detallado de Cajones Estándar Cacerolero Gaveta Oculta Inglesa">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">view_agenda</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-secondary font-semibold">MÓDULOS DE EXTRACCIÓN</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Despiece Detallado de Cajones</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Caceroleros, gavetas inglesas y holguras de 12.7mm</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 3.2 Sistemas de Apertura -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Sistemas de Apertura Correderas Undermount Ocultas Gola J Bisel 45">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">touch_app</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-primary-container font-semibold">TIRADOR &amp; PERFILES</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Sistemas de Apertura &amp; Gola</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Perfiles en J/C, biseles a 45° y correderas ocultas</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 3.3 Planos 2D de Montaje -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Planos 2D de Montaje Fijación Milimétrica de Frente">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">architecture</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-secondary font-semibold">PLANOS CAD 2D</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Fijación de Frente &amp; Cotas 2D</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Plantillas de taladrado y holguras perimetrales</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 3.4 Herrajes & Spax -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Lista Consolidada de Herrajes Tornillos Spax y Conectores Minifix Clamex">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">handyman</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-tertiary font-semibold">HERRAJES &amp; TORNILLERÍA</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Herrajes, Spax &amp; Conectores</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Minifix, Clamex P-14, Blum Movento y tornillería</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- CATEGORÍA 4: CORTE, MAQUINARIA & PRODUCCIÓN -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="corte">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[22px]">precision_manufacturing</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">4. Corte &amp; Producción CNC</h3>
+</div>
+<span class="font-label-caps text-[11px] text-primary-container bg-surface-container px-2 py-0.5 rounded-full font-bold">6 Módulos</span>
+</div>
+<div class="flex flex-col gap-unit-xs">
+<!-- 4.1 Optimizador IA -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Optimizador de Placas con IA &amp; Continuidad de Vetas Nesting">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">auto_awesome_mosaic</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-2xs">
+<span class="font-label-caps text-[10px] text-primary-container font-semibold">MOTOR NESTING IA</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-label-caps text-[9px]">KERF 3.2mm</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Optimizador de Placas &amp; Vetas</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Mapeo continuo de veta horizontal/vertical</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 4.2 Gestor de Retales QR -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Gestor Inteligente de Retales y Sobrantes con QR">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">qr_code_2</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-secondary font-semibold">INVENTARIO TANGIBLE</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Gestor de Retales &amp; Sobrantes QR</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Etiquetado térmico, ubicación en rack y reuso</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 4.3 Mantenimiento Horómetro -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Mantenimiento de Maquinaria Horómetro Disco Kerf Incisor y Encoladora PUR">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">build_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-tertiary-container font-semibold">HORÓMETRO &amp; AFILADO</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Mantenimiento de Discos &amp; PUR</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Vida útil disco incisor, calderín y fresas CNC</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 4.4 Mecanizado CNC G-Code -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Mecanizado CNC Avance Roscado y G-Code Postprocesador">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-secondary font-semibold">CONTROL NUMÉRICO</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Mecanizado CNC &amp; G-Code</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Velocidad de avance, RPM spindle y postprocesado</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 4.5 Higrometría & Barnices -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Control Higrométrico Mermas de Madera y Acabados Barnices PUR">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">humidity_mid</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-primary font-semibold">CALIDAD DEL MATERIAL</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Higrometría &amp; Acabados</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Contracción higroscópica, aceites y lacado</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 4.6 Checklist Banco de Armado -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Checklist de Armado en Banco de Trabajo Encolado Escuadrado">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">checklist</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-secondary font-semibold">CONTROL DE CALIDAD</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Checklist de Banco de Armado</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Comprobación de diagonales y apriete con sargentos</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- CATEGORÍA 5: ELECTRICIDAD, ILUMINACIÓN LED & CONECTIVIDAD -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="mep">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[22px]">bolt</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">5. LED, Electricidad &amp; Conectividad</h3>
+</div>
+<span class="font-label-caps text-[11px] text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">3 Módulos</span>
+</div>
+<div class="flex flex-col gap-unit-xs">
+<!-- 5.1 Calculadora LED 24V -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Calculadora Eléctrica LED 24V Drivers Caída de Tensión y Sensores Ocultos">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">electrical_services</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-tertiary-container font-semibold">CÁLCULO DE VATIAJE</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Calculadora Eléctrica LED 24V</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Potencia de drivers, disipación y sensores PIR</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 5.2 Sincronización Multiplataforma -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Sincronización Multiplataforma Android iOS LiDAR Windows CNC Offline">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">devices_fold</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-secondary font-semibold">ECOSISTEMA INTEGRADO</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Sincronización &amp; LiDAR</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Enlace en tiempo real con taller sin conexión a internet</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 5.3 Parámetros & Tolerancias -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Ajustes de Taller Parámetros y Tolerancias">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-on-surface-variant font-semibold">PREFERENCIAS GLOBALES</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Tolerancias &amp; Parámetros</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Grosor de canto (0.4 / 1 / 2mm) y márgenes de desbaste</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- CATEGORÍA 6: LOGÍSTICA, COMERCIAL & ENTREGA VIP -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="gestion">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[22px]">local_shipping</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">6. Logística, Comercial &amp; Entrega</h3>
+</div>
+<span class="font-label-caps text-[11px] text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">4 Módulos</span>
+</div>
+<div class="flex flex-col gap-unit-xs">
+<!-- 6.1 Control de Proyectos -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Panel Central de Control de Proyectos y Simulador de Flujo">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-primary-container font-semibold">GESTIÓN MAESTRA</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Control de Proyectos &amp; Gantt</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Simulador de cuellos de botella y fechas de entrega</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 6.2 Presupuestos & Márgenes -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Presupuesto Costes y Márgenes Comerciales">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-secondary font-semibold">FINANZAS DE TALLER</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Presupuesto, Costes &amp; Margen</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Cálculo de hora hombre, depreciación y beneficio real</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 6.3 Exportación WhatsApp / Email -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Centro de Exportación Técnica y Compartir Rápido WhatsApp Email">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">outgoing_mail</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-tertiary font-semibold">COMUNICACIÓN TÉCNICA</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Exportación Rápida &amp; WhatsApp</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">PDFs de despiece para operarios y listas de compra</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+<!-- 6.4 Garantía VIP & Firma -->
+<div class="module-card flex items-center justify-between p-unit-md bg-surface-container rounded-xl shadow-sm hover:bg-surface-container-high transition-all active:scale-[0.99] cursor-pointer" data-title="Dossier de Garantía 5 Años Entrega VIP y Acta de Entrega Táctil">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-2xs">
+<span class="font-label-caps text-[10px] text-primary-container font-semibold">POST-VENTA PREMIUM</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-lowest text-primary font-label-caps text-[9px]">5 AÑOS</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Dossier de Garantía &amp; Acta VIP</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Firma digital del cliente y manual de cuidado de maderas</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0 ml-unit-xs">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- ESTADO VACÍO EN BÚSQUEDA (DELIGHT & HUMAN DETAIL) -->
+<div class="hidden flex flex-col items-center justify-center py-unit-2xl px-unit-lg text-center bg-surface-container-low rounded-xl gap-unit-sm" id="empty-search-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-unit-xs">
+<span class="material-symbols-outlined text-[32px]">manage_search</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">No se halló esa herramienta</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+        Prueba con palabras como <strong class="text-secondary font-mono">"Cajones"</strong>, <strong class="text-primary-container font-mono">"G-Code"</strong> o <strong class="text-tertiary font-mono">"Dekton"</strong> para saltar a la pantalla requerida.
+      </p>
+<button class="mt-unit-xs px-unit-md py-2 rounded-lg bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase font-bold hover:bg-surface-bright transition-colors" id="reset-search-btn">
+        Restablecer Filtros
+      </button>
+</div>
+</div>
+<!-- MODAL / DRAWER RÁPIDO DE CAMBIO DE PROYECTO (INTERACTIVO) -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-sm flex flex-col justify-end hidden" id="project-modal">
+<div class="w-full bg-surface-container-high rounded-t-2xl p-unit-md pb-unit-2xl flex flex-col gap-unit-md shadow-2xl max-h-[707px] overflow-y-auto">
+<div class="w-12 h-1 bg-outline-variant/40 rounded-full mx-auto"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">source</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Proyectos Activos de Carpintería</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="close-project-modal">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-unit-xs">
+<!-- Proyecto 1 (Activo) -->
+<div class="p-unit-md rounded-xl bg-surface-container-lowest border-l-4 border-primary-container flex items-center justify-between cursor-pointer">
+<div class="flex flex-col">
+<span class="font-dimension-md text-[12px] text-primary-container font-bold">#PRJ-2024-88 (ACTUAL)</span>
+<span class="font-body-md text-on-surface font-bold">Cocina Roble Halifax &amp; Dekton Laurent</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">28 Módulos • 64m² Tableros • En optimización</span>
+</div>
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+</div>
+<!-- Proyecto 2 -->
+<div class="p-unit-md rounded-xl bg-surface-container hover:bg-surface-bright flex items-center justify-between cursor-pointer transition-colors">
+<div class="flex flex-col">
+<span class="font-dimension-md text-[12px] text-secondary font-bold">#PRJ-2024-91</span>
+<span class="font-body-md text-on-surface font-bold">Vestidor Nogal Americano &amp; Cristales Fumé</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">12 Módulos • Barras LED 24V • Replanteo</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">arrow_forward_ios</span>
+</div>
+<!-- Proyecto 3 -->
+<div class="p-unit-md rounded-xl bg-surface-container hover:bg-surface-bright flex items-center justify-between cursor-pointer transition-colors">
+<div class="flex flex-col">
+<span class="font-dimension-md text-[12px] text-tertiary font-bold">#PRJ-2024-79</span>
+<span class="font-body-md text-on-surface font-bold">Revestimiento Acústico Sala de Juntas</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">340 Lamas Fresno Macizo • Listo para entrega VIP</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">arrow_forward_ios</span>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg bg-surface-container text-secondary font-label-caps text-label-caps font-bold uppercase flex items-center justify-center gap-unit-xs hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        Dar de Alta Nuevo Proyecto
+      </button>
+</div>
+</div>
+</div>
+<!-- SCRIPT CLIENTE PARA MICROINTERACCIONES Y BUSCADOR EN VIVO -->
+<script>
+  (function() {
+    const searchInput = document.getElementById('module-search-input');
+    const clearBtn = document.getElementById('clear-search-btn');
+    const emptyState = document.getElementById('empty-search-state');
+    const resetSearchBtn = document.getElementById('reset-search-btn');
+    const moduleCards = document.querySelectorAll('.module-card');
+    const moduleGroups = document.querySelectorAll('.module-group');
+    const filterBtns = document.querySelectorAll('.category-filter-btn');
+    const projectBtn = document.getElementById('project-selector-btn');
+    const projectModal = document.getElementById('project-modal');
+    const closeModalBtn = document.getElementById('close-project-modal');
+
+    // FILTRADO POR BÚSQUEDA DE TEXTO
+    function filterModules() {
+      const query = (searchInput.value || '').trim().toLowerCase();
+      let visibleCount = 0;
+
+      if (query.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+
+      moduleCards.forEach(card => {
+        const title = card.getAttribute('data-title') || '';
+        const textContent = card.innerText || '';
+        const matches = (title + ' ' + textContent).toLowerCase().includes(query);
+
+        if (matches) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // Ocultar cabeceras de categorías vacías
+      moduleGroups.forEach(group => {
+        const groupCards = group.querySelectorAll('.module-card:not(.hidden)');
+        if (groupCards.length === 0) {
+          group.classList.add('hidden');
+        } else {
+          group.classList.remove('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', filterModules);
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        filterModules();
+        searchInput.focus();
+      });
+    }
+
+    if (resetSearchBtn) {
+      resetSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        filterModules();
+        // Restaurar botón de Todos
+        filterBtns.forEach(btn => {
+          if (btn.getAttribute('data-filter') === 'all') {
+            btn.classList.add('bg-primary-container', 'text-on-primary-container');
+            btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+          } else {
+            btn.classList.remove('bg-primary-container', 'text-on-primary-container');
+            btn.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+          }
+        });
+        moduleGroups.forEach(g => g.classList.remove('hidden'));
+        moduleCards.forEach(c => c.classList.remove('hidden'));
+      });
+    }
+
+    // TABS DE CATEGORÍA
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Toggle visual active
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+          b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+        btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+
+        // Limpiar búsqueda
+        if (searchInput) searchInput.value = '';
+        clearBtn.classList.add('hidden');
+        emptyState.classList.add('hidden');
+
+        moduleCards.forEach(c => c.classList.remove('hidden'));
+
+        if (filter === 'all') {
+          moduleGroups.forEach(g => g.classList.remove('hidden'));
+        } else {
+          moduleGroups.forEach(g => {
+            if (g.getAttribute('data-category') === filter) {
+              g.classList.remove('hidden');
+            } else {
+              g.classList.add('hidden');
+            }
+          });
+        }
+      });
+    });
+
+    // MODAL DE PROYECTOS
+    if (projectBtn && projectModal) {
+      projectBtn.addEventListener('click', () => {
+        projectModal.classList.remove('hidden');
+      });
+    }
+
+    if (closeModalBtn && projectModal) {
+      closeModalBtn.addEventListener('click', () => {
+        projectModal.classList.add('hidden');
+      });
+    }
+
+    if (projectModal) {
+      projectModal.addEventListener('click', (e) => {
+        if (e.target === projectModal) {
+          projectModal.classList.add('hidden');
+        }
+      });
+    }
+
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-2xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Costes</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Retales</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="logistica-carga" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">rv_hookup</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Logística</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="mantenimiento-cnc" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">settings_suggest</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Taller CNC</span></a></div></nav><script src="../core/store.js"></script></body></html>

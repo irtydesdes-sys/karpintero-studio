@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.45)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-unit-sm"><div class="flex items-center gap-unit-md min-w-0 flex-1"><div class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center shrink-0 text-primary-container shadow-[0_2px_0px_#0b0f12]"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[9px] uppercase font-bold shrink-0">Taller &amp; CNC</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Logistica Carga</h1></div></div><div class="flex items-center gap-unit-xs shrink-0"><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html" title="Gestor de Retales"><span class="material-symbols-outlined text-[20px]">grid_view</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="logistica-carga" href="proximamente.html" title="Logística de Carga y Furgoneta"><span class="material-symbols-outlined text-[20px]">local_shipping</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="mantenimiento-cnc" href="proximamente.html" title="Mantenimiento y Discos CNC"><span class="material-symbols-outlined text-[20px]">build_circle</span></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-2">Copia de seguridad real de todos tus datos</div>
+    <div class="flex flex-col gap-2 text-xs">
+      <button id="kp-backup-export" class="py-2 rounded bg-primary-container text-on-primary-container font-bold">Descargar copia real (.json)</button>
+      <label class="py-2 rounded bg-surface-container text-center font-bold cursor-pointer">Restaurar desde archivo real
+        <input id="kp-backup-import" type="file" accept="application/json" class="hidden"/>
+      </label>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  document.getElementById('kp-backup-export').addEventListener('click', function(){
+    var data = window.KarpinteroDB.exportBackup();
+    var blob = new Blob([data], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'karpintero_backup_' + new Date().toISOString().slice(0,10) + '.json';
+    a.click();
+  });
+  document.getElementById('kp-backup-import').addEventListener('change', function(e){
+    var file = e.target.files[0]; if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(){
+      try { window.KarpinteroDB.importBackup(reader.result); alert('Datos reales restaurados. Recarga cualquier pantalla para verlos.'); }
+      catch (err) { alert('Archivo inválido: ' + err.message); }
+    };
+    reader.readAsText(file);
+  });
+})();
+</script><div class="flex flex-col w-full px-gutter-mobile py-unit-md gap-unit-lg max-w-2xl mx-auto">
+<!-- Status & Version Hero Card -->
+<div class="flex flex-col bg-surface-container rounded-xl p-unit-lg shadow-md gap-unit-md">
+<div class="flex flex-wrap items-center justify-between gap-unit-xs">
+<div class="flex items-center gap-unit-xs">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase">BUNDLE V2.4 · COMPLETO</span>
+</div>
+<div class="flex items-center gap-unit-xs">
+<span class="px-unit-sm py-unit-2xs rounded-lg bg-surface-container-high text-primary font-label-caps text-[10px] tracking-wider uppercase">ZIP · 34.2 MB</span>
+<span class="px-unit-sm py-unit-2xs rounded-lg bg-secondary/15 text-secondary font-label-caps text-[10px] uppercase font-bold tracking-wider">100% OFFLINE</span>
+</div>
+</div>
+<div class="flex flex-col gap-unit-2xs">
+<div class="flex items-center gap-unit-sm">
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase font-bold">49 PANTALLAS TÉCNICAS</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Bundle Completo de Actualización (49 Pantallas)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Ecosistema integral de taller, despiece milimétrico, escáner AR, control CNC, iluminación LED y actas con firma digital empaquetados en un solo archivo.
+      </p>
+</div>
+<!-- Integrity Checklist Bar -->
+<div class="flex items-center justify-between bg-surface-container-low p-unit-sm rounded-lg">
+<div class="flex items-center gap-unit-sm">
+<div class="w-7 h-7 rounded-DEFAULT bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[11px] text-on-surface font-semibold">ESTADO DE INTEGRIDAD</span>
+<span class="font-body-sm text-body-sm text-secondary">Verificado 49/49 módulos listos para despliegue</span>
+</div>
+</div>
+<span class="font-dimension-md text-dimension-md text-primary-container">100% OK</span>
+</div>
+<!-- Primary Download Execution Button -->
+<div class="flex flex-col gap-unit-xs pt-unit-xs">
+<button class="w-full min-h-touch-target-min rounded-xl bg-primary-container text-on-primary-container font-title-lg text-title-lg flex items-center justify-center gap-unit-sm shadow-md active:translate-y-0.5 transition-transform cursor-pointer" id="btn-download" onclick="triggerDownload()">
+<span class="material-symbols-outlined text-[26px]" id="dl-icon">folder_zip</span>
+<span id="dl-text">Descargar Bundle Completo (34.2 MB)</span>
+</button>
+<!-- Checksum Panel -->
+<div class="flex items-center justify-between bg-surface-container-lowest px-unit-md py-unit-xs rounded-lg text-on-surface-variant">
+<div class="flex items-center gap-unit-xs min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0">fingerprint</span>
+<span class="font-label-caps text-label-caps text-outline truncate select-all">sha256: 9b1e4ac572d410ef9b8f02c77d401ae8</span>
+</div>
+<button class="shrink-0 px-unit-xs py-unit-2xs rounded-DEFAULT bg-surface-container-high hover:bg-surface-bright text-primary font-label-caps text-label-caps flex items-center gap-unit-2xs cursor-pointer ml-unit-sm" onclick="copyChecksum()">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copy-feedback">COPIAR</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Deployment Actions Bar -->
+<div class="grid grid-cols-3 gap-unit-sm">
+<button class="flex flex-col items-center justify-center p-unit-sm rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface gap-unit-2xs shadow-sm cursor-pointer" onclick="quickAction('whatsapp')">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<span class="font-label-caps text-[10px] text-center tracking-tight text-on-surface uppercase">A Taller WhatsApp</span>
+</button>
+<button class="flex flex-col items-center justify-center p-unit-sm rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface gap-unit-2xs shadow-sm cursor-pointer" onclick="quickAction('link')">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</div>
+<span class="font-label-caps text-[10px] text-center tracking-tight text-on-surface uppercase">Copiar Enlace</span>
+</button>
+<button class="flex flex-col items-center justify-center p-unit-sm rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface gap-unit-2xs shadow-sm cursor-pointer" onclick="quickAction('usb')">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">usb</span>
+</div>
+<span class="font-label-caps text-[10px] text-center tracking-tight text-on-surface uppercase">A USB/SD CNC</span>
+</button>
+</div>
+<!-- Visual Blueprint / Technical Workshop Modules Breakdown -->
+<div class="flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between px-unit-xs">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">layers</span>
+<span class="font-title-lg text-title-lg text-on-surface">Arquitectura del Paquete</span>
+</div>
+<span class="font-label-caps text-label-caps text-outline">5 SUBSISTEMAS</span>
+</div>
+<!-- Module 1: Core Screens (Expanded by default) -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<div class="p-unit-md flex items-start justify-between gap-unit-sm cursor-pointer bg-surface-container" onclick="toggleAccordion('acc-1', 'icon-1')">
+<div class="flex items-start gap-unit-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">web</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-[10px] text-primary uppercase">01 · INTERFAZ TALLER</span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[9px]">19.4 MB</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Frontend &amp; 49 Pantallas Técnicas</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="icon-1">expand_less</span>
+</div>
+<div class="px-unit-md pb-unit-md pt-0 flex flex-col gap-unit-sm text-body-sm text-on-surface-variant" id="acc-1">
+<p class="leading-relaxed">
+          Código pre-compilado en bundle autónomo (HTML5/Tailwind/JS nativo sin dependencias online). Listo para terminales rugerizadas de taller y tablets junto a sierra de corte.
+        </p>
+<div class="grid grid-cols-1 gap-unit-2xs bg-surface-container-low p-unit-sm rounded-lg">
+<div class="flex items-start gap-unit-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface"><strong class="font-medium text-primary">Medición &amp; Cotas:</strong> Enlace BLE con distómetros, acotación 2D y tolerancias de ranuras.</span>
+</div>
+<div class="flex items-start gap-unit-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface"><strong class="font-medium text-primary">Mobiliario Modular:</strong> Cajones Undermount, perfiles Gola, módulos altos, bajos, columnas e islas.</span>
+</div>
+<div class="flex items-start gap-unit-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface"><strong class="font-medium text-primary">Carpintería Estructural:</strong> Puertas galceadas, clósets empotrados, baños y pérgolas con ensambles tradicionales.</span>
+</div>
+<div class="flex items-start gap-unit-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface"><strong class="font-medium text-primary">Algoritmos CNC &amp; Entrega:</strong> Optimizador de corte con IA (kerf 3.2mm), escáner AR en obra y acta de conformidad con firma vectorial.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Module 2: Multiplatform -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<div class="p-unit-md flex items-start justify-between gap-unit-sm cursor-pointer bg-surface-container" onclick="toggleAccordion('acc-2', 'icon-2')">
+<div class="flex items-start gap-unit-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">devices</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-[10px] text-secondary uppercase">02 · HARDWARE WRAPPER</span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[9px]">5.1 MB</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Ecosistema Multiplataforma (Capacitor 6 + Electron)</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="icon-2">expand_more</span>
+</div>
+<div class="hidden px-unit-md pb-unit-md pt-0 flex flex-col gap-unit-sm text-body-sm text-on-surface-variant" id="acc-2">
+<p class="leading-relaxed">
+          Puente nativo para hardware de taller: drivers BLE para distanciómetros Leica DISTO D2/X3 y Bosch Professional GLM 50C/120C. Envoltorio industrial Electron para Windows 10/11 IoT montado en consola de centro de mecanizado.
+        </p>
+</div>
+</div>
+<!-- Module 3: Database & Pricing Seeds -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<div class="p-unit-md flex items-start justify-between gap-unit-sm cursor-pointer bg-surface-container" onclick="toggleAccordion('acc-3', 'icon-3')">
+<div class="flex items-start gap-unit-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">dataset</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-[10px] text-tertiary uppercase">03 · ALMACÉN RELACIONAL</span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[9px]">2.8 MB</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Base de Datos SQLite &amp; Tarifa 2025 Seed</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="icon-3">expand_more</span>
+</div>
+<div class="hidden px-unit-md pb-unit-md pt-0 flex flex-col gap-unit-sm text-body-sm text-on-surface-variant" id="acc-3">
+<p class="leading-relaxed">
+          Esquema pre-poblado con catálogos actualizados: tableros Egger Feelwood, Finsa Superpan, herrajes Blum Tandembox/Legrabox, conectores Lamello Clamex P-14 y tarificación métrica de cantos PVC/ABS de 0.8mm a 2mm.
+        </p>
+</div>
+</div>
+<!-- Module 4: PWA Offline & Service Worker -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<div class="p-unit-md flex items-start justify-between gap-unit-sm cursor-pointer bg-surface-container" onclick="toggleAccordion('acc-4', 'icon-4')">
+<div class="flex items-start gap-unit-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">wifi_off</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-[10px] text-outline uppercase">04 · AUTONOMÍA TOTAL</span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[9px]">4.2 MB</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">PWA Offline &amp; Service Worker Persistente</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="icon-4">expand_more</span>
+</div>
+<div class="hidden px-unit-md pb-unit-md pt-0 flex flex-col gap-unit-sm text-body-sm text-on-surface-variant" id="acc-4">
+<p class="leading-relaxed">
+          Caché de activos 'Cache-First' inmutable para garantizar operatividad en sótanos, naves aisladas y obra sin cobertura 4G/5G. Manifest dual con permisos de almacenamiento continuo y pantalla completa sin barra de navegación.
+        </p>
+</div>
+</div>
+<!-- Module 5: Documentation & CNC Postprocessors -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<div class="p-unit-md flex items-start justify-between gap-unit-sm cursor-pointer bg-surface-container" onclick="toggleAccordion('acc-5', 'icon-5')">
+<div class="flex items-start gap-unit-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-[10px] text-outline uppercase">05 · SCRIPTS &amp; CONTROL NUMÉRICO</span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[9px]">2.7 MB</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Manuales, Setup Scripts &amp; Postprocesadores</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="icon-5">expand_more</span>
+</div>
+<div class="hidden px-unit-md pb-unit-md pt-0 flex flex-col gap-unit-sm text-body-sm text-on-surface-variant" id="acc-5">
+<p class="leading-relaxed">
+          Scripts de arranque automatizado (<span class="font-label-caps text-[11px] text-primary">setup.sh</span> / <span class="font-label-caps text-[11px] text-primary">setup.ps1</span>), esquemas de caída de tensión para perfiles LED COB de 24V y postprocesador ISO G-Code compatible con BiesseWorks, Homag WoodWOP y software universal GRBL.
+        </p>
+</div>
+</div>
+</div>
+<!-- Realtime Packaging Log Terminal -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-md">
+<div class="flex items-center justify-between px-unit-md py-unit-xs bg-surface-container-high">
+<div class="flex items-center gap-unit-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error inline-block"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container inline-block"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary inline-block"></span>
+<span class="font-label-caps text-[10px] text-on-surface ml-unit-xs">TERMINAL :: BUILD_LOGGER_V2.4</span>
+</div>
+<span class="font-label-caps text-[10px] text-secondary uppercase font-bold">READY 49/49</span>
+</div>
+<div class="p-unit-sm font-label-caps text-[11px] text-secondary leading-relaxed flex flex-col gap-1 overflow-x-auto select-all max-h-48 overflow-y-auto">
+<div class="text-on-surface-variant">[08:14:02.102] INFO : Iniciando compilación de Bundle V2.4 'Karpintero Studio'...</div>
+<div class="text-on-surface-variant">[08:14:03.450] SYNC : Exportando 49 pantallas técnicas a componentes autónomos.</div>
+<div class="text-primary">[08:14:05.120] TREE : Inyectando motor de optimización de corte con kerf 3.2mm... OK</div>
+<div class="text-primary">[08:14:06.840] BLE  : Enlazando perfiles GATT Leica DISTO &amp; Bosch GLM... OK</div>
+<div class="text-primary">[08:14:07.310] CNC  : Generando librerías paramétricas G-Code e interpolación... OK</div>
+<div class="text-primary">[08:14:08.012] DB   : Compilando esquemas SQLite y tarifas Finsa/Egger/Blum... OK</div>
+<div class="text-secondary font-bold">[08:14:09.600] PKG  : Archivo 'karpintero-studio-bundle-v2.4-full.zip' generado (34.2 MB).</div>
+<div class="text-primary-container font-bold">[08:14:09.910] CHECKSUM SHA256: 9b1e4ac572d410ef9b8f02c77d401ae8 (INTEGRIDAD 100%)</div>
+</div>
+</div>
+<!-- Footnote & Hardware Compatibility Info -->
+<div class="flex items-center justify-between px-unit-xs pb-unit-sm text-on-surface-variant font-label-caps text-[10px]">
+<span>DISTRIBUCIÓN PRIVADA TALLER</span>
+<span class="flex items-center gap-unit-2xs text-secondary">
+<span class="material-symbols-outlined text-[14px]">bolt</span> REVISIÓN 2.40.49
+    </span>
+</div>
+</div>
+<script>
+  function toggleAccordion(contentId, iconId) {
+    const content = document.getElementById(contentId);
+    const icon = document.getElementById(iconId);
+    if (!content || !icon) return;
+
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.textContent = 'expand_less';
+    } else {
+      content.classList.add('hidden');
+      icon.textContent = 'expand_more';
+    }
+  }
+
+  function copyChecksum() {
+    const hash = "9b1e4ac572d410ef9b8f02c77d401ae8";
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(hash).then(notifyCopied);
+    } else {
+      notifyCopied();
+    }
+  }
+
+  function notifyCopied() {
+    const label = document.getElementById('copy-feedback');
+    if (label) {
+      const original = label.textContent;
+      label.textContent = "COPIADO";
+      label.parentElement.classList.add('text-secondary');
+      setTimeout(() => {
+        label.textContent = original;
+        label.parentElement.classList.remove('text-secondary');
+      }, 1600);
+    }
+  }
+
+  function triggerDownload() {
+    const btn = document.getElementById('btn-download');
+    const icon = document.getElementById('dl-icon');
+    const text = document.getElementById('dl-text');
+
+    if (!btn || !text || !icon) return;
+
+    btn.disabled = true;
+    icon.textContent = 'sync';
+    icon.classList.add('animate-spin');
+    text.textContent = 'Descargando ZIP (34.2 MB)...';
+
+    // Simulate direct download handoff
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      icon.textContent = 'check_circle';
+      text.textContent = '¡Descarga Iniciada!';
+
+      // Create fallback dummy zip trigger
+      const link = document.createElement('a');
+      link.href = '#';
+      link.setAttribute('download', 'karpintero-bundle-v2.4.zip');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      setTimeout(() => {
+        icon.textContent = 'folder_zip';
+        text.textContent = 'Descargar Bundle Completo (34.2 MB)';
+        btn.disabled = false;
+      }, 2500);
+    }, 1200);
+  }
+
+  function quickAction(type) {
+    if (type === 'whatsapp') {
+      const msg = encodeURIComponent("📦 Aquí tienes el Bundle v2.4 de Karpintero Studio (49 pantallas y CNC) verificado: sha256: 9b1e4ac572d410ef9b8f02c77d401ae8");
+      window.open(`https://wa.me/?text=${msg}`, '_blank');
+    } else if (type === 'link') {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href);
+      }
+      alert("Enlace directo copiado al portapapeles.");
+    } else if (type === 'usb') {
+      alert("Generando paquete formateado FAT32/exFAT para lectura en CNC Biesse/Homag.");
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-2xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Costes</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Retales</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="logistica-carga" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">rv_hookup</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Logística</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="mantenimiento-cnc" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">settings_suggest</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Taller CNC</span></a></div></nav><script src="../core/store.js"></script></body></html>

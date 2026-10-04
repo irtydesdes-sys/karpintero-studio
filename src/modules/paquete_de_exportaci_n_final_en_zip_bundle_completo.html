@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.45)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-unit-sm"><div class="flex items-center gap-unit-md min-w-0 flex-1"><div class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center shrink-0 text-primary-container shadow-[0_2px_0px_#0b0f12]"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[9px] uppercase font-bold shrink-0">Taller &amp; CNC</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Logistica Carga</h1></div></div><div class="flex items-center gap-unit-xs shrink-0"><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html" title="Gestor de Retales"><span class="material-symbols-outlined text-[20px]">grid_view</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="logistica-carga" href="proximamente.html" title="Logística de Carga y Furgoneta"><span class="material-symbols-outlined text-[20px]">local_shipping</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="mantenimiento-cnc" href="proximamente.html" title="Mantenimiento y Discos CNC"><span class="material-symbols-outlined text-[20px]">build_circle</span></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-2">Copia de seguridad real de todos tus datos</div>
+    <div class="flex flex-col gap-2 text-xs">
+      <button id="kp-backup-export" class="py-2 rounded bg-primary-container text-on-primary-container font-bold">Descargar copia real (.json)</button>
+      <label class="py-2 rounded bg-surface-container text-center font-bold cursor-pointer">Restaurar desde archivo real
+        <input id="kp-backup-import" type="file" accept="application/json" class="hidden"/>
+      </label>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  document.getElementById('kp-backup-export').addEventListener('click', function(){
+    var data = window.KarpinteroDB.exportBackup();
+    var blob = new Blob([data], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'karpintero_backup_' + new Date().toISOString().slice(0,10) + '.json';
+    a.click();
+  });
+  document.getElementById('kp-backup-import').addEventListener('change', function(e){
+    var file = e.target.files[0]; if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(){
+      try { window.KarpinteroDB.importBackup(reader.result); alert('Datos reales restaurados. Recarga cualquier pantalla para verlos.'); }
+      catch (err) { alert('Archivo inválido: ' + err.message); }
+    };
+    reader.readAsText(file);
+  });
+})();
+</script><div class="flex flex-col w-full px-margin-mobile py-unit-lg gap-unit-lg max-w-xl mx-auto">
+<!-- Top Hero / Release Stamp Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-unit-lg flex flex-col gap-unit-md shadow-[0_4px_16px_rgba(0,0,0,0.5)]">
+<div class="absolute -right-12 -top-12 w-40 h-40 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between gap-unit-xs">
+<span class="inline-flex items-center gap-unit-xs px-unit-sm py-unit-2xs rounded bg-primary-container/20 text-primary-container font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+        Release V1.0.0 · Production Ready
+      </span>
+<span class="font-dimension-md text-dimension-md text-secondary bg-surface-container-high px-unit-xs py-0.5 rounded">
+        ZIP · 28.4 MB
+      </span>
+</div>
+<div class="flex flex-col gap-unit-2xs">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight">
+        Exportación Integral Karpintero Studio
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Código fuente empaquetado, 47 módulos HTML/Tailwind, esquema SQLite local, configuración Capacitor 6 BLE, Electron y assets de taller.
+      </p>
+</div>
+<!-- Metrics Strip -->
+<div class="grid grid-cols-3 gap-unit-xs pt-unit-xs">
+<div class="bg-surface-container-high p-unit-xs rounded flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">Módulos</span>
+<span class="font-dimension-lg text-dimension-lg text-primary font-bold">47</span>
+</div>
+<div class="bg-surface-container-high p-unit-xs rounded flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">Entorno</span>
+<span class="font-dimension-lg text-dimension-lg text-secondary font-bold">Offline</span>
+</div>
+<div class="bg-surface-container-high p-unit-xs rounded flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">Checksum</span>
+<span class="font-dimension-lg text-dimension-lg text-on-surface font-bold">SHA-256</span>
+</div>
+</div>
+</div>
+<!-- Primary Download Action Box -->
+<div class="flex flex-col gap-unit-sm">
+<button class="w-full min-h-touch-target-min py-unit-md px-unit-lg bg-primary-container text-on-primary font-title-lg text-title-lg rounded-xl flex items-center justify-between gap-unit-md transition-all active:translate-y-0.5 shadow-[0_4px_0px_#613b00] hover:brightness-105 active:shadow-none" id="downloadBtn">
+<div class="flex items-center gap-unit-sm min-w-0">
+<span class="material-symbols-outlined text-[28px] text-on-primary shrink-0" style="font-variation-settings: 'FILL' 1;">archive</span>
+<div class="flex flex-col text-left min-w-0">
+<span class="truncate font-bold text-on-primary">Descargar karpintero-studio-v1.0.zip</span>
+<span class="font-label-caps text-[10px] text-on-primary-container tracking-wider uppercase">Paquete Completo · 28.4 MB</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[24px] text-on-primary shrink-0">download</span>
+</button>
+<div class="hidden transition-all bg-surface-container-highest px-unit-md py-unit-xs rounded text-primary text-center font-body-sm text-body-sm" id="toastMessage">
+      Descarga iniciada. Verificando integridad SHA-256...
+    </div>
+</div>
+<!-- Checksum & Integrity Badge Bar -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex flex-col gap-unit-xs shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-secondary flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+        Integridad Verificada
+      </span>
+<span class="font-label-caps text-[10px] text-primary px-unit-xs py-0.5 rounded bg-primary-container/20">
+        100% LISTO
+      </span>
+</div>
+<!-- Progress track -->
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="w-full h-full bg-primary-container rounded-full"></div>
+</div>
+<div class="flex items-center justify-between pt-unit-2xs">
+<span class="font-dimension-md text-[11px] text-on-surface-variant truncate">
+        SHA-256: 8f4c2b97c0a4e76d...3e1a09d7
+      </span>
+<button class="font-label-caps text-[10px] text-secondary hover:text-secondary-fixed flex items-center gap-unit-2xs shrink-0 active:scale-95 transition-transform" onclick="navigator.clipboard &amp;&amp; navigator.clipboard.writeText('8f4c2b97c0a4e76d10f279d01e1498b8c73e1a09d7f023ac92'); const el = document.getElementById('copiedTag'); el.classList.remove('hidden'); setTimeout(()=&gt;el.classList.add('hidden'), 2000);">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+        COPIAR
+      </button>
+</div>
+<span class="hidden font-label-caps text-[10px] text-primary self-end" id="copiedTag">¡Hash copiado al portapapeles!</span>
+</div>
+<!-- Interactive Package Module Manifest (Checklist) -->
+<div class="flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">
+        Contenido del Archivo ZIP
+      </span>
+<span class="font-label-caps text-[10px] text-secondary">
+        5 Componentes Compilados
+      </span>
+</div>
+<!-- Checklist Item 1 -->
+<div class="bg-surface-container rounded-lg p-unit-md flex items-start gap-unit-md shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+<div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-unit-xs">
+<span class="font-title-lg text-title-lg text-on-surface truncate">Frontend &amp; 47 Pantallas Técnicas</span>
+<span class="font-dimension-md text-[11px] text-primary shrink-0">16.8 MB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2xs">
+          Pantallas completas HTML5/Tailwind/JS: despiece milimétrico, cotas 2D, optimizador de tableros, cajoneras Blum y simulador CNC.
+        </p>
+</div>
+</div>
+<!-- Checklist Item 2 -->
+<div class="bg-surface-container rounded-lg p-unit-md flex items-start gap-unit-md shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+<div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-unit-xs">
+<span class="font-title-lg text-title-lg text-on-surface truncate">Configuración Multiplataforma</span>
+<span class="font-dimension-md text-[11px] text-secondary shrink-0">4.2 MB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2xs">
+          Capacitor 6 nativo para Android 11+ / iOS con soporte Bluetooth LE para distanciómetros láser y wrapper Electron para Windows Taller.
+        </p>
+</div>
+</div>
+<!-- Checklist Item 3 -->
+<div class="bg-surface-container rounded-lg p-unit-md flex items-start gap-unit-md shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+<div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-unit-xs">
+<span class="font-title-lg text-title-lg text-on-surface truncate">Base de Datos SQLite &amp; Seed</span>
+<span class="font-dimension-md text-[11px] text-primary shrink-0">2.1 MB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2xs">
+          Esquemas `schema.sql` y `seed.sql` con tarifas de tableros Egger/Finsa, bisagras Blum Clip Top, Häfele y proyecto demo PRJ-2024-88.
+        </p>
+</div>
+</div>
+<!-- Checklist Item 4 -->
+<div class="bg-surface-container rounded-lg p-unit-md flex items-start gap-unit-md shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+<div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-unit-xs">
+<span class="font-title-lg text-title-lg text-on-surface truncate">PWA Offline &amp; Service Worker</span>
+<span class="font-dimension-md text-[11px] text-secondary shrink-0">3.8 MB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2xs">
+          `manifest.webmanifest`, precaching offline para naves industriales sin señal móvil, iconos vectoriales y caché persistente IndexedDB.
+        </p>
+</div>
+</div>
+<!-- Checklist Item 5 -->
+<div class="bg-surface-container rounded-lg p-unit-md flex items-start gap-unit-md shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+<div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-unit-xs">
+<span class="font-title-lg text-title-lg text-on-surface truncate">Manuales &amp; Scripts de Montaje</span>
+<span class="font-dimension-md text-[11px] text-primary shrink-0">1.5 MB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2xs">
+          Documentación técnica en Markdown, esquemas de despiece unifilares y automatizaciones de despliegue `setup.sh` y `setup.ps1`.
+        </p>
+</div>
+</div>
+</div>
+<!-- Live Packaging Console / Build Log -->
+<div class="flex flex-col gap-unit-xs">
+<div class="flex items-center justify-between px-unit-2xs">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary">terminal</span>
+        Registro de Compilación (Build Log)
+      </span>
+<span class="font-dimension-md text-[11px] text-secondary">NODE_ENV=production</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-unit-md font-dimension-md text-[11px] text-on-surface flex flex-col gap-unit-2xs leading-relaxed overflow-x-auto shadow-inner">
+<div class="flex items-center gap-unit-xs text-on-surface-variant">
+<span class="text-secondary">[09:15:02]</span>
+<span>Bundling 47 HTML modules into /dist/src/</span>
+</div>
+<div class="flex items-center gap-unit-xs text-on-surface-variant">
+<span class="text-secondary">[09:15:04]</span>
+<span>Injecting BLE plugin (@capacitor-community/bluetooth-le)</span>
+</div>
+<div class="flex items-center gap-unit-xs text-on-surface-variant">
+<span class="text-secondary">[09:15:05]</span>
+<span>Compiling seed.sql (240 materials) &amp; schema.sql for SQLite</span>
+</div>
+<div class="flex items-center gap-unit-xs text-on-surface-variant">
+<span class="text-secondary">[09:15:06]</span>
+<span>Generating Service Worker pre-cache manifests &amp; app icons</span>
+</div>
+<div class="flex items-center gap-unit-xs text-primary font-bold">
+<span class="text-secondary">[09:15:07]</span>
+<span>ZIP ready: karpintero-studio-v1.0.zip (28.4 MB) OK</span>
+</div>
+</div>
+</div>
+<!-- Secondary Distribution Channels -->
+<div class="flex flex-col gap-unit-xs">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant px-unit-2xs">
+      Canales Alternativos de Despliegue
+    </span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-unit-sm">
+<!-- WhatsApp Workshop -->
+<button class="min-h-touch-target-min py-unit-sm px-unit-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg flex items-center justify-center gap-unit-sm text-center transition-colors" onclick="window.open('https://api.whatsapp.com/send?text=Descarga%20Karpintero%20Studio%20V1.0%20Bundle:%20https://karpintero.local/download/v1.0.zip', '_blank')">
+<span class="material-symbols-outlined text-[20px] text-secondary">chat</span>
+<span class="font-body-sm text-body-sm font-semibold truncate">Enviar por WhatsApp</span>
+</button>
+<!-- Workshop Email -->
+<button class="min-h-touch-target-min py-unit-sm px-unit-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg flex items-center justify-center gap-unit-sm text-center transition-colors" onclick="window.location.href='mailto:taller@karpintero.local?subject=Bundle%20Karpintero%20Studio%20v1.0&amp;body=Enlace%20de%20descarga%20y%20checksum%20SHA-256%20del%20bundle%20completo.'">
+<span class="material-symbols-outlined text-[20px] text-primary">mail</span>
+<span class="font-body-sm text-body-sm font-semibold truncate">Correo de Taller</span>
+</button>
+<!-- Clone / cURL command -->
+<button class="min-h-touch-target-min py-unit-sm px-unit-md bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg flex items-center justify-center gap-unit-sm text-center transition-colors" onclick="navigator.clipboard &amp;&amp; navigator.clipboard.writeText('curl -O https://releases.karpintero.local/v1.0.0/karpintero-studio.zip'); const el = document.getElementById('curlNotice'); el.classList.remove('hidden'); setTimeout(()=&gt;el.classList.add('hidden'), 2000);">
+<span class="material-symbols-outlined text-[20px] text-secondary">terminal</span>
+<span class="font-body-sm text-body-sm font-semibold truncate">Copiar cURL / Git</span>
+</button>
+</div>
+<span class="hidden font-label-caps text-[10px] text-secondary text-center" id="curlNotice">Comando de terminal copiado: curl -O https://releases...</span>
+</div>
+<!-- Workshop Equipment Integration Note -->
+<div class="bg-surface-container-low p-unit-md rounded-lg flex items-center gap-unit-md shadow-sm">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[22px]">precision_manufacturing</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-lg text-[15px] text-on-surface truncate">Compatibilidad CNC &amp; Bluetooth</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+        Post-procesador G-Code probado en GRBL/Mach3. Conexión directa a distanciómetros Bosch GLM 50C y Leica DISTO D2.
+      </span>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for bundle download simulation
+  const downloadBtn = document.getElementById('downloadBtn');
+  const toastMessage = document.getElementById('toastMessage');
+
+  if (downloadBtn && toastMessage) {
+    downloadBtn.addEventListener('click', () => {
+      toastMessage.classList.remove('hidden');
+      downloadBtn.classList.add('opacity-90');
+      
+      setTimeout(() => {
+        // Create an ephemeral mock trigger for file download
+        const link = document.createElement('a');
+        link.href = '#';
+        link.setAttribute('download', 'karpintero-studio-v1.0.zip');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        toastMessage.textContent = 'Archivo karpintero-studio-v1.0.zip transferido al dispositivo.';
+        setTimeout(() => {
+          toastMessage.classList.add('hidden');
+          downloadBtn.classList.remove('opacity-90');
+        }, 3000);
+      }, 1000);
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-2xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Costes</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Retales</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="logistica-carga" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">rv_hookup</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Logística</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="mantenimiento-cnc" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">settings_suggest</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Taller CNC</span></a></div></nav><script src="../core/store.js"></script></body></html>

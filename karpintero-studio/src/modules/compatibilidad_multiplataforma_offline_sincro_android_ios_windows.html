@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.45)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-unit-sm"><div class="flex items-center gap-unit-md min-w-0 flex-1"><div class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center shrink-0 text-primary-container shadow-[0_2px_0px_#0b0f12]"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[9px] uppercase font-bold shrink-0">Taller &amp; CNC</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Mantenimiento Cnc</h1></div></div><div class="flex items-center gap-unit-xs shrink-0"><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html" title="Gestor de Retales"><span class="material-symbols-outlined text-[20px]">grid_view</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="logistica-carga" href="proximamente.html" title="Logística de Carga y Furgoneta"><span class="material-symbols-outlined text-[20px]">local_shipping</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="mantenimiento-cnc" href="proximamente.html" title="Mantenimiento y Discos CNC"><span class="material-symbols-outlined text-[20px]">build_circle</span></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-2">Estado real de almacenamiento en este dispositivo</div>
+    <div id="kp-sync-info" class="text-sm"></div>
+  </div>
+</section>
+<script>
+(function(){
+  function render(){
+    var info = window.KarpinteroDB.getStorageInfo();
+    document.getElementById('kp-sync-info').innerHTML =
+      'Proyectos guardados: <b>' + info.totalProyectos + '</b><br/>' +
+      'Piezas guardadas: <b>' + info.totalPiezas + '</b><br/>' +
+      'Tamaño real de datos: <b>' + (info.bytes/1024).toFixed(1) + ' KB</b><br/>' +
+      'Último guardado real: <b>' + (info.lastSaved ? new Date(info.lastSaved).toLocaleString() : 'Nunca') + '</b>';
+  }
+  document.addEventListener('DOMContentLoaded', render);
+  if (document.readyState !== 'loading') render();
+})();
+</script><div class="flex flex-col w-full px-gutter-mobile py-unit-md gap-unit-lg text-on-surface">
+<!-- Header Técnico Contextual -->
+<section class="flex flex-col gap-unit-xs bg-surface-container p-unit-lg rounded-xl shadow-md">
+<div class="flex items-center justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Ecosistema Karpintero Cloud</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container-high px-unit-sm py-unit-2xs rounded-DEFAULT">v4.2 PRO</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">Sincronización &amp; Multiplataforma</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2xs">Gestión en tiempo real de nodos operativos: Taller CNC, Medición en Obra y Terminales de Corte.</p>
+</div>
+<!-- Badges de Estado -->
+<div class="grid grid-cols-2 gap-unit-sm mt-unit-sm">
+<div class="flex items-center gap-unit-sm bg-surface-container-low p-unit-sm rounded-lg">
+<span class="material-symbols-outlined text-primary-container text-[20px]">hub</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Nodos Vinculados</span>
+<span class="font-dimension-md text-dimension-md text-primary font-bold truncate">3 Dispositivos</span>
+</div>
+</div>
+<div class="flex items-center gap-unit-sm bg-surface-container-low p-unit-sm rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">sync_saved_locally</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Estado Red</span>
+<span class="font-dimension-md text-dimension-md text-secondary font-bold truncate">Sincronizado Ahora</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Matriz de Compatibilidad y Dispositivos Activos -->
+<section class="flex flex-col gap-unit-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">devices</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Entornos Activos de Trabajo</h3>
+</div>
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">3 / 3 En Línea</span>
+</div>
+<!-- Dispositivo 1: Android de Taller -->
+<article class="flex flex-col bg-surface-container p-unit-lg rounded-xl gap-unit-sm shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[24px]">phone_android</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-[10px] text-secondary font-bold uppercase">Android 11 a 14+</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<h4 class="font-title-lg text-[16px] text-on-surface font-semibold truncate">Samsung Galaxy Tab Active / Taller</h4>
+</div>
+</div>
+<span class="bg-primary-container/20 text-primary-container px-unit-sm py-0.5 rounded-DEFAULT font-label-caps text-[10px] font-bold shrink-0 uppercase">Taller Corte</span>
+</div>
+<div class="grid grid-cols-2 gap-unit-xs mt-unit-xs">
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">bluetooth_connected</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">BLE Bosch/Leica GLM</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">view_in_ar</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Cámara AR Retales</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">front_hand</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Modo Guantes Taller</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">database</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">SQLite Local Offline</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-unit-xs">
+<span class="font-label-caps text-[10px] text-outline uppercase">Última acción: Optimizado Melamina 18mm</span>
+<span class="font-dimension-md text-body-sm text-secondary font-mono">100% Batería</span>
+</div>
+</article>
+<!-- Dispositivo 2: iOS de Medición en Obra -->
+<article class="flex flex-col bg-surface-container p-unit-lg rounded-xl gap-unit-sm shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[24px]">tablet_mac</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-[10px] text-secondary font-bold uppercase">iOS 15 a 17+ / iPadOS</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<h4 class="font-title-lg text-[16px] text-on-surface font-semibold truncate">iPad Pro M2 LiDAR / iPhone 15 Pro</h4>
+</div>
+</div>
+<span class="bg-secondary/20 text-secondary px-unit-sm py-0.5 rounded-DEFAULT font-label-caps text-[10px] font-bold shrink-0 uppercase">En Obra</span>
+</div>
+<div class="grid grid-cols-2 gap-unit-xs mt-unit-xs">
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">radar</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Escaneo 3D LiDAR</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">draw</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Apple Pencil Croquis</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">ink_pen</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Firma Actas de Cierre</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">speed</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Metal GPU Aceleración</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-unit-xs">
+<span class="font-label-caps text-[10px] text-outline uppercase">Obra actual: Ático Diagonal Mar #104</span>
+<span class="font-dimension-md text-body-sm text-secondary font-mono">Modo Standby</span>
+</div>
+</article>
+<!-- Dispositivo 3: Windows PC Principal -->
+<article class="flex flex-col bg-surface-container p-unit-lg rounded-xl gap-unit-sm shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[24px]">desktop_windows</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-[10px] text-secondary font-bold uppercase">Windows 10 / 11 64-bit</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<h4 class="font-title-lg text-[16px] text-on-surface font-semibold truncate">Estación Taller CNC Principal (Workstation)</h4>
+</div>
+</div>
+<span class="bg-primary-container/20 text-primary-container px-unit-sm py-0.5 rounded-DEFAULT font-label-caps text-[10px] font-bold shrink-0 uppercase">Master CNC</span>
+</div>
+<div class="grid grid-cols-2 gap-unit-xs mt-unit-xs">
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">precision_manufacturing</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">G-Code Maestro/Homag</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">memory</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Nesting Multihilo 16c</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">print</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Zebra QR Térmica LAN</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">architecture</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Bridge DXF / CAD-CAM</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-unit-xs">
+<span class="font-label-caps text-[10px] text-outline uppercase">Unidad Z: 48 Programas Listos</span>
+<span class="font-dimension-md text-body-sm text-secondary font-mono">CPU 14% • LAN 1Gbps</span>
+</div>
+</article>
+</section>
+<!-- Motor Offline y Métricas Local-First -->
+<section class="flex flex-col bg-surface-container p-unit-lg rounded-xl gap-unit-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[22px]">offline_pin</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Motor Local-First (Sin Conexión)</h3>
+</div>
+<span class="bg-secondary-container/20 text-secondary font-label-caps text-[10px] px-unit-xs py-0.5 rounded-DEFAULT uppercase font-bold">PWA Activa</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Arquitectura local resiliente. Permite el despiece completo, catalogación de retales y cálculo de escuadría dentro de sótanos de obra y naves industriales blindadas con cero cobertura.
+    </p>
+<!-- Métricas Offline -->
+<div class="grid grid-cols-2 gap-unit-sm">
+<div class="flex flex-col bg-surface-container-low p-unit-sm rounded-lg">
+<span class="font-label-caps text-label-caps text-outline uppercase">Caché Local Offline</span>
+<span class="font-dimension-hero text-[28px] text-primary font-bold">2.4 <span class="text-[16px] text-on-surface-variant">GB</span></span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">Planos 2D, Texturas y DXF</span>
+</div>
+<div class="flex flex-col bg-surface-container-low p-unit-sm rounded-lg">
+<span class="font-label-caps text-label-caps text-outline uppercase">Cola Sincro (CRDT)</span>
+<span class="font-dimension-hero text-[28px] text-secondary font-bold">0 <span class="text-[16px] text-on-surface-variant">pendientes</span></span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">Sin conflictos detectados</span>
+</div>
+</div>
+<!-- Toggle de Descarga Offline -->
+<div class="flex items-center justify-between bg-surface-container-high p-unit-md rounded-lg gap-unit-sm">
+<div class="flex flex-col min-w-0">
+<span class="font-title-lg text-[14px] text-on-surface font-semibold">Descargar proyectos activos a memoria local</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Mantiene actualizados tableros, retales y herrajes</span>
+</div>
+<button aria-label="Alternar descarga offline" class="w-12 h-7 bg-primary-container rounded-full p-1 flex items-center justify-end transition-colors cursor-pointer shrink-0" id="offline-toggle-btn" type="button">
+<span class="w-5 h-5 bg-on-primary rounded-full shadow-md"></span>
+</button>
+</div>
+</section>
+<!-- Parámetros de Integración y Hardware Externo -->
+<section class="flex flex-col bg-surface-container p-unit-lg rounded-xl gap-unit-sm shadow-md">
+<div class="flex items-center gap-unit-xs mb-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">cable</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Periféricos &amp; Red de Taller</h3>
+</div>
+<!-- Periférico 1 -->
+<div class="flex items-center justify-between bg-surface-container-low p-unit-sm rounded-lg">
+<div class="flex items-center gap-unit-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">straighten</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-[13px] text-on-surface font-semibold truncate">Bosch GLM 50C / Leica Disto</span>
+<span class="font-label-caps text-[10px] text-outline">Bluetooth BLE • Cota directa a despiece</span>
+</div>
+</div>
+<span class="bg-surface-container-high text-secondary px-unit-sm py-0.5 rounded-DEFAULT font-label-caps text-[10px] font-bold uppercase shrink-0">Vinculado</span>
+</div>
+<!-- Periférico 2 -->
+<div class="flex items-center justify-between bg-surface-container-low p-unit-sm rounded-lg">
+<div class="flex items-center gap-unit-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">qr_code_scanner</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-[13px] text-on-surface font-semibold truncate">Zebra ZD421 / Brother QL</span>
+<span class="font-label-caps text-[10px] text-outline">192.168.1.45:9100 • Etiquetas Canto y Retal</span>
+</div>
+</div>
+<span class="bg-surface-container-high text-primary-container px-unit-sm py-0.5 rounded-DEFAULT font-label-caps text-[10px] font-bold uppercase shrink-0">En Red</span>
+</div>
+<!-- Periférico 3 -->
+<div class="flex items-center justify-between bg-surface-container-low p-unit-sm rounded-lg">
+<div class="flex items-center gap-unit-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">folder_shared</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-[13px] text-on-surface font-semibold truncate">Directorio CNC Nesting</span>
+<span class="font-label-caps text-[10px] text-outline">SMB Z:\Maquinaria\CNC_Nesting\Output</span>
+</div>
+</div>
+<span class="bg-surface-container-high text-secondary px-unit-sm py-0.5 rounded-DEFAULT font-label-caps text-[10px] font-bold uppercase shrink-0">Montado</span>
+</div>
+</section>
+<!-- Botones de Acción Rápida -->
+<section class="flex flex-col gap-unit-sm mt-unit-xs">
+<!-- Botón Primario Ámbar -->
+<button class="w-full min-h-touch-target-min bg-primary-container text-on-primary font-title-lg text-title-lg rounded-xl flex items-center justify-center gap-unit-sm shadow-[0_2px_0px_#0b0f12] active:translate-y-0.5 transition-transform" id="sync-now-btn" type="button">
+<span class="material-symbols-outlined text-[24px]">sync</span>
+<span>Sincronizar Todo el Taller Manualmente</span>
+</button>
+<!-- Botón Secundario Oscuro Windows -->
+<button class="w-full min-h-touch-target-min bg-surface-container-high text-secondary font-title-lg text-[15px] rounded-xl flex items-center justify-center gap-unit-sm shadow-[0_2px_0px_#0b0f12] active:translate-y-0.5 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">download</span>
+<span>Descargar Instalador PC (Windows 64-bit .msi)</span>
+</button>
+<!-- Botón Terciario QR Mobile -->
+<button class="w-full min-h-touch-target-min bg-surface-container text-on-surface font-title-lg text-[14px] rounded-xl flex items-center justify-center gap-unit-sm active:translate-y-0.5 transition-transform" id="open-qr-btn" type="button">
+<span class="material-symbols-outlined text-primary-container text-[22px]">qr_code_2</span>
+<span>Ver QR para Vincular iPad, iPhone o Tablet Android</span>
+</button>
+</section>
+<!-- Panel Desplegable QR para Vinculación Móvil Rápida -->
+<div class="hidden flex-col bg-surface-container-highest p-unit-lg rounded-xl gap-unit-md mt-unit-xs shadow-xl" id="qr-modal">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">devices_other</span>
+<h4 class="font-title-lg text-[16px] text-on-surface font-semibold">Emparejar Nuevo Terminal</h4>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="close-qr-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col items-center justify-center p-unit-md bg-surface-container-lowest rounded-lg gap-unit-sm">
+<!-- Representación visual de código QR de sincronización industrial -->
+<div class="w-44 h-44 bg-surface-bright p-2 rounded-lg flex flex-col items-center justify-center relative shadow-inner">
+<div class="grid grid-cols-6 grid-rows-6 gap-1 w-full h-full p-2 bg-surface-container-lowest rounded">
+<div class="col-span-2 row-span-2 bg-primary-container rounded-sm"></div>
+<div class="col-span-2 bg-secondary rounded-sm"></div>
+<div class="col-span-2 row-span-2 bg-primary-container rounded-sm"></div>
+<div class="col-span-1 bg-surface-variant rounded-sm"></div>
+<div class="col-span-1 bg-on-surface-variant rounded-sm"></div>
+<div class="col-span-2 row-span-2 bg-secondary rounded-sm"></div>
+<div class="col-span-2 bg-primary-container rounded-sm"></div>
+<div class="col-span-2 bg-surface-variant rounded-sm"></div>
+<div class="col-span-2 row-span-2 bg-primary-container rounded-sm"></div>
+<div class="col-span-1 bg-on-surface-variant rounded-sm"></div>
+<div class="col-span-3 bg-secondary rounded-sm"></div>
+</div>
+<span class="font-label-caps text-[9px] text-primary-container mt-1 uppercase font-mono">TOKEN: KRP-992-TALLER-X</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant text-center max-w-xs">
+        Abra la cámara del iPad o tablet Android en obra para transferir certificados y catálogos de corte al instante.
+      </p>
+</div>
+</div>
+<!-- Pie Técnico / Seguridad y Arquitectura -->
+<footer class="flex flex-col bg-surface-container-low p-unit-md rounded-xl gap-unit-xs mb-unit-lg">
+<div class="flex items-center justify-between text-outline">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">security</span>
+<span class="font-label-caps text-[10px] tracking-wider uppercase">Cifrado Militar AES-256 E2E</span>
+</div>
+<span class="font-label-caps text-[10px] text-outline font-mono">HASH: SHA-512-V4</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-tight">
+      Arquitectura Unificada: Core en C++ nativo para optimización de corte multihilo, wrapper Electron para Windows 64-bit y React Native / Capacitor PWA para dispositivos móviles de taller y campo.
+    </p>
+</footer>
+</div>
+<script>
+  (function() {
+    const syncBtn = document.getElementById('sync-now-btn');
+    const offlineToggle = document.getElementById('offline-toggle-btn');
+    const openQrBtn = document.getElementById('open-qr-btn');
+    const closeQrBtn = document.getElementById('close-qr-btn');
+    const qrModal = document.getElementById('qr-modal');
+
+    // Micro-interacción: Botón Sincronizar
+    if (syncBtn) {
+      syncBtn.addEventListener('click', function() {
+        const icon = this.querySelector('.material-symbols-outlined');
+        const textSpan = this.querySelector('span:last-child');
+        if (icon) icon.classList.add('animate-spin');
+        if (textSpan) textSpan.textContent = 'Sincronizando Nodos de Taller...';
+        
+        setTimeout(() => {
+          if (icon) icon.classList.remove('animate-spin');
+          if (textSpan) textSpan.textContent = '¡Todo el Taller Sincronizado!';
+          setTimeout(() => {
+            if (textSpan) textSpan.textContent = 'Sincronizar Todo el Taller Manualmente';
+          }, 2500);
+        }, 1200);
+      });
+    }
+
+    // Micro-interacción: Toggle Offline
+    if (offlineToggle) {
+      let active = true;
+      offlineToggle.addEventListener('click', function() {
+        active = !active;
+        if (active) {
+          this.classList.remove('bg-surface-container-highest', 'justify-start');
+          this.classList.add('bg-primary-container', 'justify-end');
+        } else {
+          this.classList.remove('bg-primary-container', 'justify-end');
+          this.classList.add('bg-surface-container-highest', 'justify-start');
+        }
+      });
+    }
+
+    // Abrir/Cerrar Modal QR
+    if (openQrBtn && qrModal) {
+      openQrBtn.addEventListener('click', function() {
+        qrModal.classList.remove('hidden');
+        qrModal.classList.add('flex');
+        qrModal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    }
+
+    if (closeQrBtn && qrModal) {
+      closeQrBtn.addEventListener('click', function() {
+        qrModal.classList.add('hidden');
+        qrModal.classList.remove('flex');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-2xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Costes</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Retales</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="logistica-carga" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">rv_hookup</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Logística</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="mantenimiento-cnc" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">settings_suggest</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Taller CNC</span></a></div></nav><script src="../core/store.js"></script></body></html>

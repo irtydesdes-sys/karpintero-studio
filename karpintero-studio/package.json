@@ -1,0 +1,37 @@
+{
+  "name": "karpintero-studio",
+  "version": "1.0.0",
+  "description": "Ecosistema integral de taller: medición BLE, despiece de muebles, CNC y optimización de tableros",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:apk": "./build-apk.sh",
+    "build:ios": "./build-ios.sh",
+    "build:win": "electron-builder --win --x64"
+  },
+  "dependencies": {
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
+    "@capacitor-community/bluetooth-le": "^6.0.0",
+    "@capacitor-community/sqlite": "^6.0.0"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.karpintero.studio",
+    "productName": "Karpintero Studio",
+    "directories": {
+      "output": "dist-win"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    }
+  }
+}

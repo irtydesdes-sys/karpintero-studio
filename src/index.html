@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpintero Studio — Hub de Taller</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+<style>body{font-family:'Work Sans',sans-serif;background-color:#101418;color:#e2e8f0;}</style>
+</head>
+<body class="min-h-screen p-4 max-w-6xl mx-auto">
+<header class="flex items-center justify-between border-b border-stone-800 pb-4 mb-6">
+  <div class="flex items-center space-x-3">
+    <div class="w-10 h-10 rounded bg-amber-500 text-black flex items-center justify-center font-black text-xl shadow-lg shadow-amber-500/20">K</div>
+    <div>
+      <h1 class="font-bold text-lg text-white leading-tight">Karpintero Studio</h1>
+      <span class="text-[11px] text-amber-500 font-semibold tracking-wider uppercase">Taller, Medición BLE &amp; CNC</span>
+    </div>
+  </div>
+  <div class="flex items-center gap-2">
+    <span class="text-xs px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded-full font-mono flex items-center gap-1.5">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> SQLite Offline
+    </span>
+    <span class="text-xs px-2.5 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded-full font-mono">31 pantallas</span>
+  </div>
+</header>
+<main>
+  <div class="bg-stone-900 border border-stone-800 rounded-xl p-5 mb-4 shadow-sm">
+    <div class="flex items-center justify-between mb-2">
+      <h2 class="text-xs font-bold text-stone-400 uppercase tracking-wider">Proyecto activo (dato real, no simulado)</h2>
+      <button id="kp-nuevo-proyecto" class="text-[11px] px-2 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/30">+ Nuevo proyecto</button>
+    </div>
+    <div id="kp-proyecto-activo" class="text-sm text-stone-200 font-mono"></div>
+    <select id="kp-selector-proyecto" class="mt-2 w-full bg-stone-950 text-stone-200 text-xs rounded px-2 py-1.5 border border-stone-800"></select>
+  </div>
+  <div class="bg-stone-900 border border-stone-800 rounded-xl p-5 mb-8 shadow-sm">
+    <h2 class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Centro de Control de Producción</h2>
+    <p class="text-sm text-stone-300 mb-4">Ecosistema técnico integrado para carpinterías: medición láser Bluetooth, optimización de cortes, despiece de muebles, CNC y exportación de dossieres técnicos.</p>
+    <div class="flex flex-wrap gap-2 text-xs font-mono">
+      <span class="px-2 py-1 bg-stone-800 rounded text-stone-300">📱 Android 11+</span>
+      <span class="px-2 py-1 bg-stone-800 rounded text-stone-300">🍎 iOS 15+</span>
+      <span class="px-2 py-1 bg-stone-800 rounded text-stone-300">💻 Windows 10/11</span>
+      <span class="px-2 py-1 bg-stone-800 rounded text-stone-300">📏 Leica/Bosch BLE</span>
+    </div>
+  </div>
+
+      <section class="mb-8">
+        <h3 class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Taller & Corte (5)</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <a href="modules/conexi_n_medidor_l_ser_ble_esc_ner_de_obra_en_vivo.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/conexi_n_medidor_l_ser_ble_esc_ner_de_obra_en_vivo.png" alt="Conexión Medidor Láser BLE (Escáner en Vivo)" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Conexión Medidor Láser BLE (Escáner en Vivo)</div>
+          </div>
+        </a>
+
+        <a href="modules/calculadora_de_falsa_escuadra_ajustes_en_obra.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/calculadora_de_falsa_escuadra_ajustes_en_obra.png" alt="Calculadora de Falsa Escuadra (Ajustes en Obra)" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Calculadora de Falsa Escuadra (Ajustes en Obra)</div>
+          </div>
+        </a>
+
+        <a href="modules/plano_2d_fijaci_n_y_regulaci_n_de_frente.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/plano_2d_fijaci_n_y_regulaci_n_de_frente.png" alt="Plano 2D: Fijación y Regulación de Frente" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Plano 2D: Fijación y Regulación de Frente</div>
+          </div>
+        </a>
+
+        <a href="modules/gestor_inteligente_de_retales_y_sobrantes_de_tableros.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/gestor_inteligente_de_retales_y_sobrantes_de_tableros.png" alt="Gestor Inteligente de Retales y Sobrantes" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Gestor Inteligente de Retales y Sobrantes</div>
+          </div>
+        </a>
+
+        <a href="modules/ajustes_de_taller_par_metros_tolerancias.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/ajustes_de_taller_par_metros_tolerancias.png" alt="Ajustes de Taller: Parámetros y Tolerancias" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Ajustes de Taller: Parámetros y Tolerancias</div>
+          </div>
+        </a>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h3 class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Mobiliario (13)</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <a href="modules/despiece_detallado_de_cajones.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/despiece_detallado_de_cajones.png" alt="Despiece Detallado de Cajones" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Despiece Detallado de Cajones</div>
+          </div>
+        </a>
+
+        <a href="modules/despiece_de_cajones_con_correderas_ocultas_undermount.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/despiece_de_cajones_con_correderas_ocultas_undermount.png" alt="Cajones con Correderas Ocultas Undermount" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Cajones con Correderas Ocultas Undermount</div>
+          </div>
+        </a>
+
+        <a href="modules/despiece_de_cajones_con_perfil_gola_y_perfil_j.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/despiece_de_cajones_con_perfil_gola_y_perfil_j.png" alt="Cajones con Perfil Gola y Perfil J" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Cajones con Perfil Gola y Perfil J</div>
+          </div>
+        </a>
+
+        <a href="modules/despiece_de_cajones_con_chafl_n_a_45_biselado.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/despiece_de_cajones_con_chafl_n_a_45_biselado.png" alt="Cajones con Chaflán a 45° (Biselado)" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Cajones con Chaflán a 45° (Biselado)</div>
+          </div>
+        </a>
+
+        <a href="modules/columnas_islas_y_ruteo_led_integral_de_cocina.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/columnas_islas_y_ruteo_led_integral_de_cocina.png" alt="Columnas, Islas y Ruteo LED de Cocina" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Columnas, Islas y Ruteo LED de Cocina</div>
+          </div>
+        </a>
+
+        <a href="modules/libreros_estanter_as_a_medida_y_muebles_de_guarda.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/libreros_estanter_as_a_medida_y_muebles_de_guarda.png" alt="Libreros, Estanterías y Muebles de Guarda" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Libreros, Estanterías y Muebles de Guarda</div>
+          </div>
+        </a>
+
+        <a href="modules/muebles_de_tv_escritorios_rec_maras_y_lambrines.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/muebles_de_tv_escritorios_rec_maras_y_lambrines.png" alt="Muebles de TV, Escritorios, Recámaras y Lambrines" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Muebles de TV, Escritorios, Recámaras y Lambrines</div>
+          </div>
+        </a>
+
+        <a href="modules/marcos_cercos_y_galces_de_puertas_de_paso.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/marcos_cercos_y_galces_de_puertas_de_paso.png" alt="Marcos, Cercos y Galces de Puertas de Paso" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Marcos, Cercos y Galces de Puertas de Paso</div>
+          </div>
+        </a>
+
+        <a href="modules/escaleras_de_madera_a_medida_zancas_y_barandillas.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/escaleras_de_madera_a_medida_zancas_y_barandillas.png" alt="Escaleras de Madera: Zancas y Barandillas" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Escaleras de Madera: Zancas y Barandillas</div>
+          </div>
+        </a>
+
+        <a href="modules/p_rgolas_decks_y_carpinter_a_de_exterior.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/p_rgolas_decks_y_carpinter_a_de_exterior.png" alt="Pérgolas, Decks y Carpintería de Exterior" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Pérgolas, Decks y Carpintería de Exterior</div>
+          </div>
+        </a>
+
+        <a href="modules/panelados_ac_sticos_alistonados_y_revestimientos_murales.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/panelados_ac_sticos_alistonados_y_revestimientos_murales.png" alt="Panelados Acústicos y Revestimientos Murales" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Panelados Acústicos y Revestimientos Murales</div>
+          </div>
+        </a>
+
+        <a href="modules/alta_ebanister_a_ensambles_y_siller_a_de_autor.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/alta_ebanister_a_ensambles_y_siller_a_de_autor.png" alt="Alta Ebanistería: Ensambles y Sillería de Autor" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Alta Ebanistería: Ensambles y Sillería de Autor</div>
+          </div>
+        </a>
+
+        <a href="modules/restauraci_n_y_ebanister_a_patrimonial.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/restauraci_n_y_ebanister_a_patrimonial.png" alt="Restauración y Ebanistería Patrimonial" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Restauración y Ebanistería Patrimonial</div>
+          </div>
+        </a>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h3 class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Instalación & MEP (4)</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <a href="modules/cajeados_t_cnicos_tomas_de_agua_desag_es_y_electricidad_en_mueble.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/cajeados_t_cnicos_tomas_de_agua_desag_es_y_electricidad_en_mueble.png" alt="Cajeados Técnicos: Agua, Desagüe y Electricidad" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Cajeados Técnicos: Agua, Desagüe y Electricidad</div>
+          </div>
+        </a>
+
+        <a href="modules/impresi_n_de_etiquetas_qr_esc_ner_de_montaje_en_obra.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/impresi_n_de_etiquetas_qr_esc_ner_de_montaje_en_obra.png" alt="Impresión de Etiquetas QR y Escáner de Montaje" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Impresión de Etiquetas QR y Escáner de Montaje</div>
+          </div>
+        </a>
+
+        <a href="modules/dossier_t_cnico_pdf_generador_de_etiquetas_qr.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/dossier_t_cnico_pdf_generador_de_etiquetas_qr.png" alt="Dossier Técnico PDF: Generador de Etiquetas QR" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Dossier Técnico PDF: Generador de Etiquetas QR</div>
+          </div>
+        </a>
+
+        <a href="modules/centro_de_exportaci_n_t_cnica_pdf_de_taller_etiquetas_qr.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/centro_de_exportaci_n_t_cnica_pdf_de_taller_etiquetas_qr.png" alt="Centro de Exportación Técnica PDF y QR" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Centro de Exportación Técnica PDF y QR</div>
+          </div>
+        </a>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h3 class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Gestión & Salida (9)</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <a href="modules/men_de_navegaci_n_entre_m_dulos.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/men_de_navegaci_n_entre_m_dulos.png" alt="Menú de Navegación entre Módulos" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Menú de Navegación entre Módulos</div>
+          </div>
+        </a>
+
+        <a href="modules/resumen_general_de_pantallas_y_m_dulos_de_taller.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/resumen_general_de_pantallas_y_m_dulos_de_taller.png" alt="Resumen General de Pantallas y Módulos" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Resumen General de Pantallas y Módulos</div>
+          </div>
+        </a>
+
+        <a href="modules/simulador_de_flujo_integral_de_proyecto.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/simulador_de_flujo_integral_de_proyecto.png" alt="Simulador de Flujo Integral de Proyecto" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Simulador de Flujo Integral de Proyecto</div>
+          </div>
+        </a>
+
+        <a href="modules/acta_de_entrega_final_con_firma_digital_garant_a.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/acta_de_entrega_final_con_firma_digital_garant_a.png" alt="Acta de Entrega Final (Firma Digital y Garantía)" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Acta de Entrega Final (Firma Digital y Garantía)</div>
+          </div>
+        </a>
+
+        <a href="modules/compartir_r_pido_por_whatsapp_y_correo.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/compartir_r_pido_por_whatsapp_y_correo.png" alt="Compartir Rápido por WhatsApp y Correo" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Compartir Rápido por WhatsApp y Correo</div>
+          </div>
+        </a>
+
+        <a href="modules/compatibilidad_multiplataforma_offline_sincro_android_ios_windows.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/compatibilidad_multiplataforma_offline_sincro_android_ios_windows.png" alt="Compatibilidad Multiplataforma Offline" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Compatibilidad Multiplataforma Offline</div>
+          </div>
+        </a>
+
+        <a href="modules/centro_de_descarga_real_script_paquete_zip.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/centro_de_descarga_real_script_paquete_zip.png" alt="Centro de Descarga: Script y Paquete ZIP" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Centro de Descarga: Script y Paquete ZIP</div>
+          </div>
+        </a>
+
+        <a href="modules/paquete_de_exportaci_n_final_en_zip_bundle_completo.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/paquete_de_exportaci_n_final_en_zip_bundle_completo.png" alt="Paquete de Exportación Final (ZIP Bundle)" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Paquete de Exportación Final (ZIP Bundle)</div>
+          </div>
+        </a>
+
+        <a href="modules/bundle_de_actualizaci_n_completo_49_pantallas.html" class="group flex flex-col bg-stone-900 border border-stone-800 rounded-xl overflow-hidden hover:border-amber-500 transition-all">
+          <div class="h-28 w-full overflow-hidden bg-stone-950"><img src="assets/thumbs/bundle_de_actualizaci_n_completo_49_pantallas.png" alt="Bundle de Actualización Completo" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity"/></div>
+          <div class="p-3">
+            <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">Bundle de Actualización Completo</div>
+          </div>
+        </a>
+        </div>
+      </section>
+</main>
+<footer class="text-center text-xs text-stone-500 border-t border-stone-800/80 pt-4 mt-8 pb-6">
+  Karpintero Studio · Datos reales guardados en este dispositivo (localStorage) · Compatible con Android, iOS y Windows Desktop
+</footer>
+<script src="core/store.js"></script>
+<script>
+(function(){
+  function render(){
+    var proj = window.KarpinteroDB.getActiveProject();
+    document.getElementById('kp-proyecto-activo').textContent = proj ? (proj.codigo + ' — ' + proj.nombre) : 'Sin proyectos aún';
+    var sel = document.getElementById('kp-selector-proyecto');
+    sel.innerHTML = '';
+    window.KarpinteroDB.listProjects().forEach(function(p){
+      var opt = document.createElement('option');
+      opt.value = p.id; opt.textContent = p.codigo + ' — ' + p.nombre;
+      if (proj && p.id === proj.id) opt.selected = true;
+      sel.appendChild(opt);
+    });
+  }
+  document.getElementById('kp-nuevo-proyecto').addEventListener('click', function(){
+    var nombre = prompt('Nombre del nuevo proyecto:');
+    if (!nombre) return;
+    window.KarpinteroDB.createProject({ nombre: nombre });
+    render();
+  });
+  document.getElementById('kp-selector-proyecto').addEventListener('change', function(e){
+    window.KarpinteroDB.setActiveProject(e.target.value);
+    render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>

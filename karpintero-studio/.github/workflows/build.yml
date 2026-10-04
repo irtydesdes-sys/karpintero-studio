@@ -1,0 +1,76 @@
+name: Compilar Karpintero Studio (Android, iOS y Windows)
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build-android:
+    name: Compilar APK Android real (instalable ya, sin firmar a mano)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - run: |
+          npm install
+          npx cap add android
+          npx cap sync android
+      - run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug --stacktrace
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KarpinteroStudio-Android-APK
+          path: android/app/build/outputs/apk/debug/*.apk
+
+  build-windows:
+    name: Compilar Instalador Windows real (.exe)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: |
+          npm install
+          npm run build:win
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KarpinteroStudio-Windows-Installer
+          path: dist-win/*.exe
+
+  build-ios:
+    name: Compilar app iOS real para Simulador (sin firma de Apple)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: |
+          npm install
+          npx cap add ios
+          npx cap sync ios
+      - run: |
+          cd ios/App
+          pod install
+          xcodebuild -workspace App.xcworkspace -scheme App             -sdk iphonesimulator -configuration Debug             -derivedDataPath build CODE_SIGNING_ALLOWED=NO build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KarpinteroStudio-iOS-Simulator-App
+          path: ios/App/build/Build/Products/Debug-iphonesimulator/*.app
+      # NOTA: esto compila y verifica la app para el Simulador de iOS, sin
+      # necesitar cuenta de Apple. Para instalarla en un iPhone/iPad real o
+      # publicarla en la App Store, Apple EXIGE (sin excepción, ni para
+      # nosotros ni para nadie) una cuenta de Apple Developer Program
+      # (99 USD/año) y firmar con un certificado + perfil de aprovisionamiento
+      # reales — ver README.md sección "iOS en un dispositivo real".

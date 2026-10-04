@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.45)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-unit-sm"><div class="flex items-center gap-unit-md min-w-0 flex-1"><div class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center shrink-0 text-primary-container shadow-[0_2px_0px_#0b0f12]"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[9px] uppercase font-bold shrink-0">Taller &amp; CNC</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Mantenimiento Cnc</h1></div></div><div class="flex items-center gap-unit-xs shrink-0"><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html" title="Gestor de Retales"><span class="material-symbols-outlined text-[20px]">grid_view</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="logistica-carga" href="proximamente.html" title="Logística de Carga y Furgoneta"><span class="material-symbols-outlined text-[20px]">local_shipping</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="mantenimiento-cnc" href="proximamente.html" title="Mantenimiento y Discos CNC"><span class="material-symbols-outlined text-[20px]">build_circle</span></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-2">Fase real del proyecto activo</div>
+    <div id="kp-fase-texto" class="text-sm text-on-surface mb-2"></div>
+    <div class="w-full h-2 bg-surface-container-lowest rounded-full overflow-hidden mb-3">
+      <div id="kp-fase-barra" class="h-full bg-primary-container transition-all"></div>
+    </div>
+    <button id="kp-avanzar-fase" class="w-full py-2 rounded bg-primary-container text-on-primary-container font-bold text-sm">Marcar fase actual como completada y avanzar</button>
+  </div>
+</section>
+<script>
+(function(){
+  function render(){
+    var proj = window.KarpinteroDB.getActiveProject();
+    var fase = window.KarpinteroDB.getFaseActual();
+    var nombre = window.KarpinteroDB.FASES[fase-1] || '';
+    document.getElementById('kp-fase-texto').textContent = (proj ? proj.codigo + ' — ' : '') + 'Fase ' + fase + '/6: ' + nombre;
+    document.getElementById('kp-fase-barra').style.width = (fase/6*100) + '%';
+    var btn = document.getElementById('kp-avanzar-fase');
+    if (fase >= 6) { btn.disabled = true; btn.textContent = 'Proyecto entregado (Fase 6/6 completa)'; btn.classList.add('opacity-50'); }
+  }
+  document.getElementById('kp-avanzar-fase').addEventListener('click', function(){
+    window.KarpinteroDB.avanzarFase();
+    render();
+  });
+  document.addEventListener('DOMContentLoaded', render);
+  if (document.readyState !== 'loading') render();
+})();
+</script><div class="flex flex-col w-full">
+<!-- Status Bar / Project Summary -->
+<div class="px-margin-mobile pt-unit-md pb-unit-sm flex flex-col gap-unit-sm bg-surface">
+<!-- Breadcrumb & Tags -->
+<div class="flex items-center justify-between gap-unit-xs">
+<div class="flex items-center gap-unit-xs overflow-hidden">
+<span class="px-unit-xs py-unit-2xs bg-surface-container-high text-secondary font-label-caps text-label-caps uppercase rounded-DEFAULT flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">precision_manufacturing</span>
+          EXP-2024-089
+        </span>
+<span class="px-unit-xs py-unit-2xs bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps uppercase rounded-DEFAULT truncate">
+          Egger H1180 ST37
+        </span>
+</div>
+<div class="flex items-center gap-unit-2xs shrink-0">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold">Taller En Línea</span>
+</div>
+</div>
+<!-- Title & Client Card -->
+<div class="bg-surface-container p-unit-md rounded-xl shadow-md flex flex-col gap-unit-sm">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="min-w-0">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Flujo Integral Obra → Taller</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight mt-0.5 truncate">
+            Cocina Roble Halifax &amp; Isla Dekton
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Cliente: Arq. Valenzuela • Domicilio: C/ San Vicente 44, Ático B
+          </p>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex flex-col items-center justify-center shrink-0 shadow-[0_2px_0px_#0b0f12]">
+<span class="font-dimension-lg text-dimension-lg text-primary-container leading-none font-bold">68%</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase mt-1">Avance</span>
+</div>
+</div>
+<!-- Linear Visual Progress Bar -->
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full transition-all duration-500" style="width: 50%;"></div>
+<div class="bg-primary-container h-full transition-all duration-500" style="width: 18%;"></div>
+<div class="bg-surface-container-high h-full" style="width: 32%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-caps text-[10px]">
+<span class="text-secondary">4 Fases Listas</span>
+<span class="text-primary">Fase 5 en Proceso</span>
+<span>2 Pendientes</span>
+</div>
+</div>
+</div>
+<!-- Interactive Alert Simulation Trigger Banner -->
+<div class="px-margin-mobile py-unit-xs">
+<div class="bg-surface-container-high p-unit-md rounded-xl shadow-md flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<span class="font-label-caps text-label-caps uppercase font-bold tracking-wider">Simulador de Resiliencia Taller</span>
+</div>
+<span class="font-label-caps text-[9px] px-unit-xs py-0.5 rounded-DEFAULT bg-primary/20 text-primary">En Directo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+        Inyecta variaciones dimensionales imprevistas para verificar la compensación paramétrica automática en corte CNC y herrajes.
+      </p>
+<button class="w-full min-h-touch-target-min px-unit-md py-unit-sm bg-surface-container-highest text-on-surface font-label-caps text-label-caps uppercase tracking-wider rounded-lg flex items-center justify-center gap-unit-sm active:translate-y-0.5 transition-all shadow-[0_2px_0px_#0b0f12]" id="btn-simular-alerta">
+<span class="material-symbols-outlined text-[18px] text-primary">warning_amber</span>
+<span>Simular Falsa Escuadra (+2.4° Rincón)</span>
+</button>
+<!-- Dynamic Live Alert Box (Hidden until clicked or toggled) -->
+<div class="hidden bg-surface-container-lowest p-unit-sm rounded-lg flex-col gap-unit-xs" id="alerta-box">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_fix_high</span> Recálculo Paramétrico Activo
+          </span>
+<span class="font-dimension-md text-[11px] text-secondary">T = 0.28s</span>
+</div>
+<div class="grid grid-cols-2 gap-unit-xs text-[11px] font-dimension-md">
+<div class="bg-surface-container p-unit-xs rounded-DEFAULT">
+<span class="text-on-surface-variant block text-[9px] font-label-caps uppercase">Lateral Cajeado:</span>
+<span class="text-secondary font-bold">580mm → 586.2mm</span>
+</div>
+<div class="bg-surface-container p-unit-xs rounded-DEFAULT">
+<span class="text-on-surface-variant block text-[9px] font-label-caps uppercase">Gola Superior:</span>
+<span class="text-primary font-bold">Bisel corte 87.6°</span>
+</div>
+</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+          Nido CNC actualizado: Tablero #3 reoptimizado sin colisión con tubos.
+        </div>
+</div>
+</div>
+</div>
+<!-- Six Operative Phases Stepper / Accordion -->
+<div class="px-margin-mobile py-unit-sm flex flex-col gap-unit-md">
+<div class="flex items-center justify-between">
+<h3 class="font-title-lg text-title-lg text-on-surface">6 Fases de Taller &amp; Obra</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Paso a Paso</span>
+</div>
+<!-- FASE 1 -->
+<div class="bg-surface-container rounded-xl shadow-md overflow-hidden">
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-dimension-md text-secondary font-bold shrink-0 shadow-[0_1px_0px_#0b0f12]">
+              01
+            </div>
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase font-semibold">Replanteo Obra</span>
+<h4 class="font-title-lg text-title-lg text-on-surface leading-tight">Medición &amp; Nube Láser</h4>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 bg-surface-container-highest text-secondary font-label-caps text-[9px] uppercase rounded-DEFAULT flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verificado
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Escaneo BLE Leica Disto &amp; ImageMeter. Descuadre de pared Norte (89.1°) compensado con regrueso de 4mm en costados ciegos.
+        </p>
+<!-- Metric badges -->
+<div class="grid grid-cols-3 gap-unit-xs">
+<div class="bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase block">Puntos Cota</span>
+<span class="font-dimension-md text-dimension-md text-on-surface">42 Medidas</span>
+</div>
+<div class="bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase block">Desviación Máx</span>
+<span class="font-dimension-md text-dimension-md text-primary">+4.2 mm</span>
+</div>
+<div class="bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase block">Plomo Suelo</span>
+<span class="font-dimension-md text-dimension-md text-secondary">0.18° OK</span>
+</div>
+</div>
+<!-- Technical Drawing Snippet -->
+<div class="bg-surface-container-lowest p-unit-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">architecture</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-[11px] text-on-surface">Plano_Obra_Replanteo_Rev2.dxf</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant">2.4 MB • Cotas 2D Vinculadas</span>
+</div>
+</div>
+<button class="px-unit-sm py-unit-xs bg-surface-container-high text-secondary font-label-caps text-label-caps uppercase rounded-DEFAULT hover:bg-surface-container-highest transition-colors">
+            Ver Cotas 2D
+          </button>
+</div>
+</div>
+</div>
+<!-- FASE 2 -->
+<div class="bg-surface-container rounded-xl shadow-md overflow-hidden">
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-dimension-md text-secondary font-bold shrink-0 shadow-[0_1px_0px_#0b0f12]">
+              02
+            </div>
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase font-semibold">Modelado Paramétrico</span>
+<h4 class="font-title-lg text-title-lg text-on-surface leading-tight">Módulos &amp; Cajeados MEP</h4>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 bg-surface-container-highest text-secondary font-label-caps text-[9px] uppercase rounded-DEFAULT flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Sin Colisión
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Bajos perfil Gola negro mate continuo. Altos 900mm con gualderas cajeables para paso de tubos de extracción Ø150mm y registros sifón isla.
+        </p>
+<!-- Technical List -->
+<div class="flex flex-col gap-1.5 font-dimension-md text-[12px]">
+<div class="flex items-center justify-between py-1 bg-surface-container-low px-unit-xs rounded-DEFAULT">
+<span class="text-on-surface">Módulo Fregadero 90cm</span>
+<span class="text-secondary font-semibold">Cajeado Sifón U-Shape</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low px-unit-xs rounded-DEFAULT">
+<span class="text-on-surface">Columna Horno/Micro 60cm</span>
+<span class="text-secondary font-semibold">Canal Ventilación 200cm²</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low px-unit-xs rounded-DEFAULT">
+<span class="text-on-surface">Isla Desayunador Dekton</span>
+<span class="text-primary font-semibold">Costilla Acero Oculta 8mm</span>
+</div>
+</div>
+<div class="flex items-center gap-unit-sm pt-unit-2xs">
+<button class="flex-1 min-h-touch-target-min bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase rounded-lg flex items-center justify-center gap-unit-xs">
+<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+            Ver Módulos (11)
+          </button>
+<button class="px-unit-md min-h-touch-target-min bg-surface-container-high text-secondary font-label-caps text-label-caps uppercase rounded-lg flex items-center justify-center">
+            Cajeados 3D
+          </button>
+</div>
+</div>
+</div>
+<!-- FASE 3 -->
+<div class="bg-surface-container rounded-xl shadow-md overflow-hidden">
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-dimension-md text-secondary font-bold shrink-0 shadow-[0_1px_0px_#0b0f12]">
+              03
+            </div>
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase font-semibold">BOM &amp; Despiece</span>
+<h4 class="font-title-lg text-title-lg text-on-surface leading-tight">Lista Milimétrica &amp; Herrajes</h4>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 bg-surface-container-highest text-secondary font-label-caps text-[9px] uppercase rounded-DEFAULT flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check</span> BOM Listo
+          </span>
+</div>
+<!-- Material Details -->
+<div class="bg-surface-container-low p-unit-sm rounded-lg flex flex-col gap-unit-xs">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-caps text-[11px] uppercase">Egger Halifax Natural H1180</span>
+<span class="font-dimension-md text-dimension-md font-bold text-primary">54 Piezas</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-[12px]">
+<span>Cantos PVC 1.0mm y 2.0mm a juego</span>
+<span class="font-dimension-md text-[11px] text-secondary">114.6 Metros Lineales</span>
+</div>
+</div>
+<!-- Hardware Chips -->
+<div class="flex flex-wrap gap-unit-xs">
+<span class="px-unit-xs py-1 bg-surface-container-high text-on-surface font-dimension-md text-[11px] rounded-DEFAULT flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">hardware</span> Blum Movento 40kg (×14)
+          </span>
+<span class="px-unit-xs py-1 bg-surface-container-high text-on-surface font-dimension-md text-[11px] rounded-DEFAULT flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">circle</span> Bisagra Blum Onyx 110° (×18)
+          </span>
+<span class="px-unit-xs py-1 bg-surface-container-high text-on-surface font-dimension-md text-[11px] rounded-DEFAULT flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">build</span> Spax 3.5×16 / 4×35 (×180)
+          </span>
+</div>
+<button class="w-full min-h-touch-target-min bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase rounded-lg flex items-center justify-center gap-unit-xs active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+          Ver Lista de Corte &amp; Herrajes Completa
+        </button>
+</div>
+</div>
+<!-- FASE 4 -->
+<div class="bg-surface-container rounded-xl shadow-md overflow-hidden">
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-dimension-md text-secondary font-bold shrink-0 shadow-[0_1px_0px_#0b0f12]">
+              04
+            </div>
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase font-semibold">Corte CNC &amp; Nesting</span>
+<h4 class="font-title-lg text-title-lg text-on-surface leading-tight">Optimización &amp; Veta Continua</h4>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 bg-primary-container/20 text-primary-container font-label-caps text-[9px] uppercase font-bold rounded-DEFAULT">
+            G-Code Listo
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Optimización en 8 tableros 2800×2070mm. Escaneo IA emparejando la continuidad visual de la veta en frentes contiguos de gaveteros.
+        </p>
+<!-- Tool & Efficiency Grid -->
+<div class="grid grid-cols-2 gap-unit-sm">
+<div class="bg-surface-container-low p-unit-sm rounded-lg flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Rendimiento Material</span>
+<div class="flex items-baseline gap-unit-xs">
+<span class="font-dimension-hero text-dimension-lg text-primary leading-none">91.4%</span>
+<span class="font-label-caps text-[10px] text-secondary">+2 Retales Reusados</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Merma total estimada: 1.42 m²</span>
+</div>
+<div class="bg-surface-container-low p-unit-sm rounded-lg flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Estado Fresa &amp; Disco</span>
+<div class="flex items-baseline gap-unit-xs">
+<span class="font-dimension-hero text-dimension-lg text-on-surface leading-none">72%</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Vida Útil</span>
+</div>
+<span class="font-body-sm text-[11px] text-secondary">Freud Diámetro 300 Z96</span>
+</div>
+</div>
+<!-- Interactive G-Code Button -->
+<div class="flex items-center gap-unit-sm">
+<button class="flex-1 min-h-touch-target-min bg-surface-container-highest text-secondary font-label-caps text-label-caps uppercase rounded-lg flex items-center justify-center gap-unit-xs">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+            Exportar G-Code Biesse
+          </button>
+<button class="w-12 min-h-touch-target-min bg-surface-container-high text-on-surface flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+</button>
+</div>
+</div>
+</div>
+<!-- FASE 5 (Active Phase) -->
+<div class="bg-surface-container rounded-xl shadow-md overflow-hidden">
+<!-- Active banner strip -->
+<div class="h-1 w-full bg-primary-container"></div>
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-dimension-md font-bold shrink-0 shadow-[0_1px_0px_#0b0f12]">
+              05
+            </div>
+<div>
+<span class="font-label-caps text-[10px] text-primary uppercase font-bold">Fase en Curso en Banco</span>
+<h4 class="font-title-lg text-title-lg text-on-surface leading-tight">Integración Eléctrica LED</h4>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 bg-primary-container text-on-primary-container font-label-caps text-[9px] uppercase font-bold rounded-DEFAULT flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">bolt</span> En Montaje
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Mecanizado de ranura oculta 12×7mm bajo módulos altos y zócalo perimetral de isla. Verificación de disipación térmica y caída de tensión.
+        </p>
+<!-- Electrical Specifications Box -->
+<div class="bg-surface-container-lowest p-unit-sm rounded-lg flex flex-col gap-unit-xs">
+<div class="grid grid-cols-2 gap-unit-xs text-on-surface font-dimension-md text-[12px]">
+<div>
+<span class="text-on-surface-variant block text-[10px] font-label-caps uppercase">Tiras LED COB:</span>
+<span>8.40 m • 24V DC 3000K</span>
+</div>
+<div>
+<span class="text-on-surface-variant block text-[10px] font-label-caps uppercase">Driver Central:</span>
+<span class="text-primary font-bold">Mean Well HLG 120W</span>
+</div>
+<div>
+<span class="text-on-surface-variant block text-[10px] font-label-caps uppercase">Caída Tensión Calc:</span>
+<span class="text-secondary font-bold">2.1% (&lt;3% Norma)</span>
+</div>
+<div>
+<span class="text-on-surface-variant block text-[10px] font-label-caps uppercase">Accionamiento:</span>
+<span>Sensor Oculto Capacitivo</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="flex-1 min-h-touch-target-min bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase font-bold rounded-lg flex items-center justify-center gap-unit-xs shadow-[0_2px_0px_#0b0f12]">
+<span class="material-symbols-outlined text-[18px]">schema</span>
+            Ver Diagrama Unifilar LED
+          </button>
+<button class="px-unit-md min-h-touch-target-min bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase rounded-lg">
+            Test Canales
+          </button>
+</div>
+</div>
+</div>
+<!-- FASE 6 -->
+<div class="bg-surface-container rounded-xl shadow-md overflow-hidden opacity-90">
+<div class="p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-dimension-md text-on-surface-variant font-bold shrink-0">
+              06
+            </div>
+<div>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase font-semibold">Logística &amp; Entrega</span>
+<h4 class="font-title-lg text-title-lg text-on-surface leading-tight">Estiba Inversa &amp; Acta VIP</h4>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 bg-surface-container-highest text-on-surface-variant font-label-caps text-[9px] uppercase rounded-DEFAULT">
+            Programado Jueves
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Plan de carga en furgoneta L2H2 ordenado para descarga secuencial en obra. Control de paso en ascensor (hueco 88×210cm verificado).
+        </p>
+<div class="grid grid-cols-2 gap-unit-xs font-dimension-md text-[11px]">
+<div class="bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="text-on-surface-variant block text-[9px] font-label-caps uppercase">Bultos Protegidos:</span>
+<span class="text-on-surface font-semibold">22 Paquetes Mantas</span>
+</div>
+<div class="bg-surface-container-low p-unit-xs rounded-DEFAULT">
+<span class="text-on-surface-variant block text-[9px] font-label-caps uppercase">Garantía Taller:</span>
+<span class="text-secondary font-semibold">5 Años Certificada</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-unit-2xs">
+<div class="flex items-center gap-unit-xs text-on-surface-variant text-[12px]">
+<span class="material-symbols-outlined text-[16px] text-primary">draw</span>
+<span>Acta Digital con Firma Táctil</span>
+</div>
+<button class="px-unit-sm py-unit-xs bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps uppercase rounded-DEFAULT">
+            Ver Ruta Carga
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Real Workshop Simulation Section / Visual Bench -->
+<div class="px-margin-mobile py-unit-sm">
+<div class="bg-surface-container-high p-unit-md rounded-xl flex flex-col gap-unit-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">tune</span> Banco de Control Taller
+        </span>
+<span class="font-dimension-md text-[11px] text-on-surface-variant">Sync: 100% OK</span>
+</div>
+<div class="bg-surface-container-lowest p-unit-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-unit-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">view_quilt</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface font-bold">Nesting Activo: Mesa 3000×1500</div>
+<div class="font-dimension-md text-[11px] text-on-surface-variant">Tablero 3 de 8 • Avance 45%</div>
+</div>
+</div>
+<span class="font-dimension-md text-dimension-md text-secondary font-bold">F-18 m/min</span>
+</div>
+</div>
+</div>
+<!-- Bottom CTA: Execute & Export Full Package -->
+<div class="p-margin-mobile flex flex-col gap-unit-sm bg-surface">
+<button class="w-full min-h-touch-target-min px-unit-lg py-unit-sm bg-primary-container text-on-primary-container font-headline-md text-[16px] uppercase tracking-wider rounded-xl flex items-center justify-center gap-unit-sm shadow-[0_3px_0px_#0b0f12] active:translate-y-1 transition-all">
+<span class="material-symbols-outlined text-[24px]">send_and_archive</span>
+<span>Exportar Paquete Completo (PDF+GCODE)</span>
+</button>
+<div class="flex items-center justify-center gap-unit-md text-on-surface-variant font-label-caps text-[10px] uppercase">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[12px] text-secondary">check</span> QR de Taller</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[12px] text-secondary">check</span> WhatsApp Montador</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[12px] text-secondary">check</span> Certificado Dekton</span>
+</div>
+</div>
+<script>
+    (function() {
+      const btnSimular = document.getElementById('btn-simular-alerta');
+      const alertaBox = document.getElementById('alerta-box');
+
+      if (btnSimular && alertaBox) {
+        let active = false;
+        btnSimular.addEventListener('click', function() {
+          active = !active;
+          if (active) {
+            alertaBox.classList.remove('hidden');
+            alertaBox.classList.add('flex');
+            btnSimular.classList.add('bg-primary', 'text-on-primary');
+            btnSimular.classList.remove('bg-surface-container-highest', 'text-on-surface');
+            btnSimular.querySelector('span:last-child').textContent = 'Alerta Simulada (Toca para restaurar)';
+          } else {
+            alertaBox.classList.add('hidden');
+            alertaBox.classList.remove('flex');
+            btnSimular.classList.remove('bg-primary', 'text-on-primary');
+            btnSimular.classList.add('bg-surface-container-highest', 'text-on-surface');
+            btnSimular.querySelector('span:last-child').textContent = 'Simular Falsa Escuadra (+2.4° Rincón)';
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-2xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Costes</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Retales</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="logistica-carga" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">rv_hookup</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Logística</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="mantenimiento-cnc" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">settings_suggest</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Taller CNC</span></a></div></nav><script src="../core/store.js"></script></body></html>

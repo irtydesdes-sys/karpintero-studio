@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.24)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-unit-md min-w-0"><div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary-container"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] uppercase font-bold shrink-0">En Taller</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Proyecto: Mueble TV Nórdico</h1></div></div><div class="flex items-center gap-unit-sm shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-3">Resumen real del proyecto activo</div>
+    <div class="grid grid-cols-3 gap-2 text-center">
+      <div class="bg-surface-container-lowest rounded-lg p-2">
+        <div id="kp-total-piezas" class="text-lg font-bold text-on-surface">0</div>
+        <div class="text-[9px] uppercase text-on-surface-variant">Piezas totales</div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-lg p-2">
+        <div id="kp-piezas-pendientes" class="text-lg font-bold text-amber-400">0</div>
+        <div class="text-[9px] uppercase text-on-surface-variant">Pendientes</div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-lg p-2">
+        <div id="kp-retales-disp" class="text-lg font-bold text-emerald-400">0</div>
+        <div class="text-[9px] uppercase text-on-surface-variant">Retales disp.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  function render(){
+    var piezas = window.KarpinteroDB.listPiezas();
+    var pendientes = piezas.filter(function(p){ return p.estado === 'PENDIENTE'; });
+    document.getElementById('kp-total-piezas').textContent = piezas.length;
+    document.getElementById('kp-piezas-pendientes').textContent = pendientes.length;
+    document.getElementById('kp-retales-disp').textContent = window.KarpinteroDB.listRetales().length;
+  }
+  document.addEventListener('DOMContentLoaded', render);
+  if (document.readyState !== 'loading') render();
+})();
+</script><div class="flex flex-col w-full">
+<!-- Status Bar & Live Workshop Signal -->
+<div class="px-gutter-mobile pt-unit-md pb-unit-sm">
+<div class="bg-surface-container rounded-xl p-unit-md shadow-md">
+<div class="flex items-center justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-xs">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary-container tracking-wider uppercase">Nodo Central de Taller Activo</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase bg-secondary-container/20 px-unit-xs py-0.5 rounded-DEFAULT">v4.8 CNC Synced</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-unit-2xs">Hub General &amp; Módulos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mapa maestro del ecosistema técnico: Diseño, Fabricación, Mecanizado, Montaje y Presupuesto.</p>
+<!-- Workshop Telemetry KPI Grid -->
+<div class="grid grid-cols-4 gap-unit-xs mt-unit-md pt-unit-sm bg-surface-container-low rounded-lg p-unit-xs">
+<div class="flex flex-col items-center justify-center p-unit-xs text-center">
+<span class="font-dimension-lg text-dimension-lg text-primary-container font-bold">28</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase mt-0.5">Módulos</span>
+</div>
+<div class="flex flex-col items-center justify-center p-unit-xs text-center">
+<span class="font-dimension-lg text-dimension-lg text-secondary font-bold">142</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase mt-0.5">Piezas</span>
+</div>
+<div class="flex flex-col items-center justify-center p-unit-xs text-center">
+<span class="font-dimension-lg text-dimension-lg text-tertiary font-bold">6</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase mt-0.5">Placas 18mm</span>
+</div>
+<div class="flex flex-col items-center justify-center p-unit-xs text-center">
+<span class="font-dimension-lg text-dimension-lg text-primary-container font-bold">100%</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase mt-0.5">CNC Ready</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Search & Category Scroller -->
+<div class="px-gutter-mobile py-unit-xs sticky top-16 z-40 bg-surface/95 backdrop-blur-md">
+<!-- Search Bar -->
+<div class="relative flex items-center mb-unit-sm">
+<span class="material-symbols-outlined absolute left-unit-sm text-on-surface-variant text-[20px] pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-unit-md bg-surface-container-low text-on-surface placeholder-on-surface-variant text-body-sm font-body-sm rounded-lg focus:outline-none focus:bg-surface-container-high transition-colors" id="workshopSearch" placeholder="Buscar módulo, herraje, plano o cálculo..." type="text"/>
+<span class="material-symbols-outlined absolute right-unit-sm text-on-surface-variant text-[18px] cursor-pointer hover:text-on-surface">tune</span>
+</div>
+<!-- Filter Chips Horizontal Reel -->
+<div class="flex items-center gap-unit-xs overflow-x-auto pb-unit-xs no-scrollbar">
+<button class="cat-pill shrink-0 px-unit-sm py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-caps text-[11px] font-semibold tracking-wider uppercase transition-colors" data-cat="all" onclick="filterCategory('all')">
+        Todos (28)
+      </button>
+<button class="cat-pill shrink-0 px-unit-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] font-semibold tracking-wider uppercase transition-colors" data-cat="cat-a" onclick="filterCategory('cat-a')">
+        Ingeniería &amp; Muebles (9)
+      </button>
+<button class="cat-pill shrink-0 px-unit-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] font-semibold tracking-wider uppercase transition-colors" data-cat="cat-b" onclick="filterCategory('cat-b')">
+        Cajonería &amp; Herrajes (7)
+      </button>
+<button class="cat-pill shrink-0 px-unit-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] font-semibold tracking-wider uppercase transition-colors" data-cat="cat-c" onclick="filterCategory('cat-c')">
+        Planta &amp; CNC (5)
+      </button>
+<button class="cat-pill shrink-0 px-unit-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] font-semibold tracking-wider uppercase transition-colors" data-cat="cat-d" onclick="filterCategory('cat-d')">
+        Acabados &amp; Taller (4)
+      </button>
+<button class="cat-pill shrink-0 px-unit-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] font-semibold tracking-wider uppercase transition-colors" data-cat="cat-e" onclick="filterCategory('cat-e')">
+        Gestión &amp; Costes (3)
+      </button>
+</div>
+</div>
+<!-- Main Modules Directory -->
+<div class="px-gutter-mobile py-unit-xs flex flex-col gap-unit-lg">
+<!-- CATEGORY A: INGENIERÍA DE MUEBLES & CARPINTERÍA ARQUITECTÓNICA -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="cat-a">
+<div class="flex items-center justify-between pt-unit-xs">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">shelves</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">A. Ingeniería &amp; Carpintería Arquitectónica</h3>
+</div>
+<span class="font-label-caps text-label-caps text-primary-container">9 MÓDULOS</span>
+</div>
+<!-- Card A1 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="muebles altos cocina tiras led ocultas ranurado 45 perfil disipador">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">countertops</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Muebles Altos Cocina &amp; LED</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: MOD-ALT-01</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Ranurado rasante 45°, perfiles disipadores de aluminio anodizado y base regruesada para luz continua.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">L: 2400 · H: 800 · P: 350 mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">8 Pzs <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card A2 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="muebles bajos cocina ergonomia zocalos fontaneria gola patas niveladoras">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">kitchen</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Muebles Bajos &amp; Zócalos</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: MOD-BAJ-02</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Distribución de tomas fontanería, gola C y L continua de aluminio, patas niveladoras Camar 150kg.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">L: 3200 · H: 870 · P: 600 mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">14 Pzs <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card A3 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="columnas islas ruteo led integral torres hornos enchufes ocultos despenseros">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">view_column</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Columnas, Islas &amp; Ruteo LED</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: MOD-COL-03</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Torres de electrodomésticos con chimenea de ventilación trasera, regruesos y despenseros extraíbles Tandem.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">L: 1800 · H: 2400 · P: 650 mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">18 Pzs <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card A4 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="muebles bano suspendidos cajeado sifon herraje cuelgue 150kg u">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">bathtub</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Baño Suspendido &amp; Cajeado Sifón</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: MOD-BAN-04</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface-variant font-label-caps text-[10px] font-bold uppercase">En Taller</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Cajeado en 'U' CNC para desagüe, fondo hidrófugo y anclajes regulables Traser-6 para carga pesada.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">L: 1200 · H: 520 · P: 480 mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">9 Pzs <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card A5 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="closets vestidores medida barras led sensores pir pantografos hidraulicos">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">checkroom</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Clósets &amp; Vestidores a Medida</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: MOD-VES-05</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Sensores de presencia PIR integrados 24V, barras de cuelgue ranuradas y pantógrafo hidráulico basculante.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">L: 3600 · H: 2600 · P: 600 mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">26 Pzs <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card A6 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="libreros estanterias gran formato tensores antiflecha acero clamex p14">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_library</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Libreros &amp; Estanterías Gran Formato</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: MOD-LIB-06</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Sistemas tensores antiflecha ocultos, unión desmontable P-System Clamex P-14 y baldas calibradas a 30mm.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">L: 4200 · H: 2850 · P: 320 mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">34 Pzs <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card A7 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="puertas comunicacion filomuro correderas ocultas guillotina drop seal pernios 3d">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">meeting_room</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Puertas Filomuro &amp; Correderas</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: MOD-FIL-07</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface-variant font-label-caps text-[10px] font-bold uppercase">En Taller</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Guillotina acústica automática Drop-Seal 38dB, cerradura magnética y pernios ocultos con regulación 3D.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">L: 850 · H: 2150 · E: 45 mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">4 Pzs <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card A8 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="marcos cercos galces puertas paso monoblock burlete epdm acustico">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">sensor_door</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Marcos, Cercos y Galces de Paso</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: MOD-MAR-08</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Monoblock de cajón con solape perimetral, ranura para burlete coextruido EPDM y tapajuntas encastrado.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Muelle: 100/120/140 mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">6 Pzs <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card A9 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="panelados acusticos alistonados revestimientos murales pet french cleat">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Panelados Acústicos Alistonados</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: MOD-PAN-09</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Listones de roble macizo 27x12mm sobre fieltro PET fonoabsorbente ignífugo y anclaje por French Cleat 45°.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Área: 18.5 m² · 48 Listones</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">12 Pzs <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</section>
+<!-- CATEGORY B: CAJONERÍA TÉCNICA & HERRAJES AVANZADOS -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="cat-b">
+<div class="flex items-center justify-between pt-unit-xs">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">inbox</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">B. Cajonería Técnica &amp; Herrajes Avanzados</h3>
+</div>
+<span class="font-label-caps text-label-caps text-secondary">7 MÓDULOS</span>
+</div>
+<!-- Card B1 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="cajones correderas ocultas undermount blum movento dtc hafele sincronizado">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Cajones Undermount Sincronizados</h4>
+<span class="font-label-caps text-[10px] text-primary-container tracking-wide uppercase">CÓD: CAJ-UND-10</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Compatibilidad Blum Movento / DTC con extracción total, tip-on integrado y holgura de fondo calibrada a 12mm.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Guías: 500mm / Carga 40kg</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">6 Juegos <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card B2 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="frentes perfil gola tirador perfil j holguras perimetrales">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">view_stream</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Frentes Gola &amp; Perfil 'J'</h4>
+<span class="font-label-caps text-[10px] text-primary-container tracking-wide uppercase">CÓD: CAJ-GOL-11</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Planificación de rebajes en costados para gola horizontal de 30mm y holgura de 3mm entre frentes continuos.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Tolerancia: ±0.5 mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Detalle CNC <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card B3 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="frentes chaflan 45 biselado corte unero madera maciza">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">carpenter</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Frentes con Chaflán 45°</h4>
+<span class="font-label-caps text-[10px] text-primary-container tracking-wide uppercase">CÓD: CAJ-CHF-12</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Biselado continuo superior a 45° con canto termofusionado PUR de 1mm y compensación de altura de módulo.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Ángulo: 45.0° Exacto</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">8 Frentes <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card B4 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="cajon interior oculto ingles gaveta doble">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Cajón Interior Oculto / Inglés</h4>
+<span class="font-label-caps text-[10px] text-primary-container tracking-wide uppercase">CÓD: CAJ-ING-13</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Frente rebajado en aluminio con tirador embutido para cubertero o especiero bajo frente maestro.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Altura útil: 85 mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">2 Módulos <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card B5 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="cajon principal inferior cacerolero costados metalicos varillas">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">soup_kitchen</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Gavetón Principal Cacerolero</h4>
+<span class="font-label-caps text-[10px] text-primary-container tracking-wide uppercase">CÓD: CAJ-CAC-14</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Costados rectos metálicos altos, doble varilla estabilizadora lateral y fondo en tablero de 16mm reforzado.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Carga: 65 kg Dinámica</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">4 Gavetas <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card B6 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="plano 2d fijacion regulacion frente cotas perforacion excentricas broca tope">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">square_foot</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Fijación 2D &amp; Regulación Frente</h4>
+<span class="font-label-caps text-[10px] text-primary-container tracking-wide uppercase">CÓD: DRW-REG-15</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Matriz de taladros para enganches frontales con excéntricas de regulación ±2mm en altura y lateral.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Broca: Ø10mm con tope 12mm</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Matriz 2D <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card B7 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="despiece herrajes tornilleria completa lista compra consolidada spax blum">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">construction</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">BOM Herrajes &amp; Tornillería Spax</h4>
+<span class="font-label-caps text-[10px] text-primary-container tracking-wide uppercase">CÓD: BOM-HRR-16</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Cómputo unificado: tornillos Spax 4x35/4x50, tacos Fischer Duopower, bisagras Clip Top 110° y amortiguadores.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">19 Líneas · 340 Items</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Ver Lista <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</section>
+<!-- CATEGORY C: MAQUINARIA DIGITAL, PLANTA & CNC -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="cat-c">
+<div class="flex items-center justify-between pt-unit-xs">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">precision_manufacturing</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">C. Maquinaria Digital, Planta &amp; CNC</h3>
+</div>
+<span class="font-label-caps text-label-caps text-primary-container">5 MÓDULOS</span>
+</div>
+<!-- Card C1 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="optimizador corte tableros ia escaner vetas grain match 3d nesting kerf 32mm">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">dashboard_customize</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Optimizador Corte con Grain-Match</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: CNC-OPT-17</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Alineación de vetas continuas en frentes colindantes, compensación de kerf de disco 3.2mm y nesting eficiente.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Aprovechamiento: 91.4%</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">6 Placas <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card C2 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="mecanizado cnc brocas fresas parametros g code calculo chip load z2 2">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">memory</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Mecanizado CNC &amp; Parámetros G-Code</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: CNC-GCD-18</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Fresa helicoidal compresión Z2+2 Ø12mm, Chip Load 0.45mm/diente, avance 18 m/min a 18.000 RPM sin astillado.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Post: WoodWOP / NC-Hops</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Listo <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card C3 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="centro exportacion tecnica pdf taller etiquetas qr dossier din a3 a4 100x50mm">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Dossier de Taller &amp; Etiquetas QR</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: DOC-EXP-19</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Generación de etiquetas térmicas 100x50mm con código QR de pieza, secuencia de canteado e indicación de cara vista.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">142 Rótulos Generados</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Imprimir <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card C4 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="checklist armado paso banco ruta verificacion tolerancias">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">checklist</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Checklist de Armado en Banco</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: RUN-BAN-20</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface-variant font-label-caps text-[10px] font-bold uppercase">En Taller</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Secuencia de premontaje en banco, comprobación de diagonales (escuadra láser) y torqueo controlado a 3.5 Nm.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Progreso: 6 de 11 fases</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Paso 7 <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card C5 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="control canto termofusionado pur espesores 045 1 2mm canteadora">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">border_outer</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Protocolo de Canteado PUR</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: CAN-PUR-21</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Regulación de rodillos de presión para cola PUR reactiva estanca a la humedad, temperatura calderín 140°C.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">PVC 1mm &amp; 2mm ABS</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Detalles <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</section>
+<!-- CATEGORY D: CONTROL FÍSICO, AJUSTES EN OBRA & ACABADOS -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="cat-d">
+<div class="flex items-center justify-between pt-unit-xs">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">straighten</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">D. Control Físico, Obra &amp; Acabados</h3>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary">4 MÓDULOS</span>
+</div>
+<!-- Card D1 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="calculadora falsa escuadra ajustes obra falsos plomos pared desniveles suelo cunas">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">architecture</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Calculadora Falsa Escuadra &amp; Obra</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: CAL-ESC-22</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Cálculo trigonométrico de remates y regletas de ajuste para absorber desfases de albañilería de hasta 22mm.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Desfase pared: +14mm / 2.4m</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Calcular <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card D2 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="control humedad mermas calibracion madera din 68360 emc anillos crecimiento">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Control de Humedad &amp; Mermas EMC</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: MAT-HUM-23</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Monitoreo higrométrico DIN 68360: coeficiente de contracción tangencial/radial en Roble Americano calibrado al 9.2%.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Humedad Taller: 54% HR · 21°C</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Óptimo <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card D3 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="acabados aceites hardwax barnices pur protocolos lijado p80 p240 ford 4 2k">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">format_paint</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Protocolos de Lijado &amp; Barnices PUR</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: ACAB-PUR-24</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-on-surface-variant font-label-caps text-[10px] font-bold uppercase">En Taller</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Secuencia de grano P120 &gt; P180 &gt; P240 con desempolvado antiestático, fondo poliuretano 2K y aceite cera mate 5UB.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Viscosidad Copa Ford #4: 18s</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Receta <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card D4 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="control calidad final holguras empaque proteccion esquineros">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Control de Calidad &amp; Protección</h4>
+<span class="font-label-caps text-[10px] text-secondary tracking-wide uppercase">CÓD: QA-LOG-25</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Inspección de luces de cierre 2.5mm, test de apertura suave Blumotion y paletizado con esquineros de nido de abeja.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">Tolerancia final: OK</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Checklist <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</section>
+<!-- CATEGORY E: INNOVACIÓN & GESTIÓN ECONÓMICA -->
+<section class="module-group flex flex-col gap-unit-sm" data-category="cat-e">
+<div class="flex items-center justify-between pt-unit-xs">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">E. Innovación &amp; Gestión Económica</h3>
+</div>
+<span class="font-label-caps text-label-caps text-secondary">3 MÓDULOS</span>
+</div>
+<!-- Card E1 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="estudio ideas bocetos ia karpintero vision ai escaneo croquis despiece 3d">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Karpintero Vision AI &amp; Croquis</h4>
+<span class="font-label-caps text-[10px] text-primary-container tracking-wide uppercase">CÓD: AI-VIS-26</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Digitalización instantánea de bocetos a mano alzada a volúmenes paramétricos y despiece preliminar.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">3 Modelos Generados</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Abrir IA <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card E2 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="presupuesto costos material margenes tableros cantos mano de obra">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Costes de Producción &amp; Margen</h4>
+<span class="font-label-caps text-[10px] text-primary-container tracking-wide uppercase">CÓD: FIN-PRC-27</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Desglose exacto de materia prima (tableros, m² canto), horas de centro de mecanizado CNC y horas de banco de taller.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-primary-container font-semibold">Total Coste: 4.860,00 €</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Márgenes <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+<!-- Card E3 -->
+<div class="module-card bg-surface-container rounded-xl p-unit-md shadow-sm hover:bg-surface-container-high transition-colors" data-keywords="planos tecnicos cotas 2d generales alzados secciones">
+<div class="flex items-start justify-between gap-unit-sm mb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">mic_detect_auto</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface">Planimetría General &amp; Secciones 2D</h4>
+<span class="font-label-caps text-[10px] text-primary-container tracking-wide uppercase">CÓD: DRW-PLN-28</span>
+</div>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] font-bold uppercase">Sincronizado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-unit-sm">Juego completo de vistas diédricas, cortes longitudinales en escala 1:20 y cotas acumuladas para instalación.</p>
+<div class="flex items-center justify-between text-on-surface-variant pt-unit-xs bg-surface-container-low px-unit-sm py-1.5 rounded-lg">
+<span class="font-dimension-md text-dimension-md text-on-surface">12 Láminas Técnicas</span>
+<span class="font-label-caps text-label-caps text-secondary flex items-center gap-0.5">Visor CAD <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</section>
+<!-- Empty State for Search Filter -->
+<div class="hidden flex flex-col items-center justify-center py-unit-2xl px-unit-md text-center bg-surface-container rounded-xl" id="searchEmptyState">
+<span class="material-symbols-outlined text-primary-container text-[40px] mb-unit-sm">search_off</span>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-unit-2xs">No se encontraron módulos</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Intenta con términos como 'cajón', 'CNC', 'gola', 'sifón' o 'herrajes'.</p>
+</div>
+</div>
+<!-- Global Floating Workshop Action Dock -->
+<div class="px-gutter-mobile pt-unit-md pb-unit-xl flex flex-col gap-unit-sm">
+<button class="w-full h-12 rounded-lg bg-primary-container text-on-primary-container font-body-md font-bold flex items-center justify-center gap-unit-sm shadow-lg active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span>Exportar Dossier Técnico Completo (ZIP / PDF)</span>
+</button>
+<button class="w-full h-11 rounded-lg bg-surface-container-high text-secondary font-label-caps text-[11px] font-semibold tracking-wider uppercase flex items-center justify-center gap-unit-xs hover:bg-surface-variant active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Sincronizar Todo con Taller &amp; Maquinaria</span>
+</button>
+</div>
+</div>
+<script>
+  function filterCategory(catId) {
+    const pills = document.querySelectorAll('.cat-pill');
+    pills.forEach(pill => {
+      if (pill.getAttribute('data-cat') === catId) {
+        pill.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        pill.classList.add('bg-primary-container', 'text-on-primary-container');
+      } else {
+        pill.classList.remove('bg-primary-container', 'text-on-primary-container');
+        pill.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      }
+    });
+
+    const groups = document.querySelectorAll('.module-group');
+    let visibleCardsCount = 0;
+    
+    groups.forEach(group => {
+      if (catId === 'all' || group.getAttribute('data-category') === catId) {
+        group.classList.remove('hidden');
+        visibleCardsCount += group.querySelectorAll('.module-card').length;
+      } else {
+        group.classList.add('hidden');
+      }
+    });
+
+    const emptyState = document.getElementById('searchEmptyState');
+    if (visibleCardsCount === 0) {
+      emptyState.classList.remove('hidden');
+    } else {
+      emptyState.classList.add('hidden');
+    }
+  }
+
+  const searchInput = document.getElementById('workshopSearch');
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.module-card');
+    const groups = document.querySelectorAll('.module-group');
+    let totalVisible = 0;
+
+    cards.forEach(card => {
+      const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+      const text = card.innerText.toLowerCase();
+      if (!term || keywords.includes(term) || text.includes(term)) {
+        card.classList.remove('hidden');
+        totalVisible++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    groups.forEach(group => {
+      const visibleInGroup = group.querySelectorAll('.module-card:not(.hidden)').length;
+      if (visibleInGroup === 0) {
+        group.classList.add('hidden');
+      } else {
+        group.classList.remove('hidden');
+      }
+    });
+
+    const emptyState = document.getElementById('searchEmptyState');
+    if (totalVisible === 0) {
+      emptyState.classList.remove('hidden');
+    } else {
+      emptyState.classList.add('hidden');
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.3)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="planos" href="plano_2d_fijaci_n_y_regulaci_n_de_frente.html"><span class="material-symbols-outlined text-[22px]">architecture</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Planos</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="placas" href="optimizador_de_corte_real.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Placas</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Presupuesto</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="ideas-ia" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Ideas IA</span></a></div></nav><script src="../core/store.js"></script></body></html>

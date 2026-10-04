@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.24)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-unit-md min-w-0"><div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary-container"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] uppercase font-bold shrink-0">En Taller</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Proyecto: Mueble TV Nórdico</h1></div></div><div class="flex items-center gap-unit-sm shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Workbench Header Ribbon -->
+<section class="px-gutter-mobile py-unit-md flex flex-col gap-unit-xs bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Módulo de Montaje • Falsa Escuadra</span>
+</div>
+<div class="px-unit-sm py-unit-2xs rounded-lg bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps">
+        TOLERANCIA ±0.5mm
+      </div>
+</div>
+<div class="flex items-center justify-between">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Calculadora de Descuadres y Ajustes en Obra</h2>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">architecture</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Soluciones milimétricas de taller para muros con falsa escuadra, suelos en declive y falsos plomos en sitio.</p>
+</section>
+<!-- Section 1: Calculadora Interactiva de Falsa Escuadra -->
+<section class="px-gutter-mobile py-unit-md flex flex-col gap-unit-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">straighten</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">1. Geometría de Falso Plomo</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary bg-surface-container px-unit-xs py-0.5 rounded">Corte Cónico</span>
+</div>
+<!-- Main Calculator Card -->
+<div class="bg-surface-container rounded-xl p-unit-md flex flex-col gap-unit-md shadow-md">
+<!-- Sliders / Precision Toggles -->
+<div class="grid grid-cols-1 gap-unit-sm">
+<!-- Vertical Plumb Variance -->
+<div class="bg-surface-container-lowest p-unit-sm rounded-lg flex flex-col gap-unit-2xs">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Desplome Vertical Muro (H: 2400 mm)</span>
+<span class="font-dimension-md text-dimension-md text-primary-container font-bold" id="plumb-display">+14 mm</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface font-label-caps text-label-caps flex items-center justify-center active:bg-primary-container active:text-on-primary select-none" id="btn-plumb-minus" type="button">-1</button>
+<input class="w-full accent-primary-container h-2 bg-surface-container-highest rounded-lg cursor-pointer" id="range-plumb" max="30" min="-15" type="range" value="14"/>
+<button class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface font-label-caps text-label-caps flex items-center justify-center active:bg-primary-container active:text-on-primary select-none" id="btn-plumb-plus" type="button">+1</button>
+</div>
+<div class="flex justify-between font-label-caps text-[9px] text-on-surface-variant/70">
+<span>Cerrada (-15mm)</span>
+<span>A plomo (0)</span>
+<span>Abierta (+30mm)</span>
+</div>
+</div>
+<!-- Floor Slope Variance -->
+<div class="bg-surface-container-lowest p-unit-sm rounded-lg flex flex-col gap-unit-2xs">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Desnivel de Suelo (Largo: 1800 mm)</span>
+<span class="font-dimension-md text-dimension-md text-secondary font-bold" id="floor-display">-7 mm</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<button class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface font-label-caps text-label-caps flex items-center justify-center active:bg-secondary active:text-on-secondary select-none" id="btn-floor-minus" type="button">-1</button>
+<input class="w-full accent-secondary h-2 bg-surface-container-highest rounded-lg cursor-pointer" id="range-floor" max="25" min="-25" type="range" value="-7"/>
+<button class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface font-label-caps text-label-caps flex items-center justify-center active:bg-secondary active:text-on-secondary select-none" id="btn-floor-plus" type="button">+1</button>
+</div>
+<div class="flex justify-between font-label-caps text-[9px] text-on-surface-variant/70">
+<span>Cota baja (-25mm)</span>
+<span>Nivel láser (0)</span>
+<span>Cota alta (+25mm)</span>
+</div>
+</div>
+</div>
+<!-- Real-time SVG Wedge Cutting Preview -->
+<div class="bg-surface-container-lowest rounded-lg p-unit-sm flex flex-col gap-unit-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Croquis Dinámico: Faja en Cuña / Bisel</span>
+<span class="font-label-caps text-label-caps text-primary">Regla Canto: 2mm PVC</span>
+</div>
+<div class="w-full h-36 bg-surface-container-high rounded-lg relative overflow-hidden flex items-center justify-center p-unit-xs">
+<!-- Drafting Grid Texture -->
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 320 120">
+<defs>
+<pattern height="16" id="cad-grid" patternunits="userSpaceOnUse" width="16">
+<path class="text-surface-variant/40" d="M 16 0 L 0 0 0 16" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#cad-grid)" height="100%" width="100%"></rect>
+<!-- Wall Reference Line -->
+<line stroke="#ffb4ab" stroke-dasharray="3,3" stroke-width="1.5" x1="40" x2="60" y1="10" y2="110"></line>
+<text class="font-label-caps text-[9px]" fill="#ffb4ab" x="32" y="65">Muro desplomado</text>
+<!-- Furniture Body Reference -->
+<rect fill="#262a2f" height="100" rx="2" width="160" x="130" y="10"></rect>
+<text class="font-label-caps text-[10px] uppercase font-bold" fill="#e0e3e8" x="180" y="65">Costado Mueble (90°)</text>
+<!-- The Calculated Compensator Wedge -->
+<polygon fill="#f59e0b" fill-opacity="0.25" id="wedge-polygon" points="60,10 130,10 130,110 74,110" stroke="#f59e0b" stroke-width="2"></polygon>
+<!-- Dimension callouts -->
+<line stroke="#4cd7f6" stroke-width="1.5" x1="60" x2="130" y1="8" y2="8"></line>
+<text class="font-dimension-md text-[10px] font-bold" fill="#4cd7f6" id="wedge-top-label" x="80" y="22">A1: 70mm</text>
+<line stroke="#4cd7f6" stroke-width="1.5" x1="74" x2="130" y1="114" y2="114"></line>
+<text class="font-dimension-md text-[10px] font-bold" fill="#4cd7f6" id="wedge-bottom-label" x="85" y="106">A2: 56mm</text>
+<text class="font-dimension-md text-[11px] font-bold" fill="#f59e0b" id="wedge-angle-label" x="78" y="60">0.33°</text>
+</svg>
+</div>
+<!-- Calculated Values Strip -->
+<div class="grid grid-cols-3 gap-unit-xs pt-unit-2xs">
+<div class="bg-surface-container-high p-unit-xs rounded text-center">
+<span class="block font-label-caps text-[10px] text-on-surface-variant uppercase">Ancho Inicial</span>
+<span class="font-dimension-md text-dimension-md text-on-surface font-bold" id="metric-w1">70.0 mm</span>
+</div>
+<div class="bg-surface-container-high p-unit-xs rounded text-center">
+<span class="block font-label-caps text-[10px] text-on-surface-variant uppercase">Ancho Final</span>
+<span class="font-dimension-md text-dimension-md text-on-surface font-bold" id="metric-w2">56.0 mm</span>
+</div>
+<div class="bg-surface-container-high p-unit-xs rounded text-center">
+<span class="block font-label-caps text-[10px] text-on-surface-variant uppercase">Ángulo Guía</span>
+<span class="font-dimension-md text-dimension-md text-primary-container font-bold" id="metric-angle">89.67°</span>
+</div>
+</div>
+</div>
+<!-- Constructive Solution Toggles -->
+<div class="flex flex-col gap-unit-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Solución Constructiva Recomendada</label>
+<div class="grid grid-cols-1 gap-unit-xs">
+<label class="flex items-start gap-unit-sm p-unit-sm rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="mt-1 accent-primary-container" name="solution_type" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-lg text-[14px] text-on-surface font-semibold">Faja Ciega a Ras con Uñero Oculto</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Absorbe hasta 22mm. Permite cepillar en sitio cara posterior en inglete sin tocar la melamina vista.</span>
+</div>
+</label>
+<label class="flex items-start gap-unit-sm p-unit-sm rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="mt-1 accent-primary-container" name="solution_type" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-lg text-[14px] text-on-surface font-semibold">Regrueso Retranqueado con Calle de Sombra (10mm)</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Oculta ondulaciones del enlucido sin necesidad de calado perfecto. Efecto flotante arquitectónico.</span>
+</div>
+</label>
+<label class="flex items-start gap-unit-sm p-unit-sm rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="mt-1 accent-primary-container" name="solution_type" type="radio"/>
+<div class="flex flex-col">
+<span class="font-title-lg text-[14px] text-on-surface font-semibold">Perfil Compensador de Aluminio + Silicona Neutra</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Solución elástica para baños o cocinas con riesgo de absorción hídrica y juntas de dilatación vivas.</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Absorbedores Mecánicos & Trucos de Taller -->
+<section class="px-gutter-mobile py-unit-md flex flex-col gap-unit-md bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">handyman</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">2. Hardware y Absorbedores Mecánicos</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary-container">Protocolo Taller</span>
+</div>
+<!-- Hardware Carousel / Grid -->
+<div class="grid grid-cols-1 gap-unit-sm">
+<!-- Coronación Superior Regulable -->
+<div class="bg-surface-container rounded-xl p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">vertical_align_top</span>
+</div>
+<div>
+<h3 class="font-title-lg text-[15px] text-on-surface">Coronación con Gatos Ocultos</h3>
+<span class="font-label-caps text-[10px] text-secondary">Ajuste de Techo • Rango 15 a 45 mm</span>
+</div>
+</div>
+<span class="px-unit-xs py-unit-2xs bg-primary-container/20 text-primary-container font-label-caps text-[10px] rounded">Llave Allen 4mm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Estructura de listón corrido fijado a techo con tornillo prisionero regulador por el interior del altillo. Permite calzar la faja superior sin clavos visibles ni masillas que agrieten con vibraciones.
+        </p>
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-[11px] text-primary-container bg-surface-container-high px-unit-xs py-0.5 rounded">Tornillo regulador Camar 816</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant bg-surface-container-high px-unit-xs py-0.5 rounded">Remate magnético</span>
+</div>
+</div>
+<!-- Zócalo y Patas de Carga -->
+<div class="bg-surface-container rounded-xl p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<h3 class="font-title-lg text-[15px] text-on-surface">Patas Estructurales Niveladoras</h3>
+<span class="font-label-caps text-[10px] text-primary-container">Absorbe Pendientes de Suelo ±20mm</span>
+</div>
+</div>
+<span class="px-unit-xs py-unit-2xs bg-secondary/20 text-secondary font-label-caps text-[10px] rounded">Volpato / Camar</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Regulación desde el fondo interior del mueble con tapón ciego extraíble de 10mm. El zócalo frontal se cala en obra únicamente en su base inferior con disco incisor, fijado mediante clips de bayoneta.
+        </p>
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-[11px] text-secondary bg-surface-container-high px-unit-xs py-0.5 rounded">Carga: 450kg / pata</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant bg-surface-container-high px-unit-xs py-0.5 rounded">Clip plástico con muelle</span>
+</div>
+</div>
+<!-- Truco de Taller: Sobremedida de Ensamblaje -->
+<div class="bg-surface-container rounded-xl p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">carpenter</span>
+</div>
+<div>
+<h3 class="font-title-lg text-[15px] text-on-surface">Técnica 'Costado con Sobremedida +20mm'</h3>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Solución para Desplomes Complejos</span>
+</div>
+</div>
+<span class="px-unit-xs py-unit-2xs bg-primary/20 text-primary font-label-caps text-[10px] rounded font-bold">Proceso Pro</span>
+</div>
+<div class="p-unit-sm bg-surface-container-lowest rounded-lg flex flex-col gap-unit-2xs">
+<div class="flex items-center gap-unit-xs text-on-surface font-label-caps text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            1. Producir costado exterior con +20mm de fondo en taller sin ranurar trasera.
+          </div>
+<div class="flex items-center gap-unit-xs text-on-surface font-label-caps text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            2. Trazar el falso plomo del muro in situ usando compás de puntas con arandela guía.
+          </div>
+<div class="flex items-center gap-unit-xs text-on-surface font-label-caps text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            3. Corte limpio a 45° en dorso con sierra de incisión y riel guía; cepillado final a mano.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Asistente IA de Taller para Imprevistos en Sitio -->
+<section class="px-gutter-mobile py-unit-md flex flex-col gap-unit-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">3. Asistente Técnico IA en Sitio</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary">Base Taller V3.2</span>
+</div>
+<!-- Query Interactive Widget -->
+<div class="bg-surface-container rounded-xl p-unit-md flex flex-col gap-unit-md shadow-md">
+<div class="flex flex-col gap-unit-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Consultar Incidencia Frecuente</label>
+<div class="flex gap-unit-xs overflow-x-auto pb-unit-xs">
+<button class="issue-pill px-unit-sm py-unit-xs rounded-lg bg-surface-container-high text-on-surface text-label-caps font-label-caps whitespace-nowrap active:bg-primary-container active:text-on-primary" data-issue="tuberia" type="button">
+            Tubería en fondo
+          </button>
+<button class="issue-pill px-unit-sm py-unit-xs rounded-lg bg-surface-container-high text-on-surface text-label-caps font-label-caps whitespace-nowrap active:bg-primary-container active:text-on-primary" data-issue="pladur" type="button">
+            Pladur hueco s/refuerzo
+          </button>
+<button class="issue-pill px-unit-sm py-unit-xs rounded-lg bg-surface-container-high text-on-surface text-label-caps font-label-caps whitespace-nowrap active:bg-primary-container active:text-on-primary" data-issue="caja" type="button">
+            Caja tras alistonado
+          </button>
+</div>
+</div>
+<!-- AI Resolution Box -->
+<div class="bg-surface-container-lowest rounded-lg p-unit-md flex flex-col gap-unit-sm" id="ai-response-card">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span class="font-title-lg text-[14px] text-on-surface" id="issue-title">Paso de Tubería de Gas / Clima (Fondo)</span>
+</div>
+<span class="font-label-caps text-[10px] text-primary-container bg-primary-container/10 px-unit-xs py-0.5 rounded">Holgura: 3mm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="issue-desc">
+          Realizar cajeado perimetral con fresadora de mano dejando 3.5mm por lado para expansión térmica. Emplear anillo pasacables bífido de nylon con ranura o tapa registrable con fijación de neodimio de 8mm.
+        </p>
+<!-- 2D Cajeado Perimetral Diagram SVG -->
+<div class="w-full bg-surface-container-high rounded-lg p-unit-sm flex flex-col gap-unit-xs">
+<span class="font-label-caps text-[10px] text-secondary uppercase">Diagrama 2D: Cajeado y Holguras Técnicas</span>
+<div class="w-full h-28 flex items-center justify-center">
+<svg class="w-full h-full" viewbox="0 0 280 100">
+<!-- Backing Board -->
+<rect fill="#181c20" height="80" rx="3" stroke="#363a3e" stroke-width="1.5" width="240" x="20" y="10"></rect>
+<text class="font-label-caps text-[9px]" fill="#d8c3ad" x="30" y="28">TRACERA MELAMINA 10mm</text>
+<!-- Cutout Notch -->
+<path d="M 100 10 L 100 65 Q 100 70 105 70 L 175 70 Q 180 70 180 65 L 180 10" fill="#101418" stroke="#f59e0b" stroke-dasharray="2,2" stroke-width="2"></path>
+<!-- Pipe -->
+<circle cx="140" cy="40" fill="#31353a" r="18" stroke="#4cd7f6" stroke-width="2"></circle>
+<text class="font-label-caps text-[9px] font-bold" fill="#4cd7f6" x="127" y="44">Ø 32mm</text>
+<!-- Dilatation gap indicators -->
+<line stroke="#ffb785" stroke-width="1" x1="120" x2="102" y1="40" y2="40"></line>
+<line stroke="#ffb785" stroke-width="1" x1="160" x2="178" y1="40" y2="40"></line>
+<text class="font-label-caps text-[8px]" fill="#ffb785" x="80" y="55">+3.5mm</text>
+<text class="font-label-caps text-[8px]" fill="#ffb785" x="184" y="55">+3.5mm</text>
+<!-- Magnetic cover hint -->
+<rect fill="#f59e0b" height="6" opacity="0.6" rx="1" width="92" x="94" y="8"></rect>
+<text class="font-label-caps text-[8px]" fill="#f59e0b" x="100" y="88">Tapa registrable imantada</text>
+</svg>
+</div>
+</div>
+</div>
+<!-- Quick AI Prompt Bar -->
+<div class="flex items-center gap-unit-xs bg-surface-container-lowest rounded-lg p-unit-2xs">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant ml-unit-xs">help</span>
+<input class="w-full bg-transparent text-on-surface font-body-sm text-body-sm px-unit-xs py-unit-xs outline-none" placeholder="¿Otra incidencia? Ej: Viga de hormigón inclinada..." type="text"/>
+<button class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 4: Acciones Rápidas de Taller -->
+<section class="px-gutter-mobile py-unit-md flex flex-col gap-unit-sm bg-surface-container-low">
+<div class="flex items-center gap-unit-xs text-on-surface font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[18px] text-primary-container">output</span>
+<span>Exportación y Planos de Taller</span>
+</div>
+<div class="grid grid-cols-1 gap-unit-sm">
+<!-- Primary Action: Añadir al despiece -->
+<button class="min-h-touch-target-min w-full rounded-xl bg-primary-container text-on-primary font-title-lg text-title-lg flex items-center justify-center gap-unit-sm shadow-md active:translate-y-0.5 active:shadow-none transition-all" id="btn-add-cutlist" type="button">
+<span class="material-symbols-outlined text-[22px]">add_task</span>
+<span>Añadir Fajas de Ajuste al Despiece</span>
+</button>
+<!-- Secondary Dual Buttons -->
+<div class="grid grid-cols-2 gap-unit-sm">
+<button class="min-h-touch-target-min rounded-xl bg-surface-container text-secondary font-label-caps text-[12px] flex items-center justify-center gap-unit-xs active:bg-surface-container-high transition-colors" id="btn-calc-wedge" type="button">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span>Calcular Corte</span>
+</button>
+<button class="min-h-touch-target-min rounded-xl bg-surface-container text-on-surface font-label-caps text-[12px] flex items-center justify-center gap-unit-xs active:bg-surface-container-high transition-colors" id="btn-export-sketch" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Exportar Croquis</span>
+</button>
+</div>
+</div>
+<!-- Operational Note Footer -->
+<div class="flex items-center gap-unit-xs py-unit-xs text-on-surface-variant font-label-caps text-[10px]">
+<span class="material-symbols-outlined text-[14px] text-primary-container">verified_user</span>
+<span>Cálculos compatibles con sierras escuadradoras Altendorf y Festool Guía FS</span>
+</div>
+</section>
+<!-- Client-side Interactive Logic Script -->
+<script>
+    (function() {
+      const rangePlumb = document.getElementById('range-plumb');
+      const plumbDisplay = document.getElementById('plumb-display');
+      const btnPlumbMinus = document.getElementById('btn-plumb-minus');
+      const btnPlumbPlus = document.getElementById('btn-plumb-plus');
+
+      const rangeFloor = document.getElementById('range-floor');
+      const floorDisplay = document.getElementById('floor-display');
+      const btnFloorMinus = document.getElementById('btn-floor-minus');
+      const btnFloorPlus = document.getElementById('btn-floor-plus');
+
+      const metricW1 = document.getElementById('metric-w1');
+      const metricW2 = document.getElementById('metric-w2');
+      const metricAngle = document.getElementById('metric-angle');
+
+      const wedgePoly = document.getElementById('wedge-polygon');
+      const wedgeTopLabel = document.getElementById('wedge-top-label');
+      const wedgeBottomLabel = document.getElementById('wedge-bottom-label');
+      const wedgeAngleLabel = document.getElementById('wedge-angle-label');
+
+      function updateCalculations() {
+        const plumbVal = parseFloat(rangePlumb.value);
+        const floorVal = parseFloat(rangeFloor.value);
+
+        plumbDisplay.textContent = (plumbVal >= 0 ? '+' : '') + plumbVal + ' mm';
+        floorDisplay.textContent = (floorVal >= 0 ? '+' : '') + floorVal + ' mm';
+
+        // Base width for safety in workshop: 70mm
+        const baseWidth = 70.0;
+        const topWidth = Math.max(15, baseWidth);
+        const bottomWidth = Math.max(10, baseWidth - plumbVal);
+
+        metricW1.textContent = topWidth.toFixed(1) + ' mm';
+        metricW2.textContent = bottomWidth.toFixed(1) + ' mm';
+
+        // Angle based on standard 2400mm height
+        const delta = topWidth - bottomWidth;
+        const rad = Math.atan2(delta, 2400);
+        const deg = rad * (180 / Math.PI);
+        const cuttingAngle = 90 - deg;
+
+        metricAngle.textContent = cuttingAngle.toFixed(2) + '°';
+        wedgeAngleLabel.textContent = Math.abs(deg).toFixed(2) + '°';
+
+        wedgeTopLabel.textContent = 'A1: ' + topWidth.toFixed(0) + 'mm';
+        wedgeBottomLabel.textContent = 'A2: ' + bottomWidth.toFixed(0) + 'mm';
+
+        // SVG polygon dynamic redraw
+        const svgStartTop = 130 - (topWidth * 0.8);
+        const svgStartBottom = 130 - (bottomWidth * 0.8);
+        wedgePoly.setAttribute('points', svgStartTop + ',10 130,10 130,110 ' + svgStartBottom + ',110');
+      }
+
+      if(rangePlumb && rangeFloor) {
+        rangePlumb.addEventListener('input', updateCalculations);
+        rangeFloor.addEventListener('input', updateCalculations);
+
+        btnPlumbMinus.addEventListener('click', function() {
+          rangePlumb.value = parseInt(rangePlumb.value) - 1;
+          updateCalculations();
+        });
+        btnPlumbPlus.addEventListener('click', function() {
+          rangePlumb.value = parseInt(rangePlumb.value) + 1;
+          updateCalculations();
+        });
+
+        btnFloorMinus.addEventListener('click', function() {
+          rangeFloor.value = parseInt(rangeFloor.value) - 1;
+          updateCalculations();
+        });
+        btnFloorPlus.addEventListener('click', function() {
+          rangeFloor.value = parseInt(rangeFloor.value) + 1;
+          updateCalculations();
+        });
+
+        updateCalculations();
+      }
+
+      // AI Issues Selector
+      const pills = document.querySelectorAll('.issue-pill');
+      const issueTitle = document.getElementById('issue-title');
+      const issueDesc = document.getElementById('issue-desc');
+
+      const issuesDB = {
+        tuberia: {
+          title: "Paso de Tubería de Gas / Clima (Fondo)",
+          desc: "Realizar cajeado perimetral con fresadora de mano dejando 3.5mm por lado para dilatación. Emplear anillo pasacables bífido de nylon con ranura o registro de imanes de neodimio."
+        },
+        pladur: {
+          title: "Pared de Pladur Hueca sin Travesaño Oculto",
+          desc: "No confiar en tacos tipo paraguas para pesos mayores a 25kg. Instalar pletina de acero oculta fijada directamente a los montantes metálicos con tornillos autorroscantes antes de colgar el módulo."
+        },
+        caja: {
+          title: "Mecanismo Eléctrico Oculto tras Alistonado",
+          desc: "Prolongar caja de mecanismos con suplemento homologado ignífugo. Enmarcar el listón con bisel a 45° para garantizar extracción segura de enchufes según normativa REBT."
+        }
+      };
+
+      pills.forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          pills.forEach(function(p) { p.classList.remove('bg-primary-container', 'text-on-primary'); });
+          pill.classList.add('bg-primary-container', 'text-on-primary');
+
+          const key = pill.getAttribute('data-issue');
+          if(issuesDB[key]) {
+            issueTitle.textContent = issuesDB[key].title;
+            issueDesc.textContent = issuesDB[key].desc;
+          }
+        });
+      });
+
+      // Quick feedback toast simulation
+      const btnAdd = document.getElementById('btn-add-cutlist');
+      if(btnAdd) {
+        btnAdd.addEventListener('click', function() {
+          const originalText = btnAdd.innerHTML;
+          btnAdd.innerHTML = '<span class="material-symbols-outlined text-[22px]">check_circle</span> Faja Guardada en Lista de Corte';
+          setTimeout(function() {
+            btnAdd.innerHTML = originalText;
+          }, 2000);
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.3)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="planos" href="plano_2d_fijaci_n_y_regulaci_n_de_frente.html"><span class="material-symbols-outlined text-[22px]">architecture</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Planos</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="placas" href="optimizador_de_corte_real.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Placas</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Presupuesto</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="ideas-ia" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Ideas IA</span></a></div></nav><script src="../core/store.js"></script></body></html>

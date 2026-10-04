@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet"/>
+<style>body{background:#101418;color:#e0e3e8;font-family:Inter,sans-serif;}</style>
+</head>
+<body class="min-h-screen">
+<header class="sticky top-0 z-40 bg-[#101418]/90 backdrop-blur-xl border-b border-white/5 px-4 h-14 flex items-center justify-between">
+  <a href="despiece_detallado_de_cajones.html" class="text-amber-400 text-sm font-bold">← Volver</a>
+  <h1 class="text-sm font-bold">Optimizador de Corte (Real)</h1>
+  <span></span>
+</header>
+<main class="p-4 max-w-2xl mx-auto pb-20">
+
+<div class="bg-[#1c2024] border border-white/10 rounded-xl p-4 mb-4">
+  <h2 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">Datos reales del tablero</h2>
+  <div class="grid grid-cols-3 gap-2 text-xs">
+    <label class="flex flex-col gap-1">Largo (mm)<input id="op-largo" type="number" value="2440" class="bg-black/30 rounded px-2 py-2"/></label>
+    <label class="flex flex-col gap-1">Ancho (mm)<input id="op-ancho" type="number" value="1220" class="bg-black/30 rounded px-2 py-2"/></label>
+    <label class="flex flex-col gap-1">Kerf (mm)<input id="op-kerf" type="number" value="3.2" step="0.1" class="bg-black/30 rounded px-2 py-2"/></label>
+  </div>
+  <button id="op-calcular" class="w-full mt-3 py-2.5 rounded bg-amber-500 text-black font-bold text-sm">Calcular optimización real</button>
+</div>
+<div id="op-resultado"></div>
+
+</main>
+<script src="../core/store.js"></script>
+<script src="../core/optimizer.js"></script>
+<script>
+(function(){
+  function svgBoard(board, idx, materialLabel){
+    var scale = 260 / board.w;
+    var h = board.h * scale;
+    var rects = '';
+    board.shelves.forEach(function(shelf){
+      shelf.pieces.forEach(function(p){
+        var x = p.x*scale, y = p.y*scale, w = p.w*scale, hh = p.h*scale;
+        rects += '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+hh+'" fill="#f59e0b33" stroke="#f59e0b" stroke-width="1"/>' +
+                 '<text x="'+(x+3)+'" y="'+(y+12)+'" font-size="8" fill="#e0e3e8">'+p.descripcion+'</text>';
+      });
+    });
+    return '<div class="mb-3"><div class="text-[10px] text-stone-400 mb-1">'+materialLabel+' — Tablero #'+(idx+1)+'</div>' +
+      '<svg width="260" height="'+h+'" style="background:#0b0f12;border:1px solid #333">'+rects+'</svg></div>';
+  }
+  document.getElementById('op-calcular').addEventListener('click', function(){
+    var piezas = window.KarpinteroDB.listPiezas();
+    if (piezas.length === 0) {
+      document.getElementById('op-resultado').innerHTML = '<div class="text-xs text-stone-400 italic">No hay piezas cargadas en el proyecto activo. Ve a Despiece y agrega piezas reales primero.</div>';
+      return;
+    }
+    var largo = parseFloat(document.getElementById('op-largo').value);
+    var ancho = parseFloat(document.getElementById('op-ancho').value);
+    var kerf = parseFloat(document.getElementById('op-kerf').value);
+    var grupos = {};
+    piezas.forEach(function(p){ var k = p.material + ' ' + p.espesor_mm + 'mm'; (grupos[k] = grupos[k]||[]).push(p); });
+    var html = '';
+    var totalTableros = 0;
+    Object.keys(grupos).forEach(function(mat){
+      var res = window.KarpinteroOptimizer.optimizarCorte(grupos[mat], largo, ancho, kerf);
+      totalTableros += res.tablerosNecesarios;
+      html += '<div class="bg-[#1c2024] border border-white/10 rounded-xl p-4 mb-3">' +
+        '<div class="flex justify-between items-center mb-2"><span class="font-bold text-sm">'+mat+'</span>' +
+        '<span class="text-xs font-mono text-emerald-400">'+res.tablerosNecesarios+' tablero(s) · '+res.desperdicioPct.toFixed(1)+'% desperdicio</span></div>';
+      res.boards.forEach(function(b, i){ html += svgBoard(b, i, mat); });
+      html += '</div>';
+    });
+    html = '<div class="text-xs text-stone-300 mb-3">Total real: <b>'+totalTableros+'</b> tablero(s) para las '+piezas.length+' pieza(s) del proyecto activo.</div>' + html;
+    document.getElementById('op-resultado').innerHTML = html;
+    window.KarpinteroDB.setPresupuesto(Object.assign({}, window.KarpinteroDB.getPresupuesto()||{}, {tablerosCalculados: totalTableros}));
+  });
+})();
+</script>
+</body></html>

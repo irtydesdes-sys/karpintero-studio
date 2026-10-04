@@ -1,0 +1,9 @@
+{
+  "appId": "com.karpintero.studio",
+  "appName": "Karpintero Studio",
+  "webDir": "src",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

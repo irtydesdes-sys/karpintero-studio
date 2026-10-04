@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.24)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-unit-md min-w-0"><div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary-container"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] uppercase font-bold shrink-0">En Taller</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Proyecto: Mueble TV Nórdico</h1></div></div><div class="flex items-center gap-unit-sm shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-2">Calculadora real de escalera</div>
+    <div class="grid grid-cols-2 gap-2 text-xs mb-2">
+      <label class="flex flex-col gap-1">Altura total a salvar (mm)<input id="kp-esc-altura" type="number" value="2600" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/></label>
+      <label class="flex flex-col gap-1">Contrahuella deseada (mm)<input id="kp-esc-contrahuella" type="number" value="180" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/></label>
+    </div>
+    <button id="kp-esc-calc" class="w-full py-2 rounded bg-primary-container text-on-primary-container font-bold text-sm mb-2">Calcular real</button>
+    <div id="kp-esc-resultado" class="text-sm"></div>
+  </div>
+</section>
+<script>
+(function(){
+  document.getElementById('kp-esc-calc').addEventListener('click', function(){
+    var altura = parseFloat(document.getElementById('kp-esc-altura').value) || 0;
+    var contrahuellaDeseada = parseFloat(document.getElementById('kp-esc-contrahuella').value) || 180;
+    var numPeldanos = Math.round(altura / contrahuellaDeseada);
+    var contrahuellaReal = numPeldanos > 0 ? (altura / numPeldanos) : 0;
+    document.getElementById('kp-esc-resultado').innerHTML =
+      'Peldaños reales necesarios: <b>' + numPeldanos + '</b> · Contrahuella real ajustada: <b>' + contrahuellaReal.toFixed(1) + ' mm</b>';
+  });
+})();
+</script><div class="flex flex-col w-full">
+<div class="p-gutter-mobile flex flex-col gap-unit-lg">
+<!-- 1. Header de Módulo Técnico -->
+<section class="flex flex-col gap-unit-sm">
+<div class="flex flex-wrap items-center gap-unit-xs">
+<span class="bg-surface-container-high text-primary font-label-caps text-label-caps px-unit-sm py-unit-2xs rounded-DEFAULT flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">stairs</span>
+          CARPINTERÍA ESTRUCTURAL &amp; VERTICAL
+        </span>
+<span class="bg-surface-container-high text-secondary font-label-caps text-label-caps px-unit-sm py-unit-2xs rounded-DEFAULT shadow-sm">
+          NORMA CTE DB-SUA / DIN 18065
+        </span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
+          Escaleras a Medida, Zancas y Barandillas
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-unit-2xs">
+          Cálculo de ley de Blondel (2H + P), zancas cremallera vs encastradas, peldañeado compensado y anclajes estructurales de alta precisión.
+        </p>
+</div>
+</section>
+<!-- 2. Calculadora Paramétrica de Pendiente y Ley de Blondel -->
+<section class="bg-surface-container rounded-xl p-unit-md shadow-md flex flex-col gap-unit-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">straighten</span>
+<span class="font-title-lg text-title-lg text-on-surface">Ergonomía de Paso</span>
+</div>
+<span class="bg-surface-container-highest text-secondary font-label-caps text-label-caps px-unit-xs py-0.5 rounded-DEFAULT">
+          DIN 18065 COMPLIANT
+        </span>
+</div>
+<!-- Blondel Callout Gauge -->
+<div class="bg-surface-container-lowest p-unit-md rounded-lg flex flex-col gap-unit-xs shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Ecuación 2H + P</span>
+<span class="font-label-caps text-[10px] text-primary-container font-semibold">RANGO: 62.0 - 64.5 cm</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-dimension-hero text-dimension-hero text-primary tracking-tight">63.5 <span class="text-dimension-md font-dimension-md text-on-surface-variant">cm</span></span>
+<span class="bg-primary-container/20 text-primary-container font-label-caps text-label-caps px-unit-sm py-0.5 rounded-DEFAULT font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> ÓPTIMO
+          </span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-DEFAULT overflow-hidden flex">
+<div class="w-1/4 bg-surface-variant"></div>
+<div class="w-1/2 bg-primary-container relative">
+<div class="w-2 h-full bg-on-primary-container mx-auto"></div>
+</div>
+<div class="w-1/4 bg-surface-variant"></div>
+</div>
+<div class="flex justify-between font-label-caps text-[9px] text-on-surface-variant">
+<span>59 cm (Fatigosa)</span>
+<span class="text-primary font-bold">Ideal 63.5</span>
+<span>68 cm (Paso largo)</span>
+</div>
+</div>
+<!-- Parametric Grid Inputs -->
+<div class="grid grid-cols-2 gap-unit-xs">
+<div class="bg-surface-container-low p-unit-sm rounded-lg flex flex-col gap-0.5">
+<span class="font-label-caps text-[10px] text-on-surface-variant">ALTURA TOTAL (H)</span>
+<span class="font-dimension-lg text-dimension-lg text-on-surface font-semibold">2,850 <span class="font-dimension-md text-[11px] text-secondary">mm</span></span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Suelo a suelo terminado</span>
+</div>
+<div class="bg-surface-container-low p-unit-sm rounded-lg flex flex-col gap-0.5">
+<span class="font-label-caps text-[10px] text-on-surface-variant">DESARROLLO PLANTA (L)</span>
+<span class="font-dimension-lg text-dimension-lg text-on-surface font-semibold">3,600 <span class="font-dimension-md text-[11px] text-secondary">mm</span></span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Longitud útil libre</span>
+</div>
+<div class="bg-surface-container-low p-unit-sm rounded-lg flex flex-col gap-0.5">
+<span class="font-label-caps text-[10px] text-on-surface-variant">PELDAÑEADO</span>
+<span class="font-dimension-lg text-dimension-lg text-primary font-semibold">16 A <span class="text-on-surface-variant text-[13px]">/ 15 H</span></span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">16 alzadas / 15 huellas</span>
+</div>
+<div class="bg-surface-container-low p-unit-sm rounded-lg flex flex-col gap-0.5">
+<span class="font-label-caps text-[10px] text-on-surface-variant">ÁNGULO PENDIENTE</span>
+<span class="font-dimension-lg text-dimension-lg text-primary font-semibold">32.5°</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Vivienda unifamiliar estándar</span>
+</div>
+</div>
+<!-- Critical Computed Dimensions -->
+<div class="bg-surface-container-highest p-unit-sm rounded-lg flex flex-col gap-unit-xs">
+<div class="flex justify-between items-center text-on-surface">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant">CONTRAHUELLA CALCULADA (H)</span>
+<span class="font-dimension-md text-dimension-md text-secondary font-bold">178.1 mm</span>
+</div>
+<span class="font-label-caps text-[10px] bg-surface-container-low text-on-surface px-unit-xs py-0.5 rounded-DEFAULT">Zona confort: 170-185mm</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant">HUELLA ÚTIL + BOCEL (P)</span>
+<span class="font-dimension-md text-dimension-md text-secondary font-bold">278.8 mm <span class="text-primary-container text-[12px]">(+30mm vuelo)</span></span>
+</div>
+<span class="font-label-caps text-[10px] bg-surface-container-low text-on-surface px-unit-xs py-0.5 rounded-DEFAULT">Potal: 308.8mm</span>
+</div>
+</div>
+<!-- Step Technical Schematic (Inline CAD Drafting SVG) -->
+<div class="flex flex-col gap-unit-xs">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">architecture</span>
+          Esquema de Sección de Peldaño &amp; Canto Fresado
+        </span>
+<div class="w-full bg-surface-container-lowest p-unit-sm rounded-lg flex flex-col items-center justify-center">
+<svg class="w-full h-44 text-on-surface" fill="none" viewbox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Background Lines -->
+<path d="M10 20 H330 M10 60 H330 M10 100 H330 M10 140 H330" stroke="#31353a" stroke-dasharray="2 2" stroke-width="0.75"></path>
+<path d="M40 10 V170 M100 10 V170 M160 10 V170 M220 10 V170 M280 10 V170" stroke="#31353a" stroke-dasharray="2 2" stroke-width="0.75"></path>
+<!-- Tread Solid Profile (42mm) -->
+<path d="M 60 70 L 260 70 L 260 112 L 80 112 C 65 112 60 105 60 95 Z" fill="#ffb95f" fill-opacity="0.22" stroke="#ffb95f" stroke-width="2"></path>
+<!-- Riser Profile (20mm) -->
+<rect fill="#4cd7f6" fill-opacity="0.25" height="50" stroke="#4cd7f6" stroke-width="1.5" width="20" x="240" y="112"></rect>
+<!-- Tread Grooves (Anti-slip / LED recess) -->
+<rect fill="#101418" height="6" stroke="#ffb95f" stroke-width="1" width="8" x="90" y="70"></rect>
+<rect fill="#101418" height="6" stroke="#ffb95f" stroke-width="1" width="8" x="105" y="70"></rect>
+<!-- Bullnose Radius annotation -->
+<circle cx="68" cy="85" r="7" stroke="#4cd7f6" stroke-dasharray="1 1" stroke-width="1"></circle>
+<line stroke="#4cd7f6" stroke-width="1" x1="68" x2="35" y1="85" y2="55"></line>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="9" font-weight="600" x="25" y="50">Bocel R6mm</text>
+<!-- Anti-slip LED line note -->
+<line stroke="#ffb95f" stroke-width="1" x1="99" x2="135" y1="70" y2="40"></line>
+<text fill="#ffb95f" font-family="JetBrains Mono" font-size="9" font-weight="600" x="140" y="40">Doble ranura embutida (3x4mm)</text>
+<!-- Dimension: Tread Thickness 42mm -->
+<line stroke="#4cd7f6" stroke-width="1.5" x1="280" x2="280" y1="70" y2="112"></line>
+<line stroke="#4cd7f6" stroke-width="1" x1="275" x2="285" y1="70" y2="70"></line>
+<line stroke="#4cd7f6" stroke-width="1" x1="275" x2="285" y1="112" y2="112"></line>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="10" font-weight="700" x="290" y="96">42 mm</text>
+<!-- Dimension: Bullnose overhang 30mm -->
+<line stroke="#ff9747" stroke-width="1.5" x1="60" x2="90" y1="130" y2="130"></line>
+<line stroke="#ff9747" stroke-width="1" x1="60" x2="60" y1="125" y2="135"></line>
+<line stroke="#ff9747" stroke-width="1" x1="90" x2="90" y1="125" y2="135"></line>
+<text fill="#ff9747" font-family="JetBrains Mono" font-size="9" font-weight="700" x="58" y="148">Vuelo: 30 mm</text>
+<!-- Dimension: Riser Height (Contrahuella) -->
+<line stroke="#e0e3e8" stroke-dasharray="2 2" stroke-width="1" x1="230" x2="230" y1="112" y2="162"></line>
+<text fill="#e0e3e8" font-family="JetBrains Mono" font-size="9" x="140" y="150">Contrahuella H: 178.1 mm</text>
+</svg>
+</div>
+</div>
+</section>
+<!-- 3. Tipologías de Zanca y Mecanizado CNC de Taller -->
+<section class="bg-surface-container rounded-xl p-unit-md shadow-md flex flex-col gap-unit-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">precision_manufacturing</span>
+<span class="font-title-lg text-title-lg text-on-surface">Zancas &amp; Mecanizado CNC</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-semibold">TOLERANCIA 0.2mm</span>
+</div>
+<!-- Selectable Stringer Types with Radio Mimic -->
+<div class="flex flex-col gap-unit-sm" id="zanca-selector">
+<!-- Option 1: Cremallera -->
+<div class="bg-surface-container-high p-unit-md rounded-lg flex flex-col gap-unit-xs cursor-pointer shadow-sm transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-unit-xs">
+<div class="w-5 h-5 bg-primary-container text-on-primary-container rounded-DEFAULT flex items-center justify-center font-bold text-xs">✓</div>
+<span class="font-body-md font-semibold text-on-surface">Zanca Cremallera (Diente de Sierra)</span>
+</div>
+<span class="bg-surface-container-low text-primary text-[10px] font-label-caps px-unit-xs py-0.5 rounded-DEFAULT font-bold">RECOMENDADO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Mecanizada al hilo en tablero tricapa estructural o viga laminada GL24h de 300x50 mm. Apoyo directo de huella maciza sobre testa encolada con espiga y tornillería oculta.
+          </p>
+</div>
+<!-- Option 2: Inglesa Encastrada -->
+<div class="bg-surface-container-low p-unit-md rounded-lg flex flex-col gap-unit-xs cursor-pointer shadow-sm opacity-90">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-unit-xs">
+<div class="w-5 h-5 bg-surface-variant rounded-DEFAULT flex items-center justify-center"></div>
+<span class="font-body-md font-semibold text-on-surface">Zanca a la Inglesa (Encastrada Ciega)</span>
+</div>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Clásica taller</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cajeado fresado CNC a 15 mm de profundidad interior. Apretado trasero con cuñas cónicas de haya y adhesivo de poliuretano D4 para bloqueo antigrietas.
+          </p>
+</div>
+<!-- Option 3: Flotantes / Volados -->
+<div class="bg-surface-container-low p-unit-md rounded-lg flex flex-col gap-unit-xs cursor-pointer shadow-sm opacity-90">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-unit-xs">
+<div class="w-5 h-5 bg-surface-variant rounded-DEFAULT flex items-center justify-center"></div>
+<span class="font-body-md font-semibold text-on-surface">Peldaños Volados / Flotantes</span>
+</div>
+<span class="font-label-caps text-[10px] text-secondary">Estructural M18</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cajas metálicas embutidas en tabique portante o zanca de acero oculta tras cartón-yeso. Forro en caja de roble macizo con perno pasante regulable antivibración.
+          </p>
+</div>
+</div>
+<!-- CNC Milling Parameters Box -->
+<div class="bg-surface-container-lowest p-unit-sm rounded-lg flex flex-col gap-unit-xs">
+<span class="font-label-caps text-[10px] text-primary uppercase font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+          Set de Herramientas &amp; Parámetros de Fresado CNC
+        </span>
+<div class="grid grid-cols-2 gap-unit-xs font-label-caps text-[11px] text-on-surface mt-1">
+<div class="flex items-center gap-unit-xs bg-surface-container-high p-unit-xs rounded-DEFAULT">
+<span class="text-secondary font-bold">Fresa:</span>
+<span>Helicoidal Z2+2 Ø12mm</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-high p-unit-xs rounded-DEFAULT">
+<span class="text-secondary font-bold">Cajera:</span>
+<span>Prof. 15.0 mm</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-high p-unit-xs rounded-DEFAULT">
+<span class="text-secondary font-bold">Radio esq:</span>
+<span>R8 mm (sin holgura)</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-high p-unit-xs rounded-DEFAULT">
+<span class="text-secondary font-bold">Avance:</span>
+<span>12 m/min @ 18,000 RPM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Intermission: Timber Craftsmanship & Shop Quality -->
+<section class="flex flex-col gap-unit-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Control de Veta &amp; Ensamble Realizado</span>
+<span class="font-label-caps text-[10px] text-primary">ROBLE EUROPEO SELECCIONADO</span>
+</div>
+<div class="grid grid-cols-2 gap-unit-sm">
+<div class="relative rounded-xl overflow-hidden shadow-md h-36">
+<img class="w-full h-full object-cover" data-alt="Close up of artisanal European white oak wood staircase tread with smooth sanded edges, 42mm solid thickness, showing tight straight timber grain in a professional modern carpentry workshop with warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV1unimoUXhZQgP7dlJbC69g-FpGtCrl1E3eU8bFJ_FC9An15q5uEUeLVQULFCCNEwg_tEi0JYWppjpNgkkjweqn0Q8akfzRFDEBe2M0Q1A2jxEzyxv4P7O--MM2tPz8eJYZx5dTLu0XEBvqiYWJaNwkbpXlXv3PvkOnYoo5J-tL-eAX6NIcniI_VzoApdSxU4R-F6UXy7s-VdjzOXT_qQAPUcps1DTT67ZF9k3PfFkV-Tz1liiNflAA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex items-end p-unit-xs">
+<span class="font-label-caps text-[10px] text-on-surface font-semibold">Peldaño Macizo 42mm</span>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-md h-36">
+<img class="w-full h-full object-cover" data-alt="Technical joinery detail of a wooden staircase stringer milled on CNC machine, showing precise cutouts and mortises for steps, sawdust in background on workshop bench with calipers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6yOfs_LbI_vW3QmzqS7dFUIEfkYxEp-oHe0eTYg7QSyoVpRua5K4Kpj0kibrD5EVgIRP5y1HMX5DNFVunGnE8R1Sb-lh_uPOXPiKiI0w4oORXJnmQUpCtGqeNGJ5TmPYy8RMDM8BPgSX4itCY5UIXZ_ELsvEBL33o17xio9H1ctOnCXyDvRxS3BlPpLjdBWOQT3yK7mgt2wjfIGi8nYyKFV_lVv1cXbhfmHF35hB-J_863EQ41qQEeQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex items-end p-unit-xs">
+<span class="font-label-caps text-[10px] text-on-surface font-semibold">Mecanizado de Zanca</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Barandillas, Balaustres y Rigidez Estructural -->
+<section class="bg-surface-container rounded-xl p-unit-md shadow-md flex flex-col gap-unit-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">shield</span>
+<span class="font-title-lg text-title-lg text-on-surface">Barandillas &amp; Seguridad</span>
+</div>
+<span class="bg-surface-container-highest text-primary font-label-caps text-label-caps px-unit-xs py-0.5 rounded-DEFAULT">
+          CTE DB-SUA 1
+        </span>
+</div>
+<!-- Safety Norm Banner -->
+<div class="bg-surface-container-high p-unit-sm rounded-lg flex items-center gap-unit-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-[24px]">child_friendly</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-secondary font-bold uppercase">Hueco Máximo Permitido</span>
+<span class="font-body-md text-on-surface font-semibold">&lt; 100 mm entre barrotes</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Imposibilita el paso de esfera infantil de 10cm</span>
+</div>
+</div>
+<!-- Structural Load & Details -->
+<div class="grid grid-cols-2 gap-unit-xs">
+<div class="bg-surface-container-lowest p-unit-sm rounded-lg flex flex-col gap-0.5">
+<span class="font-label-caps text-[10px] text-on-surface-variant">CARGA HORIZONTAL</span>
+<span class="font-dimension-lg text-dimension-lg text-secondary font-bold">1.0 <span class="text-dimension-md font-dimension-md text-on-surface-variant">kN/m</span></span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">Uso residencial privado</span>
+</div>
+<div class="bg-surface-container-lowest p-unit-sm rounded-lg flex flex-col gap-0.5">
+<span class="font-label-caps text-[10px] text-on-surface-variant">ANCLAJE BALAUSTRE</span>
+<span class="font-dimension-lg text-dimension-lg text-primary font-bold">M8 Rampa</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">O espiga Ø25mm torneada</span>
+</div>
+</div>
+<!-- Ergonomic Handrail Profile -->
+<div class="bg-surface-container-low p-unit-md rounded-lg flex flex-col gap-unit-xs">
+<div class="flex justify-between items-center">
+<span class="font-body-md font-semibold text-on-surface">Pasamanos Ergonómico de Agarre</span>
+<span class="font-label-caps text-[10px] text-primary-container bg-surface-container-high px-unit-xs py-0.5 rounded-DEFAULT">60 x 45 mm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Perfil macizo continuo con canal inferior cóncavo (uñero finger-grip) y fresado central de 12x12 mm con difusor opal para tira LED monocroma 2700K indirecta.
+        </p>
+<div class="flex items-center gap-unit-xs mt-unit-2xs text-secondary font-label-caps text-[11px]">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+          Tira LED integrada: Guía oculta a ras con canalización para cable pasante.
+        </div>
+</div>
+</section>
+<!-- 5. Despiece Rápido y Cubicaje de Madera Maciza -->
+<section class="bg-surface-container rounded-xl p-unit-md shadow-md flex flex-col gap-unit-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">inventory_2</span>
+<span class="font-title-lg text-title-lg text-on-surface">Despiece &amp; Cubicaje Macizo</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">LOTE ESC-04</span>
+</div>
+<!-- Materials List -->
+<div class="flex flex-col gap-unit-xs">
+<!-- Item 1: Huellas -->
+<div class="bg-surface-container-high p-unit-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="bg-primary-container text-on-primary-container font-label-caps text-[11px] font-bold px-1.5 rounded-DEFAULT">16x</span>
+<span class="font-body-md font-semibold text-on-surface truncate">Huellas Roble Europeo</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Alistonado veta continua, 1ª calidad</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-dimension-md text-dimension-md text-secondary font-bold">950×310×42</span>
+<span class="block font-label-caps text-[10px] text-on-surface-variant">mm</span>
+</div>
+</div>
+<!-- Item 2: Contrahuellas -->
+<div class="bg-surface-container-high p-unit-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="bg-surface-variant text-on-surface font-label-caps text-[11px] font-bold px-1.5 rounded-DEFAULT">16x</span>
+<span class="font-body-md font-semibold text-on-surface truncate">Contrahuellas Roble</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Fijación clip oculto o ranura</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-dimension-md text-dimension-md text-secondary font-bold">950×180×20</span>
+<span class="block font-label-caps text-[10px] text-on-surface-variant">mm</span>
+</div>
+</div>
+<!-- Item 3: Zancas -->
+<div class="bg-surface-container-high p-unit-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="bg-primary-container text-on-primary-container font-label-caps text-[11px] font-bold px-1.5 rounded-DEFAULT">2x</span>
+<span class="font-body-md font-semibold text-on-surface truncate">Zancas Laterales Viga</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Madera laminada GL24h o fresno</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-dimension-md text-dimension-md text-primary font-bold">4400×300×55</span>
+<span class="block font-label-caps text-[10px] text-on-surface-variant">mm</span>
+</div>
+</div>
+<!-- Item 4: Pasamanos -->
+<div class="bg-surface-container-high p-unit-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="bg-surface-variant text-on-surface font-label-caps text-[11px] font-bold px-1.5 rounded-DEFAULT">1x</span>
+<span class="font-body-md font-semibold text-on-surface truncate">Pasamanos Continuo</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Ranura LED 12x12 + uñero</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-dimension-md text-dimension-md text-secondary font-bold">4500×60×45</span>
+<span class="block font-label-caps text-[10px] text-on-surface-variant">mm</span>
+</div>
+</div>
+<!-- Item 5: Balaustres -->
+<div class="bg-surface-container-high p-unit-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="bg-surface-variant text-on-surface font-label-caps text-[11px] font-bold px-1.5 rounded-DEFAULT">32x</span>
+<span class="font-body-md font-semibold text-on-surface truncate">Balaustres Verticales</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Cuadrado 30x30 o vidrio 8+8mm</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-dimension-md text-dimension-md text-secondary font-bold">920×30×30</span>
+<span class="block font-label-caps text-[10px] text-on-surface-variant">mm</span>
+</div>
+</div>
+</div>
+<!-- Volume & Weight Summary -->
+<div class="bg-surface-container-lowest p-unit-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">scale</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant">VOLUMEN MADERA</span>
+<span class="font-dimension-md text-dimension-md text-primary font-bold">0.38 m³</span>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-variant"></div>
+<div class="flex flex-col text-right">
+<span class="font-label-caps text-[10px] text-on-surface-variant">PESO ESTIMADO</span>
+<span class="font-dimension-md text-dimension-md text-on-surface font-bold">265 kg <span class="text-body-sm text-secondary font-normal">(~700 kg/m³)</span></span>
+</div>
+</div>
+</section>
+<!-- 6. Botones de Acción de Taller (Thumb Driven) -->
+<section class="flex flex-col gap-unit-sm pb-unit-lg">
+<!-- Primary Action Amber Industrial -->
+<button class="w-full min-h-touch-target-min bg-primary-container text-on-primary-container font-headline-md text-body-lg font-bold rounded-lg flex items-center justify-center gap-unit-xs shadow-md active:translate-y-0.5 transition-all uppercase tracking-wider" id="btn-add-despiece" type="button">
+<span class="material-symbols-outlined text-[22px]">post_add</span>
+        Añadir Escalera al Despiece General
+      </button>
+<!-- Secondary Technical Actions -->
+<div class="grid grid-cols-2 gap-unit-sm">
+<button class="min-h-touch-target-min bg-surface-container text-secondary font-label-caps text-[11px] rounded-lg p-unit-xs flex items-center justify-center gap-1 shadow-sm active:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Plantilla CNC (.DXF)
+        </button>
+<button class="min-h-touch-target-min bg-surface-container text-on-surface font-label-caps text-[11px] rounded-lg p-unit-xs flex items-center justify-center gap-1 shadow-sm active:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+          Compensación en L
+        </button>
+</div>
+</section>
+</div>
+</div>
+<script>
+  (function() {
+    // Micro-interaction for Zanca selector
+    const selectorRoot = document.getElementById('zanca-selector');
+    if (selectorRoot) {
+      const items = selectorRoot.children;
+      Array.from(items).forEach((item) => {
+        item.addEventListener('click', () => {
+          Array.from(items).forEach((el) => {
+            el.classList.remove('bg-surface-container-high');
+            el.classList.add('bg-surface-container-low', 'opacity-90');
+            const check = el.querySelector('.w-5');
+            if (check) {
+              check.className = 'w-5 h-5 bg-surface-variant rounded-DEFAULT flex items-center justify-center';
+              check.textContent = '';
+            }
+          });
+          item.classList.remove('bg-surface-container-low', 'opacity-90');
+          item.classList.add('bg-surface-container-high');
+          const activeCheck = item.querySelector('.w-5');
+          if (activeCheck) {
+            activeCheck.className = 'w-5 h-5 bg-primary-container text-on-primary-container rounded-DEFAULT flex items-center justify-center font-bold text-xs';
+            activeCheck.textContent = '✓';
+          }
+        });
+      });
+    }
+
+    // Add to project micro-interaction feedback
+    const addBtn = document.getElementById('btn-add-despiece');
+    if (addBtn) {
+      addBtn.addEventListener('click', function() {
+        const prevHtml = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[22px]">check</span> LOTE REGISTRADO EN TALLER';
+        this.classList.add('bg-secondary', 'text-on-secondary');
+        this.classList.remove('bg-primary-container', 'text-on-primary-container');
+        setTimeout(() => {
+          this.innerHTML = prevHtml;
+          this.classList.remove('bg-secondary', 'text-on-secondary');
+          this.classList.add('bg-primary-container', 'text-on-primary-container');
+        }, 2200);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.3)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="planos" href="plano_2d_fijaci_n_y_regulaci_n_de_frente.html"><span class="material-symbols-outlined text-[22px]">architecture</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Planos</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="placas" href="optimizador_de_corte_real.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Placas</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Presupuesto</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="ideas-ia" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Ideas IA</span></a></div></nav><script src="../core/store.js"></script></body></html>

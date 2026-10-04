@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.45)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-unit-sm"><div class="flex items-center gap-unit-md min-w-0 flex-1"><div class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center shrink-0 text-primary-container shadow-[0_2px_0px_#0b0f12]"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[9px] uppercase font-bold shrink-0">Taller &amp; CNC</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Logistica Carga</h1></div></div><div class="flex items-center gap-unit-xs shrink-0"><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html" title="Gestor de Retales"><span class="material-symbols-outlined text-[20px]">grid_view</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="logistica-carga" href="proximamente.html" title="Logística de Carga y Furgoneta"><span class="material-symbols-outlined text-[20px]">local_shipping</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="mantenimiento-cnc" href="proximamente.html" title="Mantenimiento y Discos CNC"><span class="material-symbols-outlined text-[20px]">build_circle</span></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-2">Piezas reales pendientes de etiquetar</div>
+    <div id="kp-qr-lista" class="flex flex-col gap-1 text-sm"></div>
+  </div>
+</section>
+<script>
+(function(){
+  function render(){
+    var piezas = window.KarpinteroDB.listPiezas().filter(function(p){ return !p.qr_impreso; });
+    var cont = document.getElementById('kp-qr-lista');
+    cont.innerHTML = '';
+    if (piezas.length === 0) cont.innerHTML = '<div class="text-on-surface-variant text-xs italic">No hay piezas reales pendientes de etiqueta.</div>';
+    piezas.forEach(function(pz){
+      var row = document.createElement('div');
+      row.className = 'flex items-center justify-between bg-surface-container-lowest rounded px-2 py-1.5';
+      row.innerHTML = '<span>' + pz.descripcion + ' (' + pz.id.slice(-6).toUpperCase() + ')</span><button data-id="' + pz.id + '" class="kp-imp text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400">Marcar impresa</button>';
+      cont.appendChild(row);
+    });
+    cont.querySelectorAll('.kp-imp').forEach(function(btn){
+      btn.addEventListener('click', function(){ window.KarpinteroDB.marcarQrImpreso(btn.getAttribute('data-id')); render(); });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', render);
+  if (document.readyState !== 'loading') render();
+})();
+</script><div class="flex flex-col w-full gap-unit-lg px-gutter-mobile py-unit-md">
+<!-- Top Segmented Switcher (Workshop Printing vs. Jobsite Assembly Scanner) -->
+<div class="flex items-center justify-between p-unit-xs bg-surface-container-low rounded-xl shadow-[0_2px_0px_#0b0f12]">
+<button class="flex-1 py-unit-sm px-unit-md flex items-center justify-center gap-unit-xs rounded-lg bg-surface-container-highest text-primary font-headline-md text-[13px] tracking-wide transition-all shadow-[0_2px_0px_#0b0f12]" id="btnTabPrint" onclick="switchMode('print')">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Etiquetado Taller</span>
+</button>
+<button class="flex-1 py-unit-sm px-unit-md flex items-center justify-center gap-unit-xs rounded-lg text-on-surface-variant font-headline-md text-[13px] tracking-wide transition-all hover:text-on-surface" id="btnTabScan" onclick="switchMode('scan')">
+<span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>
+<span>Escáner Obra</span>
+<span class="ml-unit-2xs w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+</div>
+<!-- Project Header & Active Thermal Printer Status -->
+<section class="flex flex-col gap-unit-xs bg-surface-container p-unit-md rounded-xl shadow-[0_2px_0px_#0b0f12]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container text-on-primary-container font-label-caps text-[10px] tracking-wider uppercase">PRJ-2024-88</span>
+<span class="text-on-surface font-title-lg text-title-lg truncate">Cocina Roble &amp; Gola</span>
+</div>
+<div class="flex items-center gap-unit-2xs text-secondary font-label-caps text-[10px] uppercase">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+<span>Zebra GK420t (BT)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-unit-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+        Roble Rústico Syncro 19mm + MDF 8mm
+      </span>
+<span class="font-dimension-md text-primary">Lote: 42 uds</span>
+</div>
+</section>
+<!-- ==================== VIEW 1: PRINT & THERMAL LABEL SIMULATOR ==================== -->
+<div class="flex flex-col gap-unit-lg" id="printSection">
+<!-- Carousel / Piece Selector -->
+<div class="flex flex-col gap-unit-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Selector de Piezas (Lote Activo)</span>
+<span class="font-dimension-md text-secondary text-[12px]" id="labelIndex">PZ 04 de 42</span>
+</div>
+<!-- Horizontal Scrollable Selector of Pieces -->
+<div class="flex gap-unit-sm overflow-x-auto pb-unit-xs -mx-gutter-mobile px-gutter-mobile">
+<!-- Piece Card 01 -->
+<button class="piece-thumb shrink-0 w-36 p-unit-sm rounded-lg bg-surface-container-low text-left flex flex-col gap-unit-2xs hover:bg-surface-container transition-all" id="piece-thumb-1" onclick="selectPiece(1)">
+<span class="font-label-caps text-[10px] text-on-surface-variant">#PZ-088-01</span>
+<span class="font-title-lg text-[13px] text-on-surface truncate">Costado Der. Columna</span>
+<span class="font-dimension-md text-[11px] text-primary">2100.0 × 580.0</span>
+<span class="font-label-caps text-[9px] text-secondary">Canto 2mm</span>
+</button>
+<!-- Piece Card 02 -->
+<button class="piece-thumb shrink-0 w-36 p-unit-sm rounded-lg bg-surface-container-low text-left flex flex-col gap-unit-2xs hover:bg-surface-container transition-all" id="piece-thumb-2" onclick="selectPiece(2)">
+<span class="font-label-caps text-[10px] text-on-surface-variant">#PZ-088-02</span>
+<span class="font-title-lg text-[13px] text-on-surface truncate">Suelo Módulo Columna</span>
+<span class="font-dimension-md text-[11px] text-primary">562.0 × 580.0</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant">Canto 0.4mm</span>
+</button>
+<!-- Piece Card 03 -->
+<button class="piece-thumb shrink-0 w-36 p-unit-sm rounded-lg bg-surface-container-low text-left flex flex-col gap-unit-2xs hover:bg-surface-container transition-all" id="piece-thumb-3" onclick="selectPiece(3)">
+<span class="font-label-caps text-[10px] text-on-surface-variant">#PZ-088-03</span>
+<span class="font-title-lg text-[13px] text-on-surface truncate">Trasera 8mm Fregadero</span>
+<span class="font-dimension-md text-[11px] text-primary">760.0 × 562.0</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant">Sin Canto</span>
+</button>
+<!-- Piece Card 04 (Active) -->
+<button class="piece-thumb shrink-0 w-36 p-unit-sm rounded-lg bg-surface-container-highest text-left flex flex-col gap-unit-2xs shadow-[0_2px_0px_#0b0f12] transition-all" id="piece-thumb-4" onclick="selectPiece(4)">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-primary font-bold">#PZ-088-04</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="font-title-lg text-[13px] text-on-surface truncate">Costado Izq. Fregadero</span>
+<span class="font-dimension-md text-[11px] text-primary-container">780.0 × 580.0</span>
+<span class="font-label-caps text-[9px] text-secondary">Canto 2mm + Gola</span>
+</button>
+<!-- Piece Card 05 -->
+<button class="piece-thumb shrink-0 w-36 p-unit-sm rounded-lg bg-surface-container-low text-left flex flex-col gap-unit-2xs hover:bg-surface-container transition-all" id="piece-thumb-5" onclick="selectPiece(5)">
+<span class="font-label-caps text-[10px] text-on-surface-variant">#PZ-088-05</span>
+<span class="font-title-lg text-[13px] text-on-surface truncate">Frente Cajón Cacerolero</span>
+<span class="font-dimension-md text-[11px] text-primary">596.0 × 387.0</span>
+<span class="font-label-caps text-[9px] text-secondary">4 Cantos 2mm</span>
+</button>
+</div>
+</div>
+<!-- PHYSICAL ZEBRA THERMAL LABEL MOCKUP (White thermal adhesive paper look with workshop precision) -->
+<div class="flex flex-col gap-unit-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Previsualización Térmica</span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-secondary font-label-caps text-[9px]">100 × 60 mm</span>
+</div>
+<button class="font-label-caps text-[10px] text-primary-container hover:underline uppercase" id="btnFormat" onclick="toggleLabelFormat()">
+          Cambiar a 60×40mm
+        </button>
+</div>
+<!-- The Sticker Container: High contrast white/off-white with real industrial receipt/label typography -->
+<div class="relative bg-inverse-surface text-inverse-on-surface p-unit-md rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.5)] flex flex-col gap-unit-sm select-none transition-all" id="thermalSticker">
+<!-- Thermal Header Line -->
+<div class="flex items-start justify-between pb-unit-xs bg-surface-container/5">
+<div class="flex flex-col">
+<span class="font-headline-md text-[11px] uppercase tracking-wider font-bold text-inverse-primary">KARPINTERO STUDIO CNC</span>
+<span class="font-label-caps text-[10px] text-inverse-on-surface/80">PROYECTO: #PRJ-2024-88 (COCINA GOLA)</span>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-[9px] bg-inverse-on-surface text-inverse-surface px-1.5 py-0.5 rounded-DEFAULT font-bold">LOTE A-1</span>
+</div>
+</div>
+<!-- QR Code + Piece Primary ID -->
+<div class="flex gap-unit-md items-center">
+<!-- Real Scalable Vector QR Code -->
+<div class="shrink-0 p-1.5 bg-surface-container-lowest rounded-lg shadow-sm">
+<svg class="w-20 h-20 text-inverse-surface" fill="currentColor" viewbox="0 0 100 100">
+<!-- Corner Squares -->
+<rect fill="white" height="28" width="28" x="5" y="5"></rect>
+<rect fill="black" height="20" width="20" x="9" y="9"></rect>
+<rect fill="white" height="12" width="12" x="13" y="13"></rect>
+<rect fill="white" height="28" width="28" x="67" y="5"></rect>
+<rect fill="black" height="20" width="20" x="71" y="9"></rect>
+<rect fill="white" height="12" width="12" x="75" y="13"></rect>
+<rect fill="white" height="28" width="28" x="5" y="67"></rect>
+<rect fill="black" height="20" width="20" x="9" y="71"></rect>
+<rect fill="white" height="12" width="12" x="13" y="75"></rect>
+<!-- QR Data Pixels Matrix -->
+<rect fill="white" height="8" width="8" x="38" y="8"></rect>
+<rect fill="white" height="6" width="6" x="50" y="8"></rect>
+<rect fill="white" height="6" width="6" x="38" y="20"></rect>
+<rect fill="white" height="8" width="8" x="48" y="22"></rect>
+<rect fill="white" height="6" width="8" x="10" y="38"></rect>
+<rect fill="white" height="8" width="6" x="22" y="42"></rect>
+<rect fill="white" height="10" width="10" x="36" y="36"></rect>
+<rect fill="white" height="8" width="8" x="52" y="38"></rect>
+<rect fill="white" height="6" width="6" x="68" y="38"></rect>
+<rect fill="white" height="6" width="10" x="80" y="42"></rect>
+<rect fill="white" height="8" width="8" x="40" y="52"></rect>
+<rect fill="white" height="12" width="6" x="54" y="54"></rect>
+<rect fill="white" height="8" width="8" x="68" y="50"></rect>
+<rect fill="white" height="8" width="8" x="82" y="56"></rect>
+<rect fill="white" height="8" width="6" x="38" y="70"></rect>
+<rect fill="white" height="6" width="10" x="50" y="72"></rect>
+<rect fill="white" height="6" width="6" x="66" y="72"></rect>
+<rect fill="white" height="10" width="8" x="76" y="68"></rect>
+<rect fill="white" height="6" width="12" x="38" y="84"></rect>
+<rect fill="white" height="8" width="8" x="56" y="84"></rect>
+<rect fill="white" height="6" width="10" x="72" y="84"></rect>
+<rect fill="white" height="12" width="6" x="88" y="78"></rect>
+</svg>
+</div>
+<!-- Piece Meta in Sticker -->
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-unit-xs">
+<span class="font-dimension-hero text-[22px] leading-none font-bold text-inverse-primary" id="stickerPzCode">#PZ-088-04</span>
+<span class="font-label-caps text-[10px] px-1 py-0.5 bg-inverse-on-surface/10 rounded-DEFAULT">MOD: M-02 FREG</span>
+</div>
+<span class="font-headline-md text-[14px] leading-tight font-bold text-inverse-on-surface truncate mt-1" id="stickerPzDesc">Costado Izquierdo Fregadero</span>
+<span class="font-body-sm text-[11px] text-inverse-on-surface/75">Substrato: Roble Sincro 19.0mm</span>
+<div class="flex items-center gap-unit-sm mt-1">
+<span class="flex items-center gap-1 font-label-caps text-[10px] text-inverse-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">height</span> VETA VERTICAL
+              </span>
+<span class="font-label-caps text-[10px] text-inverse-on-surface/80">CANT: 1/1</span>
+</div>
+</div>
+</div>
+<!-- Cutting Dimensions Badge (The high-impact measurement data) -->
+<div class="p-unit-sm bg-surface-container-highest/10 rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] uppercase tracking-wider text-inverse-on-surface/70">Dimensiones de Corte Final</span>
+<span class="font-dimension-hero text-[24px] leading-none font-bold text-inverse-on-surface" id="stickerDims">
+              780.0 <span class="text-[14px] font-normal font-body-sm">×</span> 580.0 <span class="text-[14px] font-normal font-body-sm">×</span> 19.0 mm
+            </span>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-[9px] uppercase text-inverse-on-surface/70">Tolerancia CNC</span>
+<span class="font-dimension-md text-[12px] font-bold block text-inverse-primary">±0.2 mm</span>
+</div>
+</div>
+<!-- Visual 4-Side Edgebanding Diagram (El Croquis de Cantos) -->
+<div class="flex flex-col gap-unit-2xs bg-surface-container-highest/5 p-unit-sm rounded-lg">
+<span class="font-label-caps text-[9px] uppercase tracking-wider text-inverse-on-surface/70 flex items-center justify-between">
+<span>Disposición de Cantos (Visto Cara Buena)</span>
+<span class="text-[9px] font-bold text-inverse-primary">2mm Frente / 0.4mm Fondo</span>
+</span>
+<!-- Interactive Edgeband Blueprint Map -->
+<div class="relative w-full h-24 bg-surface-container-lowest/15 rounded-lg flex items-center justify-center p-unit-xs">
+<!-- Top Edge (Arriba - Espiga/Gola) -->
+<div class="absolute top-1 left-8 right-8 h-4 bg-inverse-primary/80 rounded-DEFAULT flex items-center justify-center text-[9px] font-label-caps font-bold text-inverse-surface shadow-xs">
+              ARRIBA: Canto PVC 0.4mm
+            </div>
+<!-- Left Edge (Fondo Trasero) -->
+<div class="absolute left-1 top-6 bottom-6 w-5 bg-inverse-on-surface/30 rounded-DEFAULT flex items-center justify-center text-[8px] font-label-caps text-inverse-surface [writing-mode:vertical-lr] rotate-180">
+              FONDO: 0.4mm
+            </div>
+<!-- Center Panel Graphic (Shows grain and machinings) -->
+<div class="w-3/5 h-12 bg-surface-container-lowest/40 rounded-DEFAULT flex items-center justify-center flex-col gap-0.5">
+<span class="font-label-caps text-[9px] text-inverse-surface tracking-widest font-bold">ROBLE SYNCRO</span>
+<span class="font-dimension-md text-[10px] text-inverse-surface">780 × 580</span>
+</div>
+<!-- Right Edge (FRENTE VISTO - PVC 2mm) -->
+<div class="absolute right-1 top-6 bottom-6 w-6 bg-inverse-primary rounded-DEFAULT flex items-center justify-center text-[8px] font-label-caps font-bold text-inverse-surface [writing-mode:vertical-lr] shadow-xs">
+              FRENTE: PVC 2.0mm
+            </div>
+<!-- Bottom Edge (Abajo - Base Suelo) -->
+<div class="absolute bottom-1 left-8 right-8 h-4 bg-inverse-on-surface/20 rounded-DEFAULT flex items-center justify-center text-[8px] font-label-caps text-inverse-surface">
+              ABAJO: Sin Canto (Machihembrado)
+            </div>
+</div>
+</div>
+<!-- Machining & Hardware Badges (Mecanizados CNC) -->
+<div class="flex flex-col gap-unit-2xs">
+<span class="font-label-caps text-[9px] uppercase tracking-wider text-inverse-on-surface/70">Mecanizados Asignados en Programa CNC #04</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-inverse-on-surface/10 font-label-caps text-[10px] text-inverse-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-inverse-primary">tune</span> Sist. 32 (2×5)
+            </span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-inverse-on-surface/10 font-label-caps text-[10px] text-inverse-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-inverse-primary">carpenter</span> Rastro Gola 'L'
+            </span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-inverse-on-surface/10 font-label-caps text-[10px] text-inverse-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-inverse-primary">grid_3x3</span> Clamex P-14 (×4)
+            </span>
+</div>
+</div>
+<!-- Barcode / State in Sticker -->
+<div class="flex items-center justify-between pt-unit-xs bg-surface-container/5">
+<div class="flex items-center gap-unit-2xs">
+<span class="material-symbols-outlined text-[16px] text-inverse-primary">precision_manufacturing</span>
+<span class="font-label-caps text-[10px] font-bold text-inverse-primary">ESTADO: MECANIZADO OK</span>
+</div>
+<span class="font-dimension-md text-[10px] text-inverse-on-surface/60">REV-2.4 // OPERARIO: J.M.</span>
+</div>
+</div>
+</div>
+<!-- Actions Dock for Zebra Thermal Printing -->
+<div class="grid grid-cols-2 gap-unit-sm">
+<button class="h-touch-target-min flex items-center justify-center gap-unit-xs px-unit-md bg-surface-container-highest text-primary font-headline-md text-[14px] rounded-lg shadow-[0_2px_0px_#0b0f12] active:translate-y-0.5 transition-all" onclick="simulatePrint('single')">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span>Reimprimir (1 ud)</span>
+</button>
+<button class="h-touch-target-min flex items-center justify-center gap-unit-xs px-unit-md bg-primary-container text-on-primary-container font-headline-md text-[14px] font-bold rounded-lg shadow-[0_2px_0px_#0b0f12] active:translate-y-0.5 transition-all" onclick="simulatePrint('batch')">
+<span class="material-symbols-outlined text-[20px]">local_printshop</span>
+<span>Lote Completo (42)</span>
+</button>
+</div>
+<!-- Notification Toast for Print feedback -->
+<div class="hidden p-unit-md rounded-xl bg-surface-container-high shadow-xl flex items-center gap-unit-md transition-all" id="printNotification">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-title-lg text-[14px] text-on-surface truncate" id="printNotificationMsg">Enviando comando ZPL a Zebra GK420t...</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Protocolo Bluetooth SPP • Impresión en curso</span>
+</div>
+</div>
+</div>
+<!-- ==================== VIEW 2: FAST ON-SITE ASSEMBLY SCANNER ==================== -->
+<div class="hidden flex flex-col gap-unit-lg" id="scanSection">
+<!-- Assembly Progress Banner -->
+<div class="bg-surface-container p-unit-md rounded-xl flex flex-col gap-unit-sm shadow-[0_2px_0px_#0b0f12]">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Progreso del Montaje en Obra</span>
+<span class="font-title-lg text-title-lg text-on-surface">34 de 42 piezas ensambladas</span>
+</div>
+<span class="font-dimension-hero text-primary text-[28px]">81%</span>
+</div>
+<!-- Progress Bar Track -->
+<div class="w-full h-3 bg-surface-container-lowest rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-gradient-to-r from-primary-container to-secondary rounded-full" style="width: 81%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-[11px]">
+<span>Módulos Bajos: 100% OK</span>
+<span>Columna Horno: 3/5 pzs</span>
+<span class="text-secondary font-semibold">Faltan 8 piezas</span>
+</div>
+</div>
+<!-- Live Camera Scanner Viewport -->
+<div class="relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-2xl flex flex-col items-center justify-center min-h-[300px]">
+<!-- Visual Camera Background Placeholder simulating a carpenter pointing at cabinet in workshop/jobsite -->
+<img class="absolute inset-0 w-full h-full object-cover opacity-35" data-alt="First person point of view of a carpenter holding an industrial rugged smartphone scanning a barcode sticker on a kitchen cabinet carcass in an upscale apartment under construction with oak cabinetry and tools in background, warm workshop lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbuQ3k66NYP3NFLHOEnkE5ZQyiU34GDFR_HEk5WhdLupRJIc4M6AydRSvf2RMHOd0TT69PeZoy2xNr9Tf7MpyM_5CLTfYqv4r_oHaqFtGzbXd3cRn_WkSXFjHQAkvNGty1AEv-T9BpHynz-7-5m8xMB4geZbmf1LlyxglYrS6GEqGoUYBF_hY5PzJq99JyYGD58i7oD8y9x3tl0-ZFLnAO2naL6IaUkhPxskhupAm_IY8XZYHFtF_0-Q"/>
+<!-- Scanning HUD Overlay -->
+<div class="relative z-10 w-full p-unit-lg flex flex-col items-center justify-between h-[300px]">
+<!-- Scanner Top Controls -->
+<div class="w-full flex items-center justify-between">
+<div class="px-unit-sm py-unit-xs rounded-lg bg-surface/80 backdrop-blur-md flex items-center gap-unit-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-[10px] text-on-surface uppercase">Óptica Activa • 60 FPS</span>
+</div>
+<button class="w-9 h-9 rounded-lg bg-surface/80 backdrop-blur-md text-on-surface flex items-center justify-center hover:text-primary-container transition-colors" onclick="triggerFlash()">
+<span class="material-symbols-outlined text-[20px]" id="flashIcon">flash_on</span>
+</button>
+</div>
+<!-- Center Reticle Frame with Corner Brackets -->
+<div class="relative w-52 h-52 flex items-center justify-center">
+<!-- Animated Laser Scan Line -->
+<div class="absolute inset-x-2 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent shadow-[0_0_8px_#4cd7f6] animate-bounce"></div>
+<!-- Brackets (Top Left, Top Right, Bottom Left, Bottom Right) -->
+<div class="absolute top-0 left-0 w-8 h-8 rounded-tl-lg bg-secondary/80"></div>
+<div class="absolute top-0 right-0 w-8 h-8 rounded-tr-lg bg-secondary/80"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 rounded-bl-lg bg-secondary/80"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 rounded-br-lg bg-secondary/80"></div>
+<!-- Inner Transparent Box -->
+<div class="w-48 h-48 rounded-md bg-surface-container/20 backdrop-blur-[2px] flex items-center justify-center flex-col gap-unit-xs pointer-events-none">
+<span class="material-symbols-outlined text-secondary text-[36px] opacity-80 animate-pulse">qr_code_scanner</span>
+<span class="font-label-caps text-[10px] text-on-surface text-center tracking-wider uppercase px-2 py-0.5 bg-surface/90 rounded-DEFAULT">Apunta al código QR</span>
+</div>
+</div>
+<!-- Scanner Simulation Button Trigger -->
+<div class="w-full flex justify-center">
+<button class="px-unit-md py-unit-xs rounded-full bg-surface/90 backdrop-blur-md text-primary font-headline-md text-[12px] flex items-center gap-unit-xs hover:bg-surface transition-all shadow-md active:scale-95" onclick="simulateScanSuccess()">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>Simular Detección de Etiqueta</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Scanned Piece Assembly Modal / Card (Instant Recognition Result) -->
+<div class="flex flex-col gap-unit-md bg-surface-container p-unit-md rounded-xl shadow-[0_2px_0px_#0b0f12]" id="scannedPieceSheet">
+<!-- Card Top Badge -->
+<div class="flex items-center justify-between pb-unit-xs bg-surface-container-high/30">
+<div class="flex items-center gap-unit-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-caps text-[11px] text-primary uppercase font-bold">¡Pieza Reconocida en Obra!</span>
+</div>
+<span class="font-dimension-md text-secondary text-[12px]">Paso de Montaje #06</span>
+</div>
+<!-- Scanned Item Identity -->
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-dimension-hero text-primary text-[24px] font-bold">#PZ-088-04</span>
+<span class="font-title-lg text-title-lg text-on-surface">Costado Izquierdo Módulo Fregadero</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Módulo Destino: <strong class="text-on-surface">M-02 Bajo Fregadero (800mm)</strong></span>
+</div>
+<div class="p-unit-xs rounded-lg bg-surface-container-high text-center">
+<span class="font-label-caps text-[9px] uppercase text-on-surface-variant block">Posición</span>
+<span class="font-dimension-md text-on-surface font-bold text-[14px]">IZQ / EXT</span>
+</div>
+</div>
+<!-- 2D Interactive Placement Blueprint & Hardware Instructions -->
+<div class="bg-surface-container-low p-unit-md rounded-lg flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] uppercase text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">architecture</span> Esquema de Ensamble y Cotas
+          </span>
+<span class="font-dimension-md text-primary text-[11px]">780 × 580 × 19 mm</span>
+</div>
+<!-- 2D Vector CAD Blueprint of the Module Assembly -->
+<div class="w-full h-32 bg-surface-container-lowest rounded-lg p-unit-sm relative flex items-center justify-center overflow-hidden">
+<svg class="w-full h-full text-outline-variant/60" fill="none" viewbox="0 0 300 120">
+<!-- Grid scale lines -->
+<path d="M10 20 H290 M10 60 H290 M10 100 H290" stroke="currentColor" stroke-dasharray="2 4" stroke-width="0.5"></path>
+<path d="M50 10 V110 M150 10 V110 M250 10 V110" stroke="currentColor" stroke-dasharray="2 4" stroke-width="0.5"></path>
+<!-- Cabinet Carcass 2D Outline -->
+<rect height="85" stroke="#a08e7a" stroke-dasharray="1 1" stroke-width="1.5" width="160" x="70" y="20"></rect>
+<!-- Target Active Piece Highlighted in Bold Amber -->
+<rect fill="#f59e0b" fill-opacity="0.85" height="85" stroke="#ffc174" stroke-width="2" width="12" x="70" y="20"></rect>
+<!-- Bottom Shelf -->
+<rect fill="#262a2f" height="12" stroke="#534434" stroke-width="1" width="136" x="82" y="93"></rect>
+<!-- Gola Aluminum Profile Slot -->
+<rect fill="#4cd7f6" fill-opacity="0.9" height="14" width="22" x="70" y="20"></rect>
+<!-- Assembly Clamex arrows -->
+<circle cx="76" cy="45" fill="#ffc174" r="3"></circle>
+<circle cx="76" cy="80" fill="#ffc174" r="3"></circle>
+<circle cx="76" cy="99" fill="#4cd7f6" r="3"></circle>
+<!-- Dimension arrows and callouts -->
+<text fill="#ffc174" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="35" y="65">780mm</text>
+<text fill="#a08e7a" font-family="JetBrains Mono" font-size="8" x="130" y="115">Ancho: 800mm</text>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="8" font-weight="bold" x="96" y="31">← Perfil Gola L</text>
+</svg>
+<div class="absolute bottom-1 right-2 bg-surface/90 px-unit-xs py-0.5 rounded-DEFAULT">
+<span class="font-label-caps text-[9px] text-secondary">Herraje: 4× Clamex P-14 + 2× Gola</span>
+</div>
+</div>
+<!-- Assembly Checklist for the Installer -->
+<div class="flex flex-col gap-unit-xs pt-unit-xs">
+<div class="flex items-center gap-unit-sm text-body-sm text-on-surface">
+<span class="w-5 h-5 rounded-DEFAULT bg-primary-container/20 text-primary-container flex items-center justify-center font-bold text-[11px]">1</span>
+<span>Insertar 2 conectores Clamex P-14 en ranuras de base</span>
+</div>
+<div class="flex items-center gap-unit-sm text-body-sm text-on-surface">
+<span class="w-5 h-5 rounded-DEFAULT bg-primary-container/20 text-primary-container flex items-center justify-center font-bold text-[11px]">2</span>
+<span>Enclavar testero superior con rastro de perfil Gola hacia el frente</span>
+</div>
+<div class="flex items-center gap-unit-sm text-body-sm text-on-surface">
+<span class="w-5 h-5 rounded-DEFAULT bg-secondary/20 text-secondary flex items-center justify-center font-bold text-[11px]">3</span>
+<span>Apretar prisionero lateral con llave Allen de 4mm a 90°</span>
+</div>
+</div>
+</div>
+<!-- Validation Action CTA -->
+<button class="h-touch-target-min w-full bg-primary-container text-on-primary-container font-headline-md text-[15px] font-bold rounded-lg shadow-[0_2px_0px_#0b0f12] flex items-center justify-center gap-unit-sm active:translate-y-0.5 transition-all" id="btnValidatePiece" onclick="validatePieceAssembly()">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+<span>Validar Pieza Colocada en Obra</span>
+</button>
+<!-- Already Verified Feedback (Initially Hidden) -->
+<div class="hidden p-unit-md rounded-lg bg-surface-container-high text-on-surface flex items-center justify-between" id="validatedSuccessBox">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">task_alt</span>
+<div class="flex flex-col">
+<span class="font-title-lg text-[13px] text-secondary">Registrada: 35 de 42 piezas (83%)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Sincronizado con base de datos del taller</span>
+</div>
+</div>
+<button class="px-unit-sm py-unit-xs rounded-DEFAULT bg-surface text-primary font-label-caps text-[10px] uppercase" onclick="resetScanState()">
+          Siguiente
+        </button>
+</div>
+</div>
+</div>
+<!-- Industrial Workshop Spec Footnote -->
+<footer class="pt-unit-xs flex items-center justify-between text-on-surface-variant/60 font-label-caps text-[10px] uppercase">
+<span>Karpintero OS • Módulo Etiquetado v4.2</span>
+<span>Licencia Taller Pro</span>
+</footer>
+</div>
+<script>
+  // Mode Switcher between Workshop Thermal Printing and Jobsite Scanner
+  function switchMode(mode) {
+    const printSec = document.getElementById('printSection');
+    const scanSec = document.getElementById('scanSection');
+    const btnPrint = document.getElementById('btnTabPrint');
+    const btnScan = document.getElementById('btnTabScan');
+
+    if (mode === 'print') {
+      printSec.classList.remove('hidden');
+      scanSec.classList.add('hidden');
+      
+      btnPrint.className = "flex-1 py-unit-sm px-unit-md flex items-center justify-center gap-unit-xs rounded-lg bg-surface-container-highest text-primary font-headline-md text-[13px] tracking-wide transition-all shadow-[0_2px_0px_#0b0f12]";
+      btnScan.className = "flex-1 py-unit-sm px-unit-md flex items-center justify-center gap-unit-xs rounded-lg text-on-surface-variant font-headline-md text-[13px] tracking-wide transition-all hover:text-on-surface";
+    } else {
+      printSec.classList.add('hidden');
+      scanSec.classList.remove('hidden');
+
+      btnScan.className = "flex-1 py-unit-sm px-unit-md flex items-center justify-center gap-unit-xs rounded-lg bg-surface-container-highest text-primary font-headline-md text-[13px] tracking-wide transition-all shadow-[0_2px_0px_#0b0f12]";
+      btnPrint.className = "flex-1 py-unit-sm px-unit-md flex items-center justify-center gap-unit-xs rounded-lg text-on-surface-variant font-headline-md text-[13px] tracking-wide transition-all hover:text-on-surface";
+    }
+  }
+
+  // Piece Data Mock for Workshop Carousel
+  const pieceDatabase = {
+    1: { code: '#PZ-088-01', name: 'Costado Der. Columna', dims: '2100.0 × 580.0 × 19.0 mm', index: 'PZ 01 de 42' },
+    2: { code: '#PZ-088-02', name: 'Suelo Módulo Columna', dims: '562.0 × 580.0 × 19.0 mm', index: 'PZ 02 de 42' },
+    3: { code: '#PZ-088-03', name: 'Trasera 8mm Fregadero', dims: '760.0 × 562.0 × 8.0 mm', index: 'PZ 03 de 42' },
+    4: { code: '#PZ-088-04', name: 'Costado Izquierdo Fregadero', dims: '780.0 × 580.0 × 19.0 mm', index: 'PZ 04 de 42' },
+    5: { code: '#PZ-088-05', name: 'Frente Cajón Cacerolero', dims: '596.0 × 387.0 × 19.0 mm', index: 'PZ 05 de 42' }
+  };
+
+  function selectPiece(id) {
+    // Reset thumbnails styling
+    document.querySelectorAll('.piece-thumb').forEach(el => {
+      el.className = "piece-thumb shrink-0 w-36 p-unit-sm rounded-lg bg-surface-container-low text-left flex flex-col gap-unit-2xs hover:bg-surface-container transition-all";
+    });
+    
+    // Highlight active thumbnail
+    const activeEl = document.getElementById('piece-thumb-' + id);
+    if (activeEl) {
+      activeEl.className = "piece-thumb shrink-0 w-36 p-unit-sm rounded-lg bg-surface-container-highest text-left flex flex-col gap-unit-2xs shadow-[0_2px_0px_#0b0f12] transition-all";
+    }
+
+    const data = pieceDatabase[id];
+    if (data) {
+      document.getElementById('stickerPzCode').innerText = data.code;
+      document.getElementById('stickerPzDesc').innerText = data.name;
+      document.getElementById('stickerDims').innerHTML = `${data.dims}`;
+      document.getElementById('labelIndex').innerText = data.index;
+    }
+  }
+
+  // Label dimension toggle (50x100mm vs 60x40mm)
+  let isCompactFormat = false;
+  function toggleLabelFormat() {
+    const sticker = document.getElementById('thermalSticker');
+    const btn = document.getElementById('btnFormat');
+    isCompactFormat = !isCompactFormat;
+
+    if (isCompactFormat) {
+      sticker.style.maxWidth = "360px";
+      sticker.style.margin = "0 auto";
+      btn.innerText = "Cambiar a 100×60mm";
+    } else {
+      sticker.style.maxWidth = "100%";
+      sticker.style.margin = "0";
+      btn.innerText = "Cambiar a 60×40mm";
+    }
+  }
+
+  // Print simulator
+  function simulatePrint(type) {
+    const toast = document.getElementById('printNotification');
+    const msg = document.getElementById('printNotificationMsg');
+    toast.classList.remove('hidden');
+    
+    if (type === 'single') {
+      msg.innerText = "Imprimiendo 1 etiqueta en Zebra GK420t (PZ-088-04)...";
+    } else {
+      msg.innerText = "Enviando cola de 42 etiquetas a Zebra GK420t...";
+    }
+
+    setTimeout(() => {
+      msg.innerText = "¡Impresión finalizada con éxito! Corte listo.";
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 2500);
+    }, 1800);
+  }
+
+  // Scanner Simulator Micro-interactions
+  let flashActive = false;
+  function triggerFlash() {
+    flashActive = !flashActive;
+    const icon = document.getElementById('flashIcon');
+    icon.innerText = flashActive ? 'flash_off' : 'flash_on';
+  }
+
+  function simulateScanSuccess() {
+    const sheet = document.getElementById('scannedPieceSheet');
+    sheet.classList.add('scale-[1.02]');
+    setTimeout(() => {
+      sheet.classList.remove('scale-[1.02]');
+    }, 200);
+  }
+
+  function validatePieceAssembly() {
+    const btn = document.getElementById('btnValidatePiece');
+    const successBox = document.getElementById('validatedSuccessBox');
+
+    btn.classList.add('hidden');
+    successBox.classList.remove('hidden');
+  }
+
+  function resetScanState() {
+    const btn = document.getElementById('btnValidatePiece');
+    const successBox = document.getElementById('validatedSuccessBox');
+
+    btn.classList.remove('hidden');
+    successBox.classList.add('hidden');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-2xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Costes</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Retales</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="logistica-carga" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">rv_hookup</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Logística</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="mantenimiento-cnc" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">settings_suggest</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Taller CNC</span></a></div></nav><script src="../core/store.js"></script></body></html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.45)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-unit-sm"><div class="flex items-center gap-unit-md min-w-0 flex-1"><div class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center shrink-0 text-primary-container shadow-[0_2px_0px_#0b0f12]"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[9px] uppercase font-bold shrink-0">Taller &amp; CNC</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Mantenimiento Cnc</h1></div></div><div class="flex items-center gap-unit-xs shrink-0"><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html" title="Gestor de Retales"><span class="material-symbols-outlined text-[20px]">grid_view</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="logistica-carga" href="proximamente.html" title="Logística de Carga y Furgoneta"><span class="material-symbols-outlined text-[20px]">local_shipping</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="mantenimiento-cnc" href="proximamente.html" title="Mantenimiento y Discos CNC"><span class="material-symbols-outlined text-[20px]">build_circle</span></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-2">Ajustes reales de taller (afectan al optimizador de corte)</div>
+    <form id="kp-form-ajustes" class="grid grid-cols-2 gap-2 text-xs">
+      <label class="flex flex-col gap-1">Kerf de sierra (mm)<input name="kerf_mm" type="number" step="0.1" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/></label>
+      <label class="flex flex-col gap-1">Margen de seguridad (mm)<input name="margen_mm" type="number" step="0.1" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/></label>
+      <button type="submit" class="col-span-2 mt-1 py-2 rounded bg-primary-container text-on-primary-container font-bold">Guardar ajustes reales</button>
+    </form>
+  </div>
+</section>
+<script>
+(function(){
+  function load(){ var a = window.KarpinteroDB.getAjustes(); document.querySelector('[name=kerf_mm]').value = a.kerf_mm; document.querySelector('[name=margen_mm]').value = a.margen_mm; }
+  document.getElementById('kp-form-ajustes').addEventListener('submit', function(e){
+    e.preventDefault();
+    window.KarpinteroDB.setAjustes({ kerf_mm: parseFloat(e.target.kerf_mm.value), margen_mm: parseFloat(e.target.margen_mm.value) });
+    alert('Ajustes guardados. Se usarán como valores por defecto reales en el optimizador de corte.');
+  });
+  document.addEventListener('DOMContentLoaded', load);
+  if (document.readyState !== 'loading') load();
+})();
+</script><div class="flex flex-col w-full pb-10">
+<!-- Sub-Header Info Banner (Atelier Profile & Master Status) -->
+<div class="px-gutter-mobile py-unit-md flex flex-col gap-unit-xs">
+<div class="bg-surface-container-high rounded-xl p-unit-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[28px]">handyman</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest truncate">Ajustes Generales</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<p class="font-title-lg text-title-lg text-on-surface truncate font-bold">Taller Hermanos Carpintero &amp; Ebanistas</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">ID Estación: CNC-MAZAK-04 • Norma DIN 68765</span>
+</div>
+</div>
+<div class="shrink-0 pl-unit-xs">
+<span class="px-unit-sm py-unit-xs rounded bg-surface-container-lowest text-primary font-label-caps text-[10px] uppercase font-bold tracking-wider">
+          Calibrado
+        </span>
+</div>
+</div>
+</div>
+<!-- Main Scrollable Settings Container -->
+<div class="flex flex-col gap-unit-lg px-gutter-mobile">
+<!-- SECCIÓN 1: Tolerancias de Corte y Ensamble -->
+<section class="bg-surface-container rounded-xl p-unit-md flex flex-col gap-unit-md shadow-md">
+<div class="flex items-center justify-between pb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">straighten</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Tolerancias de Corte y Ensamble</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Calibración de sierra mural, seccionadora y despieces</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase bg-surface-container-lowest px-unit-xs py-0.5 rounded">SEC 01</span>
+</div>
+<!-- Item 1: Kerf / Espesor de corte -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col pr-unit-sm">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Espesor de Corte de Disco (Kerf)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ancho real de sangría según afilado y diente trapezoidal</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-highest p-1 rounded-lg">
+<button class="px-unit-sm py-unit-xs rounded text-on-primary bg-primary-container font-label-caps text-[11px] font-bold transition-colors" id="kerf-btn-std" onclick="setKerf(3.2)" type="button">
+              3.2 mm Estándar
+            </button>
+<button class="px-unit-sm py-unit-xs rounded text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] font-medium transition-colors" id="kerf-btn-fine" onclick="setKerf(2.8)" type="button">
+              2.8 mm Fino
+            </button>
+</div>
+</div>
+<!-- Custom Kerf Stepper -->
+<div class="flex items-center justify-between pt-unit-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ajuste micrométrico:</span>
+<div class="flex items-center gap-unit-xs bg-surface-container-lowest p-1 rounded-lg">
+<button class="w-11 h-11 min-h-touch-target-min flex items-center justify-center rounded bg-surface-container-high text-on-surface active:bg-surface-container text-[18px] font-bold shadow-[0_2px_0px_#0b0f12]" onclick="adjustNum('kerf-val', -0.1, 1.0, 5.0, 1)" type="button">
+              −
+            </button>
+<div class="px-unit-md flex items-baseline gap-1">
+<span class="font-dimension-lg text-dimension-lg text-secondary font-bold" id="kerf-val">3.2</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">mm</span>
+</div>
+<button class="w-11 h-11 min-h-touch-target-min flex items-center justify-center rounded bg-surface-container-high text-on-surface active:bg-surface-container text-[18px] font-bold shadow-[0_2px_0px_#0b0f12]" onclick="adjustNum('kerf-val', 0.1, 1.0, 5.0, 1)" type="button">
+              +
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 2: Retestado perimetral -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex items-center justify-between gap-unit-md">
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Retestado Perimetral Tablero Bruto</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Saneo de bordes golpeados por transporte (4 cantos)</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-lowest p-1 rounded-lg shrink-0">
+<button class="w-11 h-11 min-h-touch-target-min flex items-center justify-center rounded bg-surface-container-high text-on-surface active:bg-surface-container text-[18px] font-bold shadow-[0_2px_0px_#0b0f12]" onclick="adjustNum('retestado-val', -5, 0, 50, 0)" type="button">
+            −
+          </button>
+<div class="w-16 text-center">
+<span class="font-dimension-lg text-dimension-lg text-primary font-bold" id="retestado-val">15</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant block -mt-1">mm/borde</span>
+</div>
+<button class="w-11 h-11 min-h-touch-target-min flex items-center justify-center rounded bg-surface-container-high text-on-surface active:bg-surface-container text-[18px] font-bold shadow-[0_2px_0px_#0b0f12]" onclick="adjustNum('retestado-val', 5, 0, 50, 0)" type="button">
+            +
+          </button>
+</div>
+</div>
+<!-- Item 3: Holguras para frentes de cajón -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Holguras para Frentes de Cajón</span>
+<span class="font-label-caps text-label-caps text-secondary-container font-semibold uppercase">Luz de junta</span>
+</div>
+<div class="grid grid-cols-2 gap-unit-sm">
+<!-- Lateral -->
+<div class="bg-surface-container-highest/60 p-unit-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Luz Lateral</span>
+<span class="font-label-caps text-[10px] text-outline">Por costado</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container text-on-surface font-bold" onclick="adjustNum('luz-lat-val', -0.5, 0.5, 6.0, 1)" type="button">−</button>
+<span class="font-dimension-md text-dimension-md text-on-surface font-bold w-9 text-center" id="luz-lat-val">2.0</span>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container text-on-surface font-bold" onclick="adjustNum('luz-lat-val', 0.5, 0.5, 6.0, 1)" type="button">+</button>
+</div>
+</div>
+<!-- Superior/Inferior -->
+<div class="bg-surface-container-highest/60 p-unit-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Luz Sup./Inf.</span>
+<span class="font-label-caps text-[10px] text-outline">Entre frentes</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container text-on-surface font-bold" onclick="adjustNum('luz-sup-val', -0.5, 0.5, 6.0, 1)" type="button">−</button>
+<span class="font-dimension-md text-dimension-md text-on-surface font-bold w-9 text-center" id="luz-sup-val">3.0</span>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container text-on-surface font-bold" onclick="adjustNum('luz-sup-val', 0.5, 0.5, 6.0, 1)" type="button">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 4: Undermount Slide Deduction -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex items-center justify-between gap-unit-md">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Tolerancia Correderas Undermount</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-label-caps text-[9px] uppercase font-bold">Ocultas</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Deducción de ancho interior vano − cajón</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-lowest p-1 rounded-lg shrink-0">
+<button class="w-11 h-11 min-h-touch-target-min flex items-center justify-center rounded bg-surface-container-high text-on-surface active:bg-surface-container text-[18px] font-bold shadow-[0_2px_0px_#0b0f12]" onclick="adjustNum('undermount-val', -1, 30, 55, 0)" type="button">
+            −
+          </button>
+<div class="w-14 text-center">
+<span class="font-dimension-lg text-dimension-lg text-secondary font-bold" id="undermount-val">42</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant block -mt-1">mm</span>
+</div>
+<button class="w-11 h-11 min-h-touch-target-min flex items-center justify-center rounded bg-surface-container-high text-on-surface active:bg-surface-container text-[18px] font-bold shadow-[0_2px_0px_#0b0f12]" onclick="adjustNum('undermount-val', 1, 30, 55, 0)" type="button">
+            +
+          </button>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 2: Parámetros Eléctricos LED por Defecto -->
+<section class="bg-surface-container rounded-xl p-unit-md flex flex-col gap-unit-md shadow-md">
+<div class="flex items-center justify-between pb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Parámetros Eléctricos LED</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cálculos automáticos de fuentes, fresado de disipador y tiras</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase bg-surface-container-lowest px-unit-xs py-0.5 rounded">SEC 02</span>
+</div>
+<!-- Voltaje Estándar -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex flex-col gap-unit-sm">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Tensión Estándar de Integración</span>
+<div class="grid grid-cols-3 gap-unit-xs">
+<button class="led-volt-btn py-unit-sm px-unit-xs rounded-lg bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps text-center flex flex-col items-center gap-1 transition-all" onclick="selectLedVolt(this, '12V')" type="button">
+<span class="font-bold text-body-md">12V</span>
+<span class="text-[10px] text-outline">Tiras cortas</span>
+</button>
+<button class="led-volt-btn py-unit-sm px-unit-xs rounded-lg bg-secondary-container text-on-secondary-container font-label-caps text-label-caps text-center flex flex-col items-center gap-1 font-bold shadow-[0_2px_0px_#00424e]" onclick="selectLedVolt(this, '24V')" type="button">
+<span class="font-bold text-body-md">24V</span>
+<span class="text-[10px] uppercase tracking-tighter">Recomendado</span>
+</button>
+<button class="led-volt-btn py-unit-sm px-unit-xs rounded-lg bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps text-center flex flex-col items-center gap-1 transition-all" onclick="selectLedVolt(this, '48V')" type="button">
+<span class="font-bold text-body-md">48V</span>
+<span class="text-[10px] text-outline">Gran tirada</span>
+</button>
+</div>
+</div>
+<!-- Margen Térmico Driver + Caída de tensión -->
+<div class="grid grid-cols-1 gap-unit-sm">
+<!-- Margen Térmico -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex items-center justify-between gap-unit-sm">
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Margen Térmico de Driver</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sobredimensionado para cajones cerrados</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-highest p-1 rounded-lg shrink-0">
+<button class="px-unit-sm py-unit-xs rounded bg-primary-container text-on-primary font-label-caps text-[10px] font-bold" id="margin-20" onclick="setThermalMargin(20)" type="button">
+              +20% Estándar
+            </button>
+<button class="px-unit-sm py-unit-xs rounded text-on-surface-variant hover:text-on-surface font-label-caps text-[10px] font-medium" id="margin-30" onclick="setThermalMargin(30)" type="button">
+              +30% Severo
+            </button>
+</div>
+</div>
+<!-- Caída de Tensión -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex items-center justify-between gap-unit-sm">
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Caída de Tensión Admisible</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Límite para evitar pérdidas de lúmenes</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-lowest p-1 rounded-lg shrink-0">
+<button class="w-10 h-10 min-h-touch-target-min flex items-center justify-center rounded bg-surface-container-high text-on-surface text-[18px] font-bold" onclick="adjustNum('voltage-drop-val', -0.5, 1.0, 5.0, 1)" type="button">
+              −
+            </button>
+<div class="w-14 text-center">
+<span class="font-dimension-md text-dimension-md text-secondary font-bold" id="voltage-drop-val">3.0</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">%</span>
+</div>
+<button class="w-10 h-10 min-h-touch-target-min flex items-center justify-center rounded bg-surface-container-high text-on-surface text-[18px] font-bold" onclick="adjustNum('voltage-drop-val', 0.5, 1.0, 5.0, 1)" type="button">
+              +
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 3: Proveedores y Costos de Referencia -->
+<section class="bg-surface-container rounded-xl p-unit-md flex flex-col gap-unit-md shadow-md">
+<div class="flex items-center justify-between pb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">euro</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Tarifas y Proveedores</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Baremos por defecto para generador de presupuestos</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase bg-surface-container-lowest px-unit-xs py-0.5 rounded">SEC 03</span>
+</div>
+<!-- Precios Hora: Taller y Obra -->
+<div class="grid grid-cols-2 gap-unit-sm">
+<div class="bg-surface-container-low rounded-lg p-unit-md flex flex-col gap-unit-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hora Oficial Taller</span>
+<div class="flex items-center justify-between pt-1">
+<span class="font-dimension-lg text-dimension-lg text-primary font-bold"><span id="rate-taller">38.00</span> €</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded bg-surface-container-highest text-on-surface font-bold flex items-center justify-center" onclick="adjustNum('rate-taller', -2, 20, 80, 2)" type="button">−</button>
+<button class="w-8 h-8 rounded bg-surface-container-highest text-on-surface font-bold flex items-center justify-center" onclick="adjustNum('rate-taller', 2, 20, 80, 2)" type="button">+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-unit-md flex flex-col gap-unit-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hora Montaje en Obra</span>
+<div class="flex items-center justify-between pt-1">
+<span class="font-dimension-lg text-dimension-lg text-secondary font-bold"><span id="rate-obra">45.00</span> €</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded bg-surface-container-highest text-on-surface font-bold flex items-center justify-center" onclick="adjustNum('rate-obra', -2, 20, 90, 2)" type="button">−</button>
+<button class="w-8 h-8 rounded bg-surface-container-highest text-on-surface font-bold flex items-center justify-center" onclick="adjustNum('rate-obra', 2, 20, 90, 2)" type="button">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Margen Comercial sobre Material -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Margen Comercial sobre Material</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Coeficiente de recargo sobre tableros y herrajes</span>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-lowest p-1 rounded-lg shrink-0">
+<button class="w-10 h-10 min-h-touch-target-min flex items-center justify-center rounded bg-surface-container-high text-on-surface text-[18px] font-bold" onclick="adjustNum('margin-material', -5, 10, 80, 0)" type="button">
+            −
+          </button>
+<div class="w-14 text-center">
+<span class="font-dimension-lg text-dimension-lg text-primary font-bold" id="margin-material">35</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">%</span>
+</div>
+<button class="w-10 h-10 min-h-touch-target-min flex items-center justify-center rounded bg-surface-container-high text-on-surface text-[18px] font-bold" onclick="adjustNum('margin-material', 5, 10, 80, 0)" type="button">
+            +
+          </button>
+</div>
+</div>
+<!-- Catálogos por Defecto (Tableros) -->
+<div class="flex flex-col gap-unit-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Catálogos de Tableros Habilitados:</span>
+<div class="grid grid-cols-3 gap-unit-xs">
+<label class="bg-surface-container-low p-unit-sm rounded-lg flex items-center gap-unit-xs cursor-pointer select-none">
+<input checked="" class="accent-primary-container w-4 h-4 rounded-DEFAULT" type="checkbox"/>
+<span class="font-label-caps text-label-caps text-on-surface font-bold">Finsa</span>
+</label>
+<label class="bg-surface-container-low p-unit-sm rounded-lg flex items-center gap-unit-xs cursor-pointer select-none">
+<input checked="" class="accent-primary-container w-4 h-4 rounded-DEFAULT" type="checkbox"/>
+<span class="font-label-caps text-label-caps text-on-surface font-bold">Egger</span>
+</label>
+<label class="bg-surface-container-low p-unit-sm rounded-lg flex items-center gap-unit-xs cursor-pointer select-none">
+<input checked="" class="accent-primary-container w-4 h-4 rounded-DEFAULT" type="checkbox"/>
+<span class="font-label-caps text-label-caps text-on-surface font-bold">Kronospan</span>
+</label>
+</div>
+</div>
+<!-- Marca de Herrajes Favorita (Radio Matrix) -->
+<div class="flex flex-col gap-unit-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Marca de Herrajes Principal (Fórmulas de taladrado):</span>
+<div class="grid grid-cols-4 gap-unit-xs">
+<button class="brand-btn py-unit-sm px-1 rounded-lg bg-primary-container text-on-primary font-label-caps text-label-caps text-center font-bold shadow-[0_2px_0px_#613b00]" onclick="selectHardwareBrand(this, 'Blum')" type="button">
+            Blum
+          </button>
+<button class="brand-btn py-unit-sm px-1 rounded-lg bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps text-center" onclick="selectHardwareBrand(this, 'Häfele')" type="button">
+            Häfele
+          </button>
+<button class="brand-btn py-unit-sm px-1 rounded-lg bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps text-center" onclick="selectHardwareBrand(this, 'Grass')" type="button">
+            Grass
+          </button>
+<button class="brand-btn py-unit-sm px-1 rounded-lg bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps text-center" onclick="selectHardwareBrand(this, 'DTC')" type="button">
+            DTC
+          </button>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 4: Dispositivos Vinculados & Backup Local -->
+<section class="bg-surface-container rounded-xl p-unit-md flex flex-col gap-unit-md shadow-md">
+<div class="flex items-center justify-between pb-unit-xs">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[20px]">devices_other</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Dispositivos &amp; Copia Local</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Conectividad de taller y persistencia de ficheros</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase bg-surface-container-lowest px-unit-xs py-0.5 rounded">SEC 04</span>
+</div>
+<!-- Dispositivos lista -->
+<div class="flex flex-col gap-unit-xs">
+<!-- Medidor Láser -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex items-center justify-between">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-9 h-9 rounded bg-surface-container-highest flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">bluetooth_connected</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">Bosch GLM 50C</span>
+<span class="font-label-caps text-[10px] text-secondary truncate">Conectado BLE • Sincronización continua</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+</div>
+<!-- Impresora Térmica -->
+<div class="bg-surface-container-low rounded-lg p-unit-md flex items-center justify-between">
+<div class="flex items-center gap-unit-md min-w-0">
+<div class="w-9 h-9 rounded bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">print</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">Zebra Etiquetadora LAN</span>
+<span class="font-dimension-md text-[11px] text-on-surface-variant truncate">IP: 192.168.1.45:9100 (Online)</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+</div>
+</div>
+<!-- Acciones Críticas: Backup & Reset -->
+<div class="flex flex-col gap-unit-sm pt-unit-xs">
+<button class="w-full min-h-touch-target-min py-unit-sm px-unit-md rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-unit-sm shadow-[0_2px_0px_#0b0f12] active:translate-y-0.5 transition-all" onclick="triggerBackup(this)" type="button">
+<span class="material-symbols-outlined text-secondary text-[22px]">inventory</span>
+<div class="flex flex-col text-left">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Copia de Seguridad Completa</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Base SQLite + Planos DXF + Parámetros</span>
+</div>
+</button>
+<button class="w-full py-unit-sm px-unit-md rounded-lg bg-surface-container-lowest hover:bg-error-container/20 text-error flex items-center justify-center gap-unit-sm transition-colors" onclick="confirmReset()" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span class="font-label-caps text-label-caps font-semibold uppercase">Restablecer Valores de Fábrica DIN 68765</span>
+</button>
+</div>
+</section>
+<!-- Visual Polish: Workshop Environment Stamp Card -->
+<div class="bg-surface-container-lowest rounded-lg p-unit-md flex items-center justify-between text-on-surface-variant/70">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-caps text-[10px] tracking-wider uppercase">Motor de Despiece V3.8 • Karpintero Engine</span>
+</div>
+<span class="font-dimension-md text-[11px]">UUID: 4FA9-91C7</span>
+</div>
+</div>
+<!-- Toast Notification Feedback -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 px-unit-lg py-unit-sm rounded-full bg-primary-container text-on-primary-container font-label-caps text-label-caps shadow-2xl flex items-center gap-unit-xs pointer-events-none opacity-0 transition-opacity duration-200 z-50" id="settings-toast">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span id="toast-message">Parámetros guardados</span>
+</div>
+</div>
+<script>
+  function showToast(msg) {
+    const toast = document.getElementById('settings-toast');
+    const label = document.getElementById('toast-message');
+    if (!toast || !label) return;
+    label.innerText = msg;
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 1800);
+  }
+
+  function adjustNum(elementId, delta, min, max, decimals) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    let current = parseFloat(el.innerText);
+    let next = current + delta;
+    if (next < min) next = min;
+    if (next > max) next = max;
+    el.innerText = decimals > 0 ? next.toFixed(decimals) : Math.round(next);
+    showToast('Parámetro actualizado');
+  }
+
+  function setKerf(val) {
+    const el = document.getElementById('kerf-val');
+    const stdBtn = document.getElementById('kerf-btn-std');
+    const fineBtn = document.getElementById('kerf-btn-fine');
+    if (el) el.innerText = val.toFixed(1);
+
+    if (val === 3.2) {
+      stdBtn.className = 'px-unit-sm py-unit-xs rounded text-on-primary bg-primary-container font-label-caps text-[11px] font-bold transition-colors';
+      fineBtn.className = 'px-unit-sm py-unit-xs rounded text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] font-medium transition-colors';
+    } else {
+      fineBtn.className = 'px-unit-sm py-unit-xs rounded text-on-primary bg-primary-container font-label-caps text-[11px] font-bold transition-colors';
+      stdBtn.className = 'px-unit-sm py-unit-xs rounded text-on-surface-variant hover:text-on-surface font-label-caps text-[11px] font-medium transition-colors';
+    }
+    showToast('Kerf fijado en ' + val + ' mm');
+  }
+
+  function selectLedVolt(btn, volt) {
+    const all = document.querySelectorAll('.led-volt-btn');
+    all.forEach(b => {
+      b.className = 'led-volt-btn py-unit-sm px-unit-xs rounded-lg bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps text-center flex flex-col items-center gap-1 transition-all';
+    });
+    btn.className = 'led-volt-btn py-unit-sm px-unit-xs rounded-lg bg-secondary-container text-on-secondary-container font-label-caps text-label-caps text-center flex flex-col items-center gap-1 font-bold shadow-[0_2px_0px_#00424e]';
+    showToast('Tensión LED fijada: ' + volt);
+  }
+
+  function setThermalMargin(margin) {
+    const btn20 = document.getElementById('margin-20');
+    const btn30 = document.getElementById('margin-30');
+    if (margin === 20) {
+      btn20.className = 'px-unit-sm py-unit-xs rounded bg-primary-container text-on-primary font-label-caps text-[10px] font-bold';
+      btn30.className = 'px-unit-sm py-unit-xs rounded text-on-surface-variant hover:text-on-surface font-label-caps text-[10px] font-medium';
+    } else {
+      btn30.className = 'px-unit-sm py-unit-xs rounded bg-primary-container text-on-primary font-label-caps text-[10px] font-bold';
+      btn20.className = 'px-unit-sm py-unit-xs rounded text-on-surface-variant hover:text-on-surface font-label-caps text-[10px] font-medium';
+    }
+    showToast('Margen de fuente: +' + margin + '%');
+  }
+
+  function selectHardwareBrand(btn, name) {
+    const all = document.querySelectorAll('.brand-btn');
+    all.forEach(b => {
+      b.className = 'brand-btn py-unit-sm px-1 rounded-lg bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps text-center';
+    });
+    btn.className = 'brand-btn py-unit-sm px-1 rounded-lg bg-primary-container text-on-primary font-label-caps text-label-caps text-center font-bold shadow-[0_2px_0px_#613b00]';
+    showToast('Herraje preferido: ' + name);
+  }
+
+  function triggerBackup(button) {
+    const originalText = button.innerHTML;
+    button.innerHTML = '<span class="material-symbols-outlined animate-spin text-secondary text-[22px]">sync</span><span class="font-body-md text-on-surface">Generando archivo .karpz...</span>';
+    setTimeout(() => {
+      button.innerHTML = originalText;
+      showToast('Copia exportada (SQLite + DXF)');
+    }, 1400);
+  }
+
+  function confirmReset() {
+    if (confirm("¿Restablecer tolerancias de taller a la norma DIN 68765 por defecto?")) {
+      document.getElementById('kerf-val').innerText = "3.2";
+      document.getElementById('retestado-val').innerText = "15";
+      document.getElementById('luz-lat-val').innerText = "2.0";
+      document.getElementById('luz-sup-val').innerText = "3.0";
+      document.getElementById('undermount-val').innerText = "42";
+      document.getElementById('voltage-drop-val').innerText = "3.0";
+      document.getElementById('rate-taller').innerText = "38.00";
+      document.getElementById('rate-obra').innerText = "45.00";
+      document.getElementById('margin-material').innerText = "35";
+      showToast('Ajustes restaurados a DIN 68765');
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-2xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Costes</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Retales</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="logistica-carga" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">rv_hookup</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Logística</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="mantenimiento-cnc" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">settings_suggest</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Taller CNC</span></a></div></nav><script src="../core/store.js"></script></body></html>

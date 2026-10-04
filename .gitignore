@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-apk/
+dist-win/
+android/app/build/
+ios/DerivedData/
+*.keystore
+key.properties
+.DS_Store
+Thumbs.db

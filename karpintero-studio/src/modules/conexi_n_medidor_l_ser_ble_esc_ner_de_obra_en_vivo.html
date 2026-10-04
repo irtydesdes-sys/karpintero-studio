@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.45)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-unit-sm"><div class="flex items-center gap-unit-md min-w-0 flex-1"><div class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center shrink-0 text-primary-container shadow-[0_2px_0px_#0b0f12]"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[9px] uppercase font-bold shrink-0">Taller &amp; CNC</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Mantenimiento Cnc</h1></div></div><div class="flex items-center gap-unit-xs shrink-0"><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html" title="Gestor de Retales"><span class="material-symbols-outlined text-[20px]">grid_view</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="logistica-carga" href="proximamente.html" title="Logística de Carga y Furgoneta"><span class="material-symbols-outlined text-[20px]">local_shipping</span></a><a class="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary-container hover:border-primary-container/60 transition-colors shrink-0" data-path="mantenimiento-cnc" href="proximamente.html" title="Mantenimiento y Discos CNC"><span class="material-symbols-outlined text-[20px]">build_circle</span></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-2">Lecturas reales del proyecto activo</div>
+    <p class="text-[11px] text-on-surface-variant mb-2">La conexión Bluetooth con el medidor láser solo funciona en la app nativa compilada, con el medidor físico presente. Aquí puedes registrar lecturas manuales reales mientras tanto.</p>
+    <div id="kp-lecturas-lista" class="flex flex-col gap-1 mb-3 text-sm"></div>
+    <form id="kp-form-lectura" class="grid grid-cols-2 gap-2 text-xs">
+      <input required name="etiqueta" placeholder="Etiqueta (ej. Ancho hueco)" class="col-span-2 bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <input required name="valor_mm" type="number" step="0.1" placeholder="Valor mm" class="col-span-2 bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <button type="submit" class="col-span-2 mt-1 py-2 rounded bg-primary-container text-on-primary-container font-bold">+ Guardar lectura real</button>
+    </form>
+  </div>
+</section>
+<script>
+(function(){
+  function render(){
+    var lecturas = window.KarpinteroDB.listLecturas();
+    var cont = document.getElementById('kp-lecturas-lista');
+    cont.innerHTML = '';
+    if (lecturas.length === 0) cont.innerHTML = '<div class="text-on-surface-variant text-xs italic">Sin lecturas guardadas todavía.</div>';
+    lecturas.slice().reverse().forEach(function(l){
+      var row = document.createElement('div');
+      row.className = 'flex items-center justify-between bg-surface-container-lowest rounded px-2 py-1.5';
+      row.innerHTML = '<span>' + l.etiqueta + '</span><span class="font-mono">' + l.valor_mm + ' mm</span>';
+      cont.appendChild(row);
+    });
+  }
+  document.getElementById('kp-form-lectura').addEventListener('submit', function(e){
+    e.preventDefault();
+    window.KarpinteroDB.addLectura({ etiqueta: e.target.etiqueta.value, valor_mm: parseFloat(e.target.valor_mm.value) });
+    e.target.reset(); render();
+  });
+  document.addEventListener('DOMContentLoaded', render);
+  if (document.readyState !== 'loading') render();
+})();
+</script><div class="flex flex-col w-full">
+<!-- Telemetría & Conexión BLE Header Strip -->
+<section class="p-gutter-mobile bg-surface-container-low flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm min-w-0">
+<div class="relative flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-highest shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px] animate-pulse">bluetooth_connected</span>
+<span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-low animate-ping"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-dimension-md text-dimension-md text-on-surface font-bold truncate">Leica DISTO D2 BLE</span>
+<span class="px-1.5 py-0.5 rounded-DEFAULT bg-secondary/15 text-secondary font-label-caps text-[10px] tracking-wider uppercase">10 Hz LIVE</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">Sincronización en curso • ID: LK-9941X</p>
+</div>
+</div>
+<div class="flex items-center gap-unit-xs shrink-0">
+<!-- Indicador RSSI & Batería -->
+<div class="flex items-center gap-1.5 px-2 py-1 rounded-DEFAULT bg-surface-container-high">
+<span class="material-symbols-outlined text-[16px] text-secondary">signal_cellular_alt</span>
+<span class="font-dimension-md text-[11px] text-on-surface font-semibold">-48dBm</span>
+<span class="text-outline-variant font-label-caps text-[10px]">|</span>
+<span class="material-symbols-outlined text-[16px] text-primary">battery_5_bar</span>
+<span class="font-dimension-md text-[11px] text-primary font-semibold">88%</span>
+</div>
+<button class="h-8 w-8 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" id="btn-device-switch" title="Cambiar a Bosch GLM / Tara">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+</button>
+</div>
+</div>
+<!-- Barra de Modo de Telemetría -->
+<div class="grid grid-cols-3 gap-unit-xs pt-unit-xs">
+<div class="p-2 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="font-label-caps text-[10px] uppercase text-on-surface-variant">Modo Láser</span>
+<span class="font-dimension-md text-[12px] text-primary-fixed font-semibold">Continuo (Track)</span>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="font-label-caps text-[10px] uppercase text-on-surface-variant">Estabilidad</span>
+<span class="font-dimension-md text-[12px] text-secondary font-semibold">±0.2 mm (Opt)</span>
+</div>
+<div class="p-2 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<span class="font-label-caps text-[10px] uppercase text-on-surface-variant">Inclinómetro</span>
+<div class="flex items-center gap-1 text-secondary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-dimension-md text-[12px] font-semibold">89.2° Plomo</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Visor Fotográfico AR & HUD Técnico de Puntero Láser -->
+<section class="p-gutter-mobile flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">view_in_ar</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Escáner Óptico de Vano</h2>
+</div>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container-high text-secondary font-label-caps text-label-caps">CALIBRACIÓN AR ACTIVA</span>
+</div>
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl bg-surface-container-lowest">
+<!-- Fondo Realista: Vano de Mampostería en Obra con Enlucido y Preinstalación -->
+<img class="w-full h-full object-cover opacity-60" data-alt="High-resolution technical site camera view of a rough white plastered wall niche ready for bespoke carpentry fitting, visible skirting board, Schuko wall outlet, ambient workshop illumination, hyper-realistic, dark industrial workshop aesthetic, depth perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlbRnQE9FEsYas_0JOK97Pif-BYSQCDy7HDGEfStSWzAoN6Z6hryuDLofGCMvrgI3wxWfEErJhAwNiWnf9pfh3pKZ3-K2PgRMbY2yLv4s9o8KGXbFPegx8kpqwtZgPAJxAjZIhp_fo1jiYnMJsY8Sr-6aFaPeYkm_Fx5RIgnfTTTrGG6HSdaypU1KZprnRdtwkYo4v0YaKIWcbg2G7iQTs3FyhbgwHWYYmSGwC4Ae-VtT8Dl4Q9hIUMA"/>
+<!-- Cuadrícula Reticular Milimétrica SVG Overlay -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="32" id="grid" patternunits="userSpaceOnUse" width="32">
+<path class="text-secondary/15" d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+<!-- Líneas de Cota Vectoriales Proyectadas en Realidad Aumentada -->
+<!-- Cota Ancho L1 -->
+<line stroke="#06b6d4" stroke-dasharray="4,2" stroke-width="2" x1="12%" x2="88%" y1="76%" y2="76%"></line>
+<circle cx="12%" cy="76%" fill="#06b6d4" r="4"></circle>
+<circle cx="88%" cy="76%" fill="#06b6d4" r="4"></circle>
+<!-- Cota Altura Izquierda H1 -->
+<line stroke="#f59e0b" stroke-width="1.5" x1="12%" x2="12%" y1="18%" y2="76%"></line>
+<circle cx="12%" cy="18%" fill="#f59e0b" r="3"></circle>
+<!-- Cota Altura Derecha H2 -->
+<line stroke="#ffb4ab" stroke-width="1.5" x1="88%" x2="88%" y1="20%" y2="76%"></line>
+<circle cx="88%" cy="20%" fill="#ffb4ab" r="3"></circle>
+<!-- Eje de Inclinación Láser en Rincón (Falsa Escuadra) -->
+<path d="M 12% 76% L 28% 68%" stroke="#06b6d4" stroke-dasharray="2,2" stroke-width="1.5"></path>
+<path d="M 16% 76% A 12 12 0 0 0 14% 72%" fill="none" stroke="#ffbf94" stroke-width="1.5"></path>
+</svg>
+<!-- Puntero Láser Pulsante Dinámico -->
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none" id="laser-spot">
+<div class="w-8 h-8 rounded-full bg-primary/20 animate-ping absolute"></div>
+<div class="w-4 h-4 rounded-full bg-primary/40 flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_#f59e0b]"></div>
+</div>
+<!-- Retícula HUD de Telemetría Láser -->
+<div class="absolute -top-7 left-1/2 -translate-x-1/2 px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-lowest/90 backdrop-blur-sm whitespace-nowrap shadow-md">
+<span class="font-dimension-md text-[11px] text-primary font-bold">LÁSER REF: 2.450,0 mm</span>
+</div>
+</div>
+<!-- Cotas Flotantes HUD con Etiquetas Paramétricas -->
+<!-- Cota Superior Ancho L1 -->
+<div class="absolute top-[68%] left-1/2 -translate-x-1/2 -translate-y-1/2 px-2 py-1 rounded-DEFAULT bg-surface-container-high/90 backdrop-blur-md shadow-md flex items-center gap-1.5">
+<span class="font-label-caps text-[10px] text-secondary">L1 ANCHO</span>
+<span class="font-dimension-md text-[13px] text-on-surface font-bold">2.450 mm</span>
+</div>
+<!-- Cota Altura Izquierda H1 -->
+<div class="absolute top-[44%] left-[14%] px-1.5 py-1 rounded-DEFAULT bg-surface-container-high/90 backdrop-blur-md shadow-md flex flex-col">
+<span class="font-label-caps text-[9px] text-primary">H1 IZQ</span>
+<span class="font-dimension-md text-[11px] text-on-surface font-bold">2.682 mm</span>
+</div>
+<!-- Cota Altura Derecha H2 con Alerta de Desnivel -->
+<div class="absolute top-[44%] right-[14%] px-1.5 py-1 rounded-DEFAULT bg-error-container/90 backdrop-blur-md shadow-md flex flex-col">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-error text-[12px]">warning</span>
+<span class="font-label-caps text-[9px] text-on-error-container">H2 DER</span>
+</div>
+<span class="font-dimension-md text-[11px] text-on-error-container font-bold">2.676 mm</span>
+<span class="font-label-caps text-[8px] text-error font-semibold">Δ -6 mm DESPLOME</span>
+</div>
+<!-- Obstáculos Detectados por Machine Vision -->
+<!-- Schuko -->
+<div class="absolute bottom-[28%] left-[28%] px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-highest/90 backdrop-blur-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary-container">power</span>
+<span class="font-label-caps text-[9px] text-on-surface">Schuko (H: 350mm)</span>
+</div>
+<!-- Llave de corte -->
+<div class="absolute bottom-[34%] right-[26%] px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-highest/90 backdrop-blur-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary">water_drop</span>
+<span class="font-label-caps text-[9px] text-on-surface">Llave Corte (H: 520mm)</span>
+</div>
+<!-- Burbuja Digital de Nivel Integrada (HUD Inclinómetro) -->
+<div class="absolute top-2 right-2 px-2 py-1 rounded-DEFAULT bg-surface-container-lowest/80 backdrop-blur-md flex items-center gap-1.5 shadow">
+<div class="w-3 h-3 rounded-full bg-surface-container-high flex items-center justify-center relative overflow-hidden">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary transform translate-x-0.5"></div>
+</div>
+<span class="font-dimension-md text-[10px] text-secondary font-semibold">NIVEL 0.15° OK</span>
+</div>
+<!-- Insignia de Falsa Escuadra en Rincón -->
+<div class="absolute bottom-2 left-2 px-2 py-1 rounded-DEFAULT bg-surface-container-high/90 backdrop-blur-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">square_foot</span>
+<span class="font-label-caps text-[10px] text-primary">RINCÓN: 89.2° (-8mm descuadre)</span>
+</div>
+</div>
+</section>
+<!-- Panel de Captura & Disparo Láser BLE -->
+<section class="p-gutter-mobile flex flex-col gap-unit-md">
+<!-- Pulsador Maestro de Disparo con Ergonomía Táctil de Taller -->
+<div class="flex flex-col items-center">
+<button class="w-full min-h-[58px] rounded-xl bg-primary-container text-on-primary-container font-title-lg text-title-lg flex items-center justify-center gap-unit-sm shadow-xl active:translate-y-0.5 active:shadow-md transition-all" id="trigger-measure">
+<span class="material-symbols-outlined text-[28px]">radio_button_checked</span>
+<span class="tracking-wide uppercase font-bold">Disparar Medida Láser (REC)</span>
+</button>
+<div class="flex items-center justify-between w-full pt-1 px-1">
+<span class="font-label-caps text-[10px] text-on-surface-variant">Respuesta háptica: VIBRACIÓN 40ms</span>
+<span class="font-label-caps text-[10px] text-secondary">DISPOSITIVO LISTO</span>
+</div>
+</div>
+<!-- Selector Rápido de Destino de Cota -->
+<div class="flex flex-col gap-unit-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Asignar Lectura Activa A:</span>
+<span class="font-label-caps text-[10px] text-primary">SELECCIONADO: ANCHO VANO</span>
+</div>
+<div class="grid grid-cols-3 gap-unit-xs">
+<button class="target-chip min-h-touch-target-min px-2 py-1.5 rounded-DEFAULT bg-primary-container text-on-primary-container font-label-caps text-[11px] font-bold flex flex-col items-center justify-center gap-0.5">
+<span>Ancho Vano</span>
+<span class="font-dimension-md text-[10px]">2.450 mm</span>
+</button>
+<button class="target-chip min-h-touch-target-min px-2 py-1.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-label-caps text-[11px] flex flex-col items-center justify-center gap-0.5 hover:bg-surface-bright transition-colors">
+<span>Alto Izq (H1)</span>
+<span class="font-dimension-md text-[10px] text-secondary">2.682 mm</span>
+</button>
+<button class="target-chip min-h-touch-target-min px-2 py-1.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-label-caps text-[11px] flex flex-col items-center justify-center gap-0.5 hover:bg-surface-bright transition-colors">
+<span>Alto Der (H2)</span>
+<span class="font-dimension-md text-[10px] text-error">2.676 mm</span>
+</button>
+<button class="target-chip min-h-touch-target-min px-2 py-1.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-label-caps text-[11px] flex flex-col items-center justify-center gap-0.5 hover:bg-surface-bright transition-colors">
+<span>Fondo / Prof.</span>
+<span class="font-dimension-md text-[10px] text-secondary">580 mm</span>
+</button>
+<button class="target-chip min-h-touch-target-min px-2 py-1.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-label-caps text-[11px] flex flex-col items-center justify-center gap-0.5 hover:bg-surface-bright transition-colors">
+<span>Escuadra Rincón</span>
+<span class="font-dimension-md text-[10px] text-primary">89.2°</span>
+</button>
+<button class="target-chip min-h-touch-target-min px-2 py-1.5 rounded-DEFAULT bg-surface-container-high text-on-surface font-label-caps text-[11px] flex flex-col items-center justify-center gap-0.5 hover:bg-surface-bright transition-colors">
+<span>Rodapié Alt/Prof</span>
+<span class="font-dimension-md text-[10px] text-secondary">80x15 mm</span>
+</button>
+</div>
+</div>
+<!-- Registro en Vivo de Telemetría BLE (Audit Trail de Mediciones) -->
+<div class="flex flex-col gap-unit-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Cola de Cotas BLE Recibidas</span>
+<button class="font-label-caps text-[10px] text-primary hover:underline" id="clear-last">Repetir Última Cota</button>
+</div>
+<div class="flex flex-col gap-1.5">
+<!-- Fila 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-DEFAULT bg-surface-container">
+<div class="flex items-center gap-unit-sm">
+<span class="font-dimension-md text-[11px] text-outline">10:42:15</span>
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-semibold">Ancho vástago a pared</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Láser directo frontal • Ref. Base</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-dimension-lg text-dimension-lg text-secondary font-bold">2.450,0</span>
+<span class="font-label-caps text-[10px] text-secondary">mm</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+</div>
+<!-- Fila 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-DEFAULT bg-surface-container">
+<div class="flex items-center gap-unit-sm">
+<span class="font-dimension-md text-[11px] text-outline">10:42:08</span>
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-semibold">Altura suelo a falso techo (H1)</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Vertical plomo digital 0.1°</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-dimension-lg text-dimension-lg text-secondary font-bold">2.682,5</span>
+<span class="font-label-caps text-[10px] text-secondary">mm</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+</div>
+<!-- Fila 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-DEFAULT bg-surface-container">
+<div class="flex items-center gap-unit-sm">
+<span class="font-dimension-md text-[11px] text-outline">10:41:55</span>
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-semibold">Profundidad prevista fondo vano</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Desde línea de rodapié</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-dimension-lg text-dimension-lg text-secondary font-bold">580,0</span>
+<span class="font-label-caps text-[10px] text-secondary">mm</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Diagnóstico Técnico: Motor Paramétrico de Taller -->
+<section class="p-gutter-mobile flex flex-col gap-unit-sm">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">build</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Compensación Paramétrica de Taller</h3>
+</div>
+<!-- Tarjeta de Resolución Automática de Falsa Escuadra -->
+<div class="p-unit-md rounded-xl bg-surface-container-high flex flex-col gap-unit-sm">
+<div class="flex items-start justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">carpenter</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-on-surface font-semibold">Corrección por Descuadre (89.2°)</span>
+<span class="font-body-sm text-on-surface-variant">Solución automática para costados de armario</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-primary/15 text-primary font-label-caps text-[10px] uppercase font-bold shrink-0">CNC LISTO</span>
+</div>
+<div class="p-2.5 rounded-DEFAULT bg-surface-container-lowest flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-on-surface">Faja / Regrueso izquierdo:</span>
+<span class="font-dimension-md text-primary font-bold">Cuña de 8.0 mm → 0 mm</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-on-surface">Mecanizado de rodapié:</span>
+<span class="font-dimension-md text-secondary font-bold">Cajeado 80 × 15 mm en CNC</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-on-surface">Holgura perimetral holgura:</span>
+<span class="font-dimension-md text-on-surface font-bold">-3.0 mm en testeros</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">info</span>
+<span class="font-body-sm text-[12px]">El algoritmo ajustará el corte de tableros sin necesidad de cepillado manual en obra.</span>
+</div>
+</div>
+</section>
+<!-- Botones de Acción de Envío & Exportación de Obra -->
+<section class="p-gutter-mobile flex flex-col gap-unit-sm">
+<button class="w-full min-h-[52px] rounded-xl bg-primary-container text-on-primary-container font-title-lg text-title-lg flex items-center justify-center gap-unit-sm shadow-xl active:scale-[0.99] transition-transform" id="btn-save-mesh">
+<span class="material-symbols-outlined text-[24px]">view_in_ar</span>
+<span class="font-bold">Guardar Nube &amp; Iniciar Despiece 3D →</span>
+</button>
+<div class="grid grid-cols-2 gap-unit-sm">
+<button class="min-h-touch-target-min px-3 rounded-xl bg-surface-container-high text-secondary font-label-caps text-[11px] font-bold flex items-center justify-center gap-1.5 hover:bg-surface-bright transition-colors shadow" id="btn-export-dxf">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>EXPORTAR DXF / CSV</span>
+</button>
+<button class="min-h-touch-target-min px-3 rounded-xl bg-surface-container-high text-on-surface font-label-caps text-[11px] font-bold flex items-center justify-center gap-1.5 hover:bg-surface-bright transition-colors shadow" id="btn-witness-photo">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>FOTO CON COTAS</span>
+</button>
+</div>
+<!-- Indicador de Persistencia Local SQLite -->
+<div class="flex items-center justify-center gap-unit-xs py-unit-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">cloud_done</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Base SQLite Local Sincronizada • Respaldo Offline Asegurado</span>
+</div>
+</section>
+<!-- Microinteracción Script para Disparador Láser y Feedback Táctil -->
+<script>
+    (function() {
+      const triggerBtn = document.getElementById('trigger-measure');
+      const laserSpot = document.getElementById('laser-spot');
+      const targetChips = document.querySelectorAll('.target-chip');
+      let liveValue = 2450.0;
+
+      // Haptic & Visual Trigger
+      if (triggerBtn) {
+        triggerBtn.addEventListener('click', () => {
+          if (navigator.vibrate) {
+            navigator.vibrate(40);
+          }
+          // Flash effect
+          triggerBtn.classList.add('bg-primary');
+          setTimeout(() => {
+            triggerBtn.classList.remove('bg-primary');
+          }, 150);
+
+          // Simulated reading variation
+          liveValue += (Math.random() * 0.4 - 0.2);
+          if (laserSpot) {
+            laserSpot.classList.add('scale-125');
+            setTimeout(() => {
+              laserSpot.classList.remove('scale-125');
+            }, 200);
+          }
+        });
+      }
+
+      // Chip Selector
+      targetChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          targetChips.forEach(c => {
+            c.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+            c.classList.add('bg-surface-container-high', 'text-on-surface');
+          });
+          chip.classList.remove('bg-surface-container-high', 'text-on-surface');
+          chip.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+          if (navigator.vibrate) navigator.vibrate(20);
+        });
+      });
+
+      // Quick export alert
+      const exportDxf = document.getElementById('btn-export-dxf');
+      if (exportDxf) {
+        exportDxf.addEventListener('click', () => {
+          exportDxf.innerText = "¡EXPORTANDO CAD DXF...!";
+          setTimeout(() => {
+            exportDxf.innerHTML = '<span class="material-symbols-outlined text-[18px]">download</span><span>EXPORTAR DXF / CSV</span>';
+          }, 1400);
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-2xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Costes</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="retales" href="gestor_inteligente_de_retales_y_sobrantes_de_tableros.html"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Retales</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="logistica-carga" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">rv_hookup</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Logística</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="mantenimiento-cnc" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">settings_suggest</span><span class="font-label-caps text-[9px] tracking-tight uppercase">Taller CNC</span></a></div></nav><script src="../core/store.js"></script></body></html>

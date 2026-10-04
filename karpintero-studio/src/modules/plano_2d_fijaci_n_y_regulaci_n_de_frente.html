@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.24)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-unit-md min-w-0"><div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary-container"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] uppercase font-bold shrink-0">En Taller</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Proyecto: Mueble TV Nórdico</h1></div></div><div class="flex items-center gap-unit-sm shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Context Header Strip (Dark Technical Brutalism) -->
+<div class="px-margin-mobile pt-unit-md pb-unit-sm bg-surface-container-low flex flex-col gap-unit-xs">
+<div class="flex items-center justify-between gap-unit-sm">
+<div class="flex items-center gap-unit-xs flex-wrap min-w-0">
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-label-caps uppercase font-bold tracking-wider">
+          Frente Exterior Bisel 45°
+        </span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-secondary-container/20 text-secondary font-label-caps text-label-caps font-semibold">
+          422 × 375 mm
+        </span>
+</div>
+<div class="flex items-center gap-unit-2xs shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[18px]">straighten</span>
+<span class="font-label-caps text-label-caps font-bold">1:5 CAD</span>
+</div>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-on-surface leading-tight tracking-tight">
+        Plano 2D: Fijación y Regulación
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+        Fijación solidaria a Cajón Cacerolero + Regulación 3D (±2mm)
+      </p>
+</div>
+</div>
+<!-- View Mode Selector (Physical Technical Tabs) -->
+<div class="px-margin-mobile py-unit-xs bg-surface-container flex items-center gap-unit-xs overflow-x-auto">
+<button class="h-10 px-unit-md rounded-DEFAULT bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-unit-xs shrink-0 shadow-sm" id="btn-tab-cara">
+<span class="material-symbols-outlined text-[16px]">grid_goldenratio</span>
+<span>Cara Posterior (Taladros)</span>
+</button>
+<button class="h-10 px-unit-md rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-unit-xs shrink-0 transition-colors" id="btn-tab-corte">
+<span class="material-symbols-outlined text-[16px]">view_agenda</span>
+<span>Corte Subfrente</span>
+</button>
+<button class="h-10 px-unit-md rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-unit-xs shrink-0 transition-colors" id="btn-tab-mecanismo">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Mecanismo 3D</span>
+</button>
+</div>
+<!-- Interactive Blueprint Canvas Viewport -->
+<div class="px-margin-mobile py-unit-sm">
+<div class="w-full bg-surface-container-lowest rounded-DEFAULT overflow-hidden relative shadow-md">
+<!-- Top HUD info -->
+<div class="px-unit-sm py-unit-xs bg-surface-container-high/80 flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps">
+<div class="flex items-center gap-unit-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>VISTA POSTERIOR // CARA INTERIOR</span>
+</div>
+<div class="flex items-center gap-unit-sm">
+<span class="text-secondary font-bold">ESPESOR: 18 mm</span>
+<span class="text-tertiary">BISEL SUPERIOR: 15 mm</span>
+</div>
+</div>
+<!-- SVG Technical Drawing -->
+<div class="p-unit-xs w-full overflow-hidden flex items-center justify-center">
+<svg class="w-full h-auto select-none" style="background-color: #0b0f12;" viewbox="0 0 520 450">
+<defs>
+<!-- Blueprint Micro Grid Pattern -->
+<pattern height="20" id="cadGrid" patternunits="userSpaceOnUse" width="20">
+<path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1c2024" stroke-width="0.8"></path>
+</pattern>
+<!-- Woodgrain Texture Area for Bevel -->
+<pattern height="6" id="bevelHash" patterntransform="rotate(45 0 0)" patternunits="userSpaceOnUse" width="6">
+<line opacity="0.35" stroke="#ff9747" stroke-width="1.2" x1="0" x2="0" y1="0" y2="6"></line>
+</pattern>
+<!-- Marker Cyan -->
+<marker id="arrowCyan" markerheight="6" markerwidth="6" orient="auto" refx="5" refy="3">
+<path d="M0,0 L6,3 L0,6 Z" fill="#4cd7f6"></path>
+</marker>
+<marker id="arrowCyanRev" markerheight="6" markerwidth="6" orient="auto" refx="1" refy="3">
+<path d="M6,0 L0,3 L6,6 Z" fill="#4cd7f6"></path>
+</marker>
+<!-- Marker Amber -->
+<marker id="arrowAmber" markerheight="6" markerwidth="6" orient="auto" refx="5" refy="3">
+<path d="M0,0 L6,3 L0,6 Z" fill="#f59e0b"></path>
+</marker>
+<marker id="arrowAmberRev" markerheight="6" markerwidth="6" orient="auto" refx="1" refy="3">
+<path d="M6,0 L0,3 L6,6 Z" fill="#f59e0b"></path>
+</marker>
+</defs>
+<!-- Grid Backdrop -->
+<rect fill="url(#cadGrid)" height="450" width="520" x="0" y="0"></rect>
+<!-- Dimension Guide Rulers & Offsets -->
+<!-- Board Outline: Real 422w x 375h mapped to Canvas (X: 55, Y: 40, W: 400, H: 355) -->
+<!-- Outer Board Contour -->
+<rect fill="#181c20" height="355" stroke="#a08e7a" stroke-width="1.8" width="400" x="55" y="40"></rect>
+<!-- Bevel Zona 45° at Top Edge (15mm rebaje ~ 14px) -->
+<rect fill="url(#bevelHash)" height="15" stroke="#ff9747" stroke-dasharray="3,2" stroke-width="1" width="400" x="55" y="40"></rect>
+<text fill="#ffb785" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="255" y="32">TESTA BISELADA A 45° (CANTO EMBUTIDO PULL-GRIP)</text>
+<!-- Zona de Retranqueo Cajón Interior Oculto (-35 mm ~ 33px) -->
+<rect fill="#262a2f" height="35" opacity="0.45" stroke="#4cd7f6" stroke-dasharray="4,4" stroke-width="0.8" width="400" x="55" y="55"></rect>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="8.5" font-weight="500" text-anchor="middle" x="255" y="76">ZONA RETRANQUEO CAJÓN INTERIOR CUBIERTOS (-35 mm)</text>
+<!-- Subfrente Acople Box Silhouette (Height: 160 mm ~ 151px, from base Y: 395 up to Y: 244) -->
+<rect fill="#101418" height="151" opacity="0.75" stroke="#f59e0b" stroke-dasharray="5,3" stroke-width="1.2" width="380" x="65" y="244"></rect>
+<text fill="#f59e0b" font-family="JetBrains Mono" font-size="8.5" font-weight="600" text-anchor="middle" x="255" y="258">ÁREA DE CONTACTO SUBFRENTE DE MADERA (H: 160 mm)</text>
+<!-- Center Symmetry Axis Line -->
+<line stroke="#534434" stroke-dasharray="8,4,2,4" stroke-width="1" x1="255" x2="255" y1="20" y2="410"></line>
+<text fill="#a08e7a" font-family="JetBrains Mono" font-size="8.5" text-anchor="middle" x="255" y="420">EJE DE SIMETRÍA C-L</text>
+<!-- Taladros: 
+               Left X = 55 + (35 * (400/422)) = 55 + 33.17 = 88.2 -> ~88
+               Right X = 455 - 33.17 = 421.8 -> ~422
+               Entreje: 422 - 88 = 334px (~352mm)
+               
+               Inferior Y = 395 - (32 * (355/375)) = 395 - 30.3 = 364.7 -> ~365
+               Superior Y = 395 - (140 * (355/375)) = 395 - 132.5 = 262.5 -> ~262
+               Piloto Intermedio Y = 395 - 86 = 309
+          -->
+<!-- Drill Holes - Left Column -->
+<!-- Top Fix Hole (88, 262) -->
+<circle cx="88" cy="262" fill="#1c2024" r="6.5" stroke="#4cd7f6" stroke-width="1.8"></circle>
+<circle cx="88" cy="262" fill="#4cd7f6" r="2"></circle>
+<!-- Crosshair -->
+<line stroke="#4cd7f6" stroke-width="0.75" x1="77" x2="99" y1="262" y2="262"></line>
+<line stroke="#4cd7f6" stroke-width="0.75" x1="88" x2="88" y1="251" y2="273"></line>
+<!-- Bottom Fix Hole (88, 365) -->
+<circle cx="88" cy="365" fill="#1c2024" r="6.5" stroke="#4cd7f6" stroke-width="1.8"></circle>
+<circle cx="88" cy="365" fill="#4cd7f6" r="2"></circle>
+<line stroke="#4cd7f6" stroke-width="0.75" x1="77" x2="99" y1="365" y2="365"></line>
+<line stroke="#4cd7f6" stroke-width="0.75" x1="88" x2="88" y1="354" y2="376"></line>
+<!-- Center Pilot Hole (88, 313) -->
+<circle cx="88" cy="313" fill="#ff9747" r="3.5" stroke="#301400" stroke-width="1"></circle>
+<circle cx="88" cy="313" fill="#101418" r="1"></circle>
+<!-- Drill Holes - Right Column -->
+<!-- Top Fix Hole (422, 262) -->
+<circle cx="422" cy="262" fill="#1c2024" r="6.5" stroke="#4cd7f6" stroke-width="1.8"></circle>
+<circle cx="422" cy="262" fill="#4cd7f6" r="2"></circle>
+<line stroke="#4cd7f6" stroke-width="0.75" x1="411" x2="433" y1="262" y2="262"></line>
+<line stroke="#4cd7f6" stroke-width="0.75" x1="422" x2="422" y1="251" y2="273"></line>
+<!-- Bottom Fix Hole (422, 365) -->
+<circle cx="422" cy="365" fill="#1c2024" r="6.5" stroke="#4cd7f6" stroke-width="1.8"></circle>
+<circle cx="422" cy="365" fill="#4cd7f6" r="2"></circle>
+<line stroke="#4cd7f6" stroke-width="0.75" x1="411" x2="433" y1="365" y2="365"></line>
+<line stroke="#4cd7f6" stroke-width="0.75" x1="422" x2="422" y1="354" y2="376"></line>
+<!-- Center Pilot Hole (422, 313) -->
+<circle cx="422" cy="313" fill="#ff9747" r="3.5" stroke="#301400" stroke-width="1"></circle>
+<circle cx="422" cy="313" fill="#101418" r="1"></circle>
+<!-- COTAS: Horizontal Width (422 mm) -->
+<line marker-end="url(#arrowCyan)" marker-start="url(#arrowCyanRev)" stroke="#4cd7f6" stroke-width="1.2" x1="55" x2="455" y1="18" y2="18"></line>
+<line opacity="0.6" stroke="#4cd7f6" stroke-width="0.75" x1="55" x2="55" y1="12" y2="40"></line>
+<line opacity="0.6" stroke="#4cd7f6" stroke-width="0.75" x1="455" x2="455" y1="12" y2="40"></line>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" x="255" y="14">422 mm (ANCHO TOTAL)</text>
+<!-- COTAS: Lateral Edge to Center (35 mm) -->
+<line marker-end="url(#arrowAmber)" marker-start="url(#arrowAmberRev)" stroke="#f59e0b" stroke-width="1.2" x1="55" x2="88" y1="388" y2="388"></line>
+<line stroke="#f59e0b" stroke-width="0.75" x1="55" x2="55" y1="380" y2="395"></line>
+<line stroke="#f59e0b" stroke-width="0.75" x1="88" x2="88" y1="372" y2="395"></line>
+<text fill="#f59e0b" font-family="JetBrains Mono" font-size="8.5" font-weight="700" text-anchor="middle" x="71" y="384">35</text>
+<!-- COTAS: Entreje Taladros (352 mm) -->
+<line marker-end="url(#arrowAmber)" marker-start="url(#arrowAmberRev)" stroke="#f59e0b" stroke-width="1.2" x1="88" x2="422" y1="280" y2="280"></line>
+<text fill="#f59e0b" font-family="JetBrains Mono" font-size="9" font-weight="700" text-anchor="middle" x="255" y="276">ENTREJE: 352 mm</text>
+<!-- COTAS: Vertical Heights Right Side -->
+<!-- Base to lower hole (32 mm) -->
+<line marker-end="url(#arrowCyan)" marker-start="url(#arrowCyanRev)" stroke="#4cd7f6" stroke-width="1.2" x1="472" x2="472" y1="395" y2="365"></line>
+<line opacity="0.6" stroke="#4cd7f6" stroke-width="0.75" x1="455" x2="480" y1="395" y2="395"></line>
+<line opacity="0.6" stroke="#4cd7f6" stroke-width="0.75" x1="428" x2="480" y1="365" y2="365"></line>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="9" font-weight="700" x="495" y="383">32 mm</text>
+<!-- Base to upper hole (140 mm) -->
+<line marker-end="url(#arrowAmber)" marker-start="url(#arrowAmberRev)" stroke="#f59e0b" stroke-width="1.2" x1="472" x2="472" y1="395" y2="262"></line>
+<line opacity="0.6" stroke="#f59e0b" stroke-width="0.75" x1="428" x2="480" y1="262" y2="262"></line>
+<text fill="#f59e0b" font-family="JetBrains Mono" font-size="9" font-weight="700" x="495" y="318">140 mm</text>
+<!-- Overall Board Height (375 mm) Left Side -->
+<line marker-end="url(#arrowCyan)" marker-start="url(#arrowCyanRev)" stroke="#4cd7f6" stroke-width="1.2" x1="38" x2="38" y1="40" y2="395"></line>
+<line opacity="0.6" stroke="#4cd7f6" stroke-width="0.75" x1="30" x2="55" y1="40" y2="40"></line>
+<line opacity="0.6" stroke="#4cd7f6" stroke-width="0.75" x1="30" x2="55" y1="395" y2="395"></line>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" transform="rotate(-90 32 222)" x="32" y="222">375 mm (ALTO)</text>
+<!-- Tool Callout Tags in Canvas -->
+<g transform="translate(102, 246)">
+<rect fill="#1c2024" height="20" rx="2" stroke="#4cd7f6" stroke-width="0.8" width="130" x="0" y="0"></rect>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="8.5" font-weight="600" text-anchor="middle" x="65" y="14">4× ø4×15 mm EUROTORX</text>
+</g>
+<g transform="translate(102, 304)">
+<rect fill="#1c2024" height="18" rx="2" stroke="#ff9747" stroke-width="0.8" width="124" x="0" y="0"></rect>
+<text fill="#ffb785" font-family="JetBrains Mono" font-size="8" font-weight="600" text-anchor="middle" x="62" y="12">2× ø2 mm GUÍA PILOTO</text>
+</g>
+</svg>
+</div>
+<!-- Quick Measurement Footnote Toolbar -->
+<div class="px-unit-sm py-unit-xs bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="w-3 h-3 bg-secondary-container/30 rounded-DEFAULT flex items-center justify-center text-secondary font-label-caps text-[9px] font-bold">1</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">4x Taladros Principales ø4×14mm</span>
+</div>
+<div class="flex items-center gap-unit-xs text-primary-container font-label-caps text-label-caps font-bold">
+<span class="material-symbols-outlined text-[16px]">pin_drop</span>
+<span>Centro: 35 mm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time Dimension Chips Grid -->
+<div class="px-margin-mobile py-unit-xs grid grid-cols-3 gap-unit-xs">
+<div class="bg-surface-container p-unit-xs rounded-DEFAULT flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Entreje (X)</span>
+<span class="font-dimension-md text-dimension-md text-secondary font-bold">352.0 mm</span>
+<span class="font-body-sm text-[10px] text-outline">Simétrico ±0.2</span>
+</div>
+<div class="bg-surface-container p-unit-xs rounded-DEFAULT flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Nivel Inf. (Y1)</span>
+<span class="font-dimension-md text-dimension-md text-primary font-bold">32.0 mm</span>
+<span class="font-body-sm text-[10px] text-outline">Desde base testada</span>
+</div>
+<div class="bg-surface-container p-unit-xs rounded-DEFAULT flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Nivel Sup. (Y2)</span>
+<span class="font-dimension-md text-dimension-md text-primary font-bold">140.0 mm</span>
+<span class="font-body-sm text-[10px] text-outline">Subfrente h160</span>
+</div>
+</div>
+<!-- Módulo de Regulación 3D y Tolerancias (Tandem + Excéntricos) -->
+<div class="px-margin-mobile pt-unit-md pb-unit-xs flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">tune</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Calibración 3D &amp; Tolerancias</h3>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-secondary font-label-caps text-[10px] font-bold">
+        CLIP TANDEM BLUM
+      </span>
+</div>
+<!-- 3-Axis Adjustment Bento Grid -->
+<div class="grid grid-cols-1 gap-unit-xs">
+<!-- Altura Y -->
+<div class="bg-surface-container p-unit-sm rounded-DEFAULT flex items-center justify-between gap-unit-sm shadow-sm">
+<div class="flex items-center gap-unit-sm min-w-0">
+<div class="w-10 h-10 rounded-DEFAULT bg-primary-container/15 flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[22px]">swap_vert</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-title-lg text-[15px] text-on-surface font-semibold">Altura Vertical (Eje Y)</span>
+<span class="px-1.5 py-0.2 rounded-DEFAULT bg-surface-container-highest text-primary font-label-caps text-[10px] font-bold">Dial Rueda</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+              Mediante dial moleteado en clip inferior de acople de guía
+            </p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-dimension-lg text-dimension-lg text-primary font-bold">±2.0 mm</span>
+<span class="font-label-caps text-[10px] text-outline">Luz Inf: 3mm</span>
+</div>
+</div>
+<!-- Lateral X -->
+<div class="bg-surface-container p-unit-sm rounded-DEFAULT flex items-center justify-between gap-unit-sm shadow-sm">
+<div class="flex items-center gap-unit-sm min-w-0">
+<div class="w-10 h-10 rounded-DEFAULT bg-secondary-container/15 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">swap_horiz</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-title-lg text-[15px] text-on-surface font-semibold">Desplazamiento Lateral (Eje X)</span>
+<span class="px-1.5 py-0.2 rounded-DEFAULT bg-surface-container-highest text-secondary font-label-caps text-[10px] font-bold">Gatillo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+              Ajuste excéntrico de gatillo para centrar vanos con costados
+            </p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-dimension-lg text-dimension-lg text-secondary font-bold">±1.5 mm</span>
+<span class="font-label-caps text-[10px] text-outline">Vano: 2.0 mm</span>
+</div>
+</div>
+<!-- Inclinación Z -->
+<div class="bg-surface-container p-unit-sm rounded-DEFAULT flex items-center justify-between gap-unit-sm shadow-sm">
+<div class="flex items-center gap-unit-sm min-w-0">
+<div class="w-10 h-10 rounded-DEFAULT bg-tertiary-container/15 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[22px]">switch_access_shortcut</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-title-lg text-[15px] text-on-surface font-semibold">Inclinación y Fuga (Eje Z)</span>
+<span class="px-1.5 py-0.2 rounded-DEFAULT bg-surface-container-highest text-tertiary font-label-caps text-[10px] font-bold">Pasador Trasero</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+              Nivelación de plomo frente al marco o muebles colindantes
+            </p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-dimension-lg text-dimension-lg text-tertiary font-bold">+4 / -1.5</span>
+<span class="font-label-caps text-[10px] text-outline">Plomo Enrasado</span>
+</div>
+</div>
+</div>
+<!-- Amarre Técnico Spax Spec Card -->
+<div class="bg-surface-container-high p-unit-sm rounded-DEFAULT flex items-start gap-unit-sm shadow-sm">
+<div class="w-8 h-8 rounded-DEFAULT bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">hardware</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-unit-xs">
+<span class="font-title-lg text-[14px] text-on-surface font-bold">Fijación Solidaria de Subfrente:</span>
+<span class="font-label-caps text-[11px] text-primary font-bold">4× SPAX 4.0×30 mm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug mt-0.5">
+          Atornillado pasante desde la cara interior del cajón cacerolero (espesor 18 mm) con penetración útil de 12 mm en el frente exterior sin sobrepasar ni amarrar el acabado lacado.
+        </p>
+</div>
+</div>
+</div>
+<!-- Banco de Trabajo: Guía Paso a Paso de Calibración -->
+<div class="px-margin-mobile pt-unit-md pb-unit-sm flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">engineering</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Guía de Banco de Trabajo</h3>
+</div>
+<span class="font-label-caps text-[10px] text-on-surface-variant">PROCESO 4 PASOS</span>
+</div>
+<div class="flex flex-col gap-unit-xs">
+<!-- Paso 1 -->
+<div class="bg-surface-container p-unit-sm rounded-DEFAULT flex gap-unit-sm items-start">
+<div class="w-7 h-7 rounded-DEFAULT bg-surface-container-highest text-primary font-label-caps text-label-caps font-bold flex items-center justify-center shrink-0">
+          01
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-title-lg text-[14px] text-on-surface font-semibold">Presentación y Centrado de Veta</h4>
+<span class="font-label-caps text-[10px] text-secondary">Cinta Bifaz / Centradores</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Colocar cinta bifaz de alto agarre o centradores de espiga ø8 mm en los orificios piloto. Enfrentar con el vano del módulo asegurando continuidad visual con los cajones adyacentes.
+          </p>
+</div>
+</div>
+<!-- Paso 2 -->
+<div class="bg-surface-container p-unit-sm rounded-DEFAULT flex gap-unit-sm items-start">
+<div class="w-7 h-7 rounded-DEFAULT bg-surface-container-highest text-primary font-label-caps text-label-caps font-bold flex items-center justify-center shrink-0">
+          02
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-title-lg text-[14px] text-on-surface font-semibold">Amarre Provisional por Colisos</h4>
+<span class="font-label-caps text-[10px] text-primary">Tornillo Guía ø4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Extraer el cajón con cuidado. Roscar 2 tornillos provisionales a través de los taladros rasgados (colisos) del subfrente metálico/madera sin dar torque completo.
+          </p>
+</div>
+</div>
+<!-- Paso 3 -->
+<div class="bg-surface-container p-unit-sm rounded-DEFAULT flex gap-unit-sm items-start">
+<div class="w-7 h-7 rounded-DEFAULT bg-surface-container-highest text-primary font-label-caps text-label-caps font-bold flex items-center justify-center shrink-0">
+          03
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-title-lg text-[14px] text-on-surface font-semibold">Calibración de Luces Perimetrales</h4>
+<span class="font-label-caps text-[10px] text-secondary">Galgas 2.0 mm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Cerrar el conjunto e insertar galgas de espesor: calibrar luz de 2.0 mm en costados y 25 mm superior libre para accionamiento manual del bisel a 45°.
+          </p>
+</div>
+</div>
+<!-- Paso 4 -->
+<div class="bg-surface-container p-unit-sm rounded-DEFAULT flex gap-unit-sm items-start">
+<div class="w-7 h-7 rounded-DEFAULT bg-surface-container-highest text-primary font-label-caps text-label-caps font-bold flex items-center justify-center shrink-0">
+          04
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-title-lg text-[14px] text-on-surface font-semibold">Apriete Final y Arandelas Cónicas</h4>
+<span class="font-label-caps text-[10px] text-primary">4 Puntos de Fijación</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Fijar los 4 tornillos Spax definitivos en orificios redondos fijos con arandelas de presión para impedir desajustes por ciclos de apertura continuada.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Brocas & Configuración de Herramienta -->
+<div class="px-margin-mobile py-unit-xs">
+<div class="bg-surface-container-high p-unit-sm rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-unit-sm">
+<span class="material-symbols-outlined text-primary-container text-[24px]">construction</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-bold uppercase">Tope de Profundidad en Broca</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Calibrar a 14 mm exactos en taladro de columna</span>
+</div>
+</div>
+<div class="flex items-center gap-unit-xs bg-surface-container-lowest px-unit-sm py-1 rounded-DEFAULT">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-label-caps text-label-caps text-secondary font-bold">14 mm</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons (Bottom Fixed Dock Workflow) -->
+<div class="px-margin-mobile pt-unit-md pb-unit-2xl flex flex-col gap-unit-xs">
+<button class="w-full min-h-touch-target-min px-unit-lg rounded-DEFAULT bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase tracking-wider font-bold flex items-center justify-center gap-unit-sm shadow-md active:translate-y-0.5 transition-transform" id="btn-download-pdf">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span>Descargar Plantilla 1:1 en PDF (A4)</span>
+</button>
+<div class="grid grid-cols-2 gap-unit-xs">
+<button class="min-h-touch-target-min px-unit-sm rounded-DEFAULT bg-surface-container-high text-secondary hover:text-on-surface font-label-caps text-label-caps uppercase tracking-wider font-semibold flex items-center justify-center gap-unit-xs transition-colors" id="btn-fullscreen-cad">
+<span class="material-symbols-outlined text-[18px]">zoom_out_map</span>
+<span>Cotas DXF</span>
+</button>
+<button class="min-h-touch-target-min px-unit-sm rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase tracking-wider font-semibold flex items-center justify-center gap-unit-xs transition-colors" id="btn-recal-kerf">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+<span>Anotar Taller</span>
+</button>
+</div>
+</div>
+<!-- Client-side Interactive Microinteractions Script -->
+<script>
+    (function() {
+      const tabCara = document.getElementById('btn-tab-cara');
+      const tabCorte = document.getElementById('btn-tab-corte');
+      const tabMecanismo = document.getElementById('btn-tab-mecanismo');
+      const tabs = [tabCara, tabCorte, tabMecanismo];
+
+      tabs.forEach(tab => {
+        if (!tab) return;
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.className = 'h-10 px-unit-md rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-unit-xs shrink-0 transition-colors';
+          });
+          tab.className = 'h-10 px-unit-md rounded-DEFAULT bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-unit-xs shrink-0 shadow-sm';
+        });
+      });
+
+      const btnPdf = document.getElementById('btn-download-pdf');
+      if (btnPdf) {
+        btnPdf.addEventListener('click', () => {
+          const originalText = btnPdf.innerHTML;
+          btnPdf.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Generando Escala 1:1...</span>';
+          setTimeout(() => {
+            btnPdf.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Plantilla Lista (3.4 MB)</span>';
+            setTimeout(() => {
+              btnPdf.innerHTML = originalText;
+            }, 2500);
+          }, 800);
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.3)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="planos" href="plano_2d_fijaci_n_y_regulaci_n_de_frente.html"><span class="material-symbols-outlined text-[22px]">architecture</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Planos</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="placas" href="optimizador_de_corte_real.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Placas</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Presupuesto</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="ideas-ia" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Ideas IA</span></a></div></nav><script src="../core/store.js"></script></body></html>

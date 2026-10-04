@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Work+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#653e00", "secondary-fixed-dim": "#4cd7f6", "primary-container": "#f59e0b", "on-error": "#690005", "surface": "#101418", "surface-bright": "#363a3e", "outline-variant": "#534434", "tertiary-fixed": "#ffdcc6", "background": "#101418", "inverse-primary": "#855300", "inverse-on-surface": "#2d3135", "on-error-container": "#ffdad6", "primary-fixed": "#ffddb8", "tertiary-container": "#ff9747", "on-secondary-container": "#00424e", "inverse-surface": "#e0e3e8", "on-secondary-fixed-variant": "#004e5c", "on-primary-container": "#613b00", "on-surface-variant": "#d8c3ad", "on-primary": "#472a00", "surface-container-high": "#262a2f", "outline": "#a08e7a", "secondary-fixed": "#acedff", "surface-variant": "#31353a", "on-tertiary": "#502500", "secondary": "#4cd7f6", "on-surface": "#e0e3e8", "on-secondary": "#003640", "tertiary-fixed-dim": "#ffb785", "surface-container-low": "#181c20", "secondary-container": "#03b5d3", "surface-dim": "#101418", "primary-fixed-dim": "#ffb95f", "on-background": "#e0e3e8", "surface-container-lowest": "#0b0f12", "surface-container": "#1c2024", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#713700", "on-tertiary-fixed": "#301400", "on-tertiary-container": "#6d3400", "tertiary": "#ffbf94", "on-primary-fixed": "#2a1700", "primary": "#ffc174", "on-secondary-fixed": "#001f26", "error-container": "#93000a", "surface-container-highest": "#31353a", "surface-tint": "#ffb95f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "unit-xs": "0.25rem", "gutter-mobile": "1rem", "unit-2xl": "2rem", "unit-xl": "1.5rem", "margin-mobile": "1rem", "unit-md": "0.75rem", "touch-target-min": "3rem", "unit-lg": "1rem", "margin-tablet": "2rem", "unit-3xl": "3rem", "unit-2xs": "0.125rem", "unit-sm": "0.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "headline-lg": ["Work Sans"], "body-sm": ["Inter"], "dimension-hero": ["JetBrains Mono"], "headline-lg-mobile": ["Work Sans"], "headline-md": ["Work Sans"], "headline-xl": ["Work Sans"], "dimension-md": ["JetBrains Mono"], "dimension-lg": ["JetBrains Mono"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["JetBrains Mono"], "title-lg": ["Work Sans"] }, fontSize: { "headline-lg": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "dimension-hero": ["36px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "dimension-md": ["14px", { lineHeight: "18px", fontWeight: "500" }], "dimension-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }], "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.24)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-unit-md min-w-0"><div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary-container"><span class="material-symbols-outlined text-[24px]">square_foot</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-unit-xs"><span class="font-label-caps text-label-caps text-secondary uppercase truncate tracking-wider">Karpintero Studio</span><span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary-container font-label-caps text-[10px] uppercase font-bold shrink-0">En Taller</span></div><h1 class="font-title-lg text-title-lg text-on-surface truncate leading-tight">Proyecto: Mueble TV Nórdico</h1></div></div><div class="flex items-center gap-unit-sm shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen">
+<section id="kp-real-panel" class="w-full px-margin-mobile pt-3">
+  <div class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-4 mb-3">
+    <div class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest mb-2">Piezas reales — Cajeados Técnicos MEP</div>
+    <div id="kp-piezas-lista" class="flex flex-col gap-1 mb-3 text-sm"></div>
+    <form id="kp-form-pieza" class="grid grid-cols-2 gap-2 text-xs">
+      <input required name="descripcion" placeholder="Descripción" class="col-span-2 bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <input required name="largo_mm" type="number" step="0.1" placeholder="Largo mm" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <input required name="ancho_mm" type="number" step="0.1" placeholder="Ancho mm" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <input required name="espesor_mm" type="number" step="0.1" placeholder="Espesor mm" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <input required name="material" placeholder="Material" class="bg-surface-container-lowest rounded px-2 py-2 text-on-surface"/>
+      <button type="submit" class="col-span-2 mt-1 py-2 rounded bg-primary-container text-on-primary-container font-bold">+ Agregar pieza real</button>
+    </form>
+  </div>
+</section>
+<script>
+(function(){
+  var MODULO = "Cajeados Técnicos MEP";
+  function render(){
+    var piezas = window.KarpinteroDB.listPiezas(null, MODULO);
+    var cont = document.getElementById('kp-piezas-lista');
+    cont.innerHTML = '';
+    if (piezas.length === 0) cont.innerHTML = '<div class="text-on-surface-variant text-xs italic">Sin piezas cargadas todavía en este módulo.</div>';
+    piezas.forEach(function(pz){
+      var row = document.createElement('div');
+      row.className = 'flex items-center justify-between bg-surface-container-lowest rounded px-2 py-1.5';
+      row.innerHTML = '<span>' + pz.descripcion + ' — ' + pz.largo_mm + '×' + pz.ancho_mm + '×' + pz.espesor_mm + 'mm (' + pz.material + ')</span>' +
+        '<button data-id="' + pz.id + '" class="kp-del text-error text-xs">✕</button>';
+      cont.appendChild(row);
+    });
+    cont.querySelectorAll('.kp-del').forEach(function(btn){
+      btn.addEventListener('click', function(){ window.KarpinteroDB.removePieza(btn.getAttribute('data-id')); render(); });
+    });
+  }
+  document.getElementById('kp-form-pieza').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = e.target;
+    window.KarpinteroDB.addPieza({
+      descripcion: f.descripcion.value, largo_mm: parseFloat(f.largo_mm.value),
+      ancho_mm: parseFloat(f.ancho_mm.value), espesor_mm: parseFloat(f.espesor_mm.value),
+      material: f.material.value, modulo: MODULO
+    });
+    f.reset(); render();
+  });
+  document.addEventListener('DOMContentLoaded', render);
+  if (document.readyState !== 'loading') render();
+})();
+</script><div class="flex flex-col w-full px-gutter-mobile py-unit-md gap-unit-lg text-on-surface">
+<!-- Header Técnico -->
+<div class="flex flex-col gap-unit-xs bg-surface-container-low p-unit-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">precision_manufacturing</span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Interferencias &amp; Ruteo CNC</span>
+</div>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-secondary/15 text-secondary font-label-caps text-[10px] tracking-wider uppercase font-semibold">Tolerancia ±1.5mm</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight">Cajeados, Tomas de Agua &amp; Electricidad</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mapeo milimétrico en obra de acometidas empotradas, fresados de registro en trasera/costados y perímetros de corte reglamentarios.</p>
+</div>
+<!-- Selector de Tipo de Mueble / Instalación Crítica -->
+<div class="flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Módulo Seleccionado</span>
+<span class="font-dimension-md text-dimension-md text-primary" id="modulo-dims">900 × 850 × 600 mm</span>
+</div>
+<div class="grid grid-cols-2 gap-unit-xs" id="selector-modulos">
+<button class="tipo-btn flex flex-col p-unit-sm rounded-lg bg-surface-container-high text-left transition-colors shadow-sm" data-type="fregadero" type="button">
+<div class="flex items-center gap-unit-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+<span class="font-label-caps text-label-caps font-semibold uppercase">Fregadero</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface truncate">Sifón, pasatubos &amp; LVV</span>
+</button>
+<button class="tipo-btn flex flex-col p-unit-sm rounded-lg bg-surface-container-low text-left transition-colors shadow-sm opacity-75" data-type="columna" type="button">
+<div class="flex items-center gap-unit-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">microwave</span>
+<span class="font-label-caps text-label-caps font-semibold uppercase">Columna Horno</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Tiro 200cm² &amp; Schuko 25A</span>
+</button>
+<button class="tipo-btn flex flex-col p-unit-sm rounded-lg bg-surface-container-low text-left transition-colors shadow-sm opacity-75" data-type="isla" type="button">
+<div class="flex items-center gap-unit-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">countertops</span>
+<span class="font-label-caps text-label-caps font-semibold uppercase">Isla / Península</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Acometida suelo &amp; zócalo</span>
+</button>
+<button class="tipo-btn flex flex-col p-unit-sm rounded-lg bg-surface-container-low text-left transition-colors shadow-sm opacity-75" data-type="tv" type="button">
+<div class="flex items-center gap-unit-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">tv</span>
+<span class="font-label-caps text-label-caps font-semibold uppercase">Mueble TV / AV</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Pasacables 100x50 &amp; RJ45</span>
+</button>
+</div>
+</div>
+<!-- Visor 2D Interactivo: Trasera & Ruteo Técnico -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-md">
+<!-- Barra Superior del Visor -->
+<div class="flex items-center justify-between px-unit-md py-unit-xs bg-surface-container-high">
+<div class="flex items-center gap-unit-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary inline-block animate-pulse"></span>
+<span class="font-label-caps text-[10px] text-on-surface uppercase font-bold">Trasera Despiezada (Vista Frontal Oculta)</span>
+</div>
+<div class="flex items-center gap-unit-xs font-label-caps text-[10px] text-secondary">
+<span>CAM. TÉCNICA:</span>
+<span class="font-dimension-md text-primary" id="tag-camara">50mm</span>
+</div>
+</div>
+<!-- Canvas SVG Vectorial Blueprint -->
+<div class="relative w-full aspect-[4/3] bg-[#0d1217] flex items-center justify-center p-2 select-none overflow-hidden" id="blueprint-container">
+<svg class="w-full h-full text-on-surface" viewbox="0 0 450 340" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Patrón de cuadrícula milimétrica -->
+<pattern height="15" id="grid-pattern" patternunits="userSpaceOnUse" width="15">
+<path d="M 15 0 L 0 0 0 15" fill="none" opacity="0.6" stroke="#1f2937" stroke-width="0.5"></path>
+</pattern>
+<!-- Patrón Zona Prohibida / Tuberías empotradas -->
+<pattern height="10" id="hazard-hatch" patterntransform="rotate(45 0 0)" patternunits="userSpaceOnUse" width="10">
+<line opacity="0.3" stroke="#ef4444" stroke-width="2" x1="0" x2="0" y1="0" y2="10"></line>
+</pattern>
+</defs>
+<!-- Fondo cuadrícula -->
+<rect fill="url(#grid-pattern)" height="340" width="450"></rect>
+<!-- Silueta Módulo Mueble (900mm ancho x 850mm alto -> 360 x 280 SVG px) -->
+<rect fill="#141c24" height="270" rx="2" stroke="#38bdf8" stroke-dasharray="6 3" stroke-width="1.5" width="360" x="45" y="25"></rect>
+<rect fill="#12181f" height="256" rx="1" stroke="#253241" stroke-width="1" width="346" x="52" y="32"></rect>
+<!-- Cotas Exteriores -->
+<!-- Ancho 900mm -->
+<line stroke="#38bdf8" stroke-width="1" x1="45" x2="405" y1="15" y2="15"></line>
+<line stroke="#38bdf8" stroke-width="1" x1="45" x2="45" y1="10" y2="20"></line>
+<line stroke="#38bdf8" stroke-width="1" x1="405" x2="405" y1="10" y2="20"></line>
+<text fill="#38bdf8" font-family="JetBrains Mono" font-size="9" font-weight="700" text-anchor="middle" x="225" y="12">900 mm (ANCHO TOTAL)</text>
+<!-- Alto 850mm -->
+<line stroke="#38bdf8" stroke-width="1" x1="418" x2="418" y1="25" y2="295"></line>
+<line stroke="#38bdf8" stroke-width="1" x1="413" x2="423" y1="25" y2="25"></line>
+<line stroke="#38bdf8" stroke-width="1" x1="413" x2="423" y1="295" y2="295"></line>
+<text fill="#38bdf8" font-family="JetBrains Mono" font-size="9" font-weight="700" text-anchor="middle" transform="rotate(90,428,165)" x="428" y="165">850 mm (H)</text>
+<!-- Línea de Nivel de Suelo y Zócalo Técnico (H: 100mm -> 32px SVG) -->
+<line stroke="#f59e0b" stroke-dasharray="3 3" stroke-width="0.8" x1="30" x2="420" y1="263" y2="263"></line>
+<text fill="#f59e0b" font-family="JetBrains Mono" font-size="7" x="36" y="258">NIVEL ZÓCALO +100mm</text>
+<!-- Zona de Seguridad / No Perforar Empotramiento Fontanería (Columna crítica vertical) -->
+<rect fill="url(#hazard-hatch)" height="231" width="90" x="180" y="32"></rect>
+<text fill="#ef4444" font-family="JetBrains Mono" font-size="7" font-weight="700" text-anchor="middle" x="225" y="45">ZONA NO PERFORAR TRASERA</text>
+<!-- TOMAS DE AGUA FRÍA / CALIENTE (H: 550mm -> Y: 140px, Intereje 150mm -> 48px) -->
+<!-- Perforaciones pasamuros corona ø60mm -->
+<g class="cursor-pointer" id="toma-agua-caliente">
+<circle cx="201" cy="135" fill="#10b981" fill-opacity="0.15" r="14" stroke="#10b981" stroke-dasharray="2 2" stroke-width="1.2"></circle>
+<circle cx="201" cy="135" fill="#ef4444" r="5"></circle>
+<text fill="#ef4444" font-family="JetBrains Mono" font-size="8" font-weight="700" text-anchor="middle" x="201" y="117">AC ø60</text>
+</g>
+<g class="cursor-pointer" id="toma-agua-fria">
+<circle cx="249" cy="135" fill="#10b981" fill-opacity="0.15" r="14" stroke="#10b981" stroke-dasharray="2 2" stroke-width="1.2"></circle>
+<circle cx="249" cy="135" fill="#38bdf8" r="5"></circle>
+<text fill="#38bdf8" font-family="JetBrains Mono" font-size="8" font-weight="700" text-anchor="middle" x="249" y="117">AF ø60</text>
+</g>
+<!-- Cota Intereje Agua 150mm -->
+<line stroke="#10b981" stroke-width="0.8" x1="201" x2="249" y1="152" y2="152"></line>
+<text fill="#10b981" font-family="JetBrains Mono" font-size="7.5" font-weight="600" text-anchor="middle" x="225" y="161">150 mm (INTEREJE)</text>
+<!-- Cota H Tomas Agua (550mm desde suelo) -->
+<line stroke="#10b981" stroke-width="0.8" x1="165" x2="190" y1="135" y2="135"></line>
+<line stroke="#10b981" stroke-width="0.8" x1="165" x2="165" y1="135" y2="295"></line>
+<text fill="#10b981" font-family="JetBrains Mono" font-size="7" text-anchor="middle" transform="rotate(-90,157,215)" x="157" y="215">H: 550 mm</text>
+<!-- DESAGÜE GENERAL PVC ø50mm (H: 450mm -> Y: 172px) -->
+<g class="cursor-pointer" id="toma-desague">
+<circle cx="225" cy="178" fill="#0284c7" fill-opacity="0.25" r="16" stroke="#38bdf8" stroke-width="1.5"></circle>
+<circle cx="225" cy="178" fill="#0284c7" r="7"></circle>
+<!-- Flecha de Pendiente 2% -->
+<path d="M 245 186 L 275 190" marker-end="url(#arrow)" stroke="#f59e0b" stroke-width="1.5"></path>
+<text fill="#38bdf8" font-family="JetBrains Mono" font-size="7.5" font-weight="700" text-anchor="middle" x="225" y="204">PVC ø50 (SIFÓN - H: 450)</text>
+<text fill="#f59e0b" font-family="JetBrains Mono" font-size="6.5" x="282" y="193">i = 2%</text>
+</g>
+<!-- ENCHUFE SCHUKO 16A ESTANCO IP44 (Lavavajillas / Ósmosis) a H: 300mm (Y: 215px) FUERA DE EJE AGUA -->
+<g class="cursor-pointer" id="toma-enchufe">
+<!-- Cajeado registrable 70x70 fresado CNC -->
+<rect fill="#f97316" fill-opacity="0.18" height="32" rx="3" stroke="#f97316" stroke-width="1.2" width="32" x="75" y="200"></rect>
+<circle cx="91" cy="216" fill="#f97316" fill-opacity="0.5" r="8"></circle>
+<circle cx="88" cy="216" fill="#101418" r="1.5"></circle>
+<circle cx="94" cy="216" fill="#101418" r="1.5"></circle>
+<text fill="#f97316" font-family="JetBrains Mono" font-size="7" font-weight="700" text-anchor="middle" x="91" y="195">SCHUKO 16A</text>
+<text fill="#f97316" font-family="JetBrains Mono" font-size="6.5" text-anchor="middle" x="91" y="242">REG: 70×70</text>
+</g>
+<!-- TUBO DE GAS / LLAVE DE CORTE ACCESIBLE -->
+<g id="toma-gas">
+<circle cx="345" cy="150" fill="#eab308" fill-opacity="0.2" r="11" stroke="#eab308" stroke-width="1.2"></circle>
+<path d="M 340 150 L 350 150 M 345 145 L 345 155" stroke="#eab308" stroke-width="1.5"></path>
+<text fill="#eab308" font-family="JetBrains Mono" font-size="7" font-weight="700" text-anchor="middle" x="345" y="134">GAS ø20</text>
+<text fill="#eab308" font-family="JetBrains Mono" font-size="6.5" text-anchor="middle" x="345" y="172">VISTA S/HERR.</text>
+</g>
+</svg>
+</div>
+<!-- Leyenda Técnica de Código de Colores -->
+<div class="grid grid-cols-4 gap-unit-xs px-unit-md py-unit-sm bg-surface-container border-t-0 text-center font-label-caps text-[9px]">
+<div class="flex items-center justify-center gap-1 text-emerald-400">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span> Fontanería AF/AC
+      </div>
+<div class="flex items-center justify-center gap-1 text-sky-400">
+<span class="w-2 h-2 rounded-full bg-sky-400"></span> Evacuación PVC
+      </div>
+<div class="flex items-center justify-center gap-1 text-orange-400">
+<span class="w-2 h-2 rounded-full bg-orange-400"></span> Fuerza / 230V
+      </div>
+<div class="flex items-center justify-center gap-1 text-red-400">
+<span class="w-2 h-2 rounded-full bg-red-400"></span> Prohibido Taladrar
+      </div>
+</div>
+</div>
+<!-- Calculadora de Cajeados y Holguras Automáticas -->
+<div class="flex flex-col gap-unit-sm bg-surface-container p-unit-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Calculadora de Holguras CNC</h3>
+</div>
+<span class="font-label-caps text-[10px] text-primary bg-primary/10 px-unit-xs py-0.5 rounded-DEFAULT">Parámetros Vivos</span>
+</div>
+<!-- Parámetro 1: Retranqueo / Cámara de aire -->
+<div class="flex flex-col gap-1 bg-surface-container-high p-unit-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-on-surface text-[13px] font-medium">Cámara Técnica de Trasera</span>
+<span class="font-dimension-md text-dimension-md text-primary" id="val-camara">50 mm</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Espacio libre entre pared de obra y panel de melamina.</p>
+<div class="grid grid-cols-2 gap-unit-xs mt-1">
+<button class="py-unit-xs rounded-DEFAULT bg-primary text-on-primary font-label-caps text-[11px] font-bold text-center" id="btn-camara-std" type="button">50mm Estándar</button>
+<button class="py-unit-xs rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[11px] font-semibold text-center" id="btn-camara-prof" type="button">70mm (Tubería Vista)</button>
+</div>
+</div>
+<!-- Parámetro 2: Herramienta / Corona de Perforación -->
+<div class="flex flex-col gap-1 bg-surface-container-high p-unit-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-on-surface text-[13px] font-medium">Diámetro Fresado / Corona</span>
+<span class="font-dimension-md text-dimension-md text-secondary" id="val-corona">Corona ø60 mm</span>
+</div>
+<div class="grid grid-cols-4 gap-unit-xs mt-1">
+<button class="corona-btn py-1 rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[10px] text-center" data-corona="ø35" type="button">ø35mm</button>
+<button class="corona-btn py-1 rounded-DEFAULT bg-secondary text-on-secondary font-label-caps text-[10px] font-bold text-center" data-corona="ø60" type="button">ø60mm</button>
+<button class="corona-btn py-1 rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[10px] text-center" data-corona="ø80" type="button">ø80mm</button>
+<button class="corona-btn py-1 rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[10px] text-center" data-corona="rect" type="button">R5 CNC</button>
+</div>
+</div>
+<!-- Parámetro 3: Holgura Seguridad Llaves de Escuadra -->
+<div class="flex items-center justify-between bg-surface-container-high p-unit-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-body-sm text-on-surface text-[13px] font-medium">Holgura Volante Escuadra</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Margen para giro sin desmontar panel</span>
+</div>
+<div class="flex items-center gap-unit-xs">
+<span class="px-unit-xs py-1 rounded-DEFAULT bg-primary/20 text-primary font-dimension-md text-dimension-md font-bold">+15 mm</span>
+</div>
+</div>
+</div>
+<!-- Herrajes Técnicos & Soluciones de Estanqueidad -->
+<div class="flex flex-col gap-unit-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title-lg text-title-lg text-on-surface">Herrajes &amp; Estanqueidad</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Accesorios Taller</span>
+</div>
+<!-- Lista de 3 Herrajes Críticos -->
+<div class="flex flex-col gap-unit-xs">
+<!-- Card 1: Junta EPDM -->
+<div class="flex items-center gap-unit-md bg-surface-container-low p-unit-sm rounded-lg shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[26px]">radio_button_checked</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-lg text-[14px] text-on-surface font-semibold truncate">Pasacables EPDM Estanco</span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-secondary-container/20 text-secondary font-label-caps text-[9px] uppercase font-bold">Anti-Humedad</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-normal">Sella el núcleo de melamina ante condensaciones del tubo de desagüe.</p>
+</div>
+</div>
+<!-- Card 2: Tapas Magnéticas -->
+<div class="flex items-center gap-unit-md bg-surface-container-low p-unit-sm rounded-lg shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[26px]">grid_view</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-lg text-[14px] text-on-surface font-semibold truncate">Tapa Registrable Magnética</span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-primary-container/20 text-primary font-label-caps text-[9px] uppercase font-bold">Acceso Llaves</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-normal">Cajeado 150x150mm enrasado con imanes de neodimio para corte rápido de agua.</p>
+</div>
+</div>
+<!-- Card 3: Escudo Anticalórico -->
+<div class="flex items-center gap-unit-md bg-surface-container-low p-unit-sm rounded-lg shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-orange-400">
+<span class="material-symbols-outlined text-[26px]">shield</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-lg text-[14px] text-on-surface font-semibold truncate">Lámina Deflectora Térmica</span>
+<span class="px-unit-xs py-0.5 rounded-DEFAULT bg-orange-500/20 text-orange-400 font-label-caps text-[9px] uppercase font-bold">Protección 120°C</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-normal">Escudo adhesivo de aluminio puro para costados adyacentes a hornos pirólisis.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Cuadro de Alerta Técnica de Montaje -->
+<div class="flex items-start gap-unit-sm p-unit-md rounded-lg bg-surface-container-high shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col gap-0.5 min-w-0">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">Reglamento UNE-EN 1153: Muebles Cocina</span>
+<p class="font-body-sm text-[11.5px] text-on-surface-variant leading-normal">Prohibido situar tomas eléctricas bajo proyecciones verticales de tomas de agua o desagües sin barrera física hidrófuga intermedia.</p>
+</div>
+</div>
+<!-- Botones de Acción de Taller -->
+<div class="flex flex-col gap-unit-xs pt-unit-xs pb-unit-md">
+<!-- Botón Primario: G-Code / DXF -->
+<button class="w-full min-h-touch-target-min py-unit-sm px-unit-md rounded-DEFAULT bg-primary-container text-on-primary font-title-lg font-bold flex items-center justify-center gap-unit-xs shadow-md active:translate-y-0.5 transition-transform" id="btn-export-cnc" type="button">
+<span class="material-symbols-outlined text-[22px]">code</span>
+<span>Generar Mecanizado CNC (G-Code / DXF)</span>
+</button>
+<!-- Botón Secundario: PDF para Instaladores -->
+<button class="w-full min-h-touch-target-min py-unit-sm px-unit-md rounded-DEFAULT bg-surface-container-high text-secondary font-dimension-md font-semibold flex items-center justify-center gap-unit-xs shadow-sm active:bg-surface-container-highest transition-colors" id="btn-export-pdf" type="button">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span>Exportar Ficha de Tomas para Fontanero/Electricista</span>
+</button>
+<!-- Botón Terciario: Añadir Holguras -->
+<button class="w-full py-unit-sm px-unit-md rounded-DEFAULT bg-transparent text-on-surface-variant font-label-caps text-label-caps text-center uppercase tracking-wider hover:text-on-surface transition-colors" id="btn-apply-holguras" type="button">
+      ✓ Aplicar Retranqueos al Despiece General
+    </button>
+</div>
+</div>
+<script>
+  // Micro-interacción: Selección de Tipo de Mueble
+  const modulos = {
+    fregadero: { dims: '900 × 850 × 600 mm', cam: '50mm' },
+    columna: { dims: '600 × 2150 × 600 mm', cam: '70mm' },
+    isla: { dims: '1200 × 900 × 900 mm', cam: '100mm' },
+    tv: { dims: '1800 × 450 × 400 mm', cam: '40mm' }
+  };
+
+  const buttons = document.querySelectorAll('.tipo-btn');
+  const dimsLabel = document.getElementById('modulo-dims');
+  const camTag = document.getElementById('tag-camara');
+  const camVal = document.getElementById('val-camara');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => {
+        b.classList.remove('bg-surface-container-high', 'opacity-100');
+        b.classList.add('bg-surface-container-low', 'opacity-75');
+        const iconDiv = b.querySelector('div');
+        if (iconDiv) {
+          iconDiv.classList.remove('text-primary');
+          iconDiv.classList.add('text-on-surface-variant');
+        }
+      });
+
+      btn.classList.remove('bg-surface-container-low', 'opacity-75');
+      btn.classList.add('bg-surface-container-high', 'opacity-100');
+      const activeIcon = btn.querySelector('div');
+      if (activeIcon) {
+        activeIcon.classList.remove('text-on-surface-variant');
+        activeIcon.classList.add('text-primary');
+      }
+
+      const type = btn.getAttribute('data-type');
+      if (modulos[type]) {
+        dimsLabel.textContent = modulos[type].dims;
+        camTag.textContent = modulos[type].cam;
+        camVal.textContent = modulos[type].cam;
+      }
+    });
+  });
+
+  // Micro-interacción: Selección Corona
+  const coronaBtns = document.querySelectorAll('.corona-btn');
+  const coronaLabel = document.getElementById('val-corona');
+
+  coronaBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      coronaBtns.forEach(b => {
+        b.className = 'corona-btn py-1 rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[10px] text-center';
+      });
+      btn.className = 'corona-btn py-1 rounded-DEFAULT bg-secondary text-on-secondary font-label-caps text-[10px] font-bold text-center';
+      
+      const tipo = btn.getAttribute('data-corona');
+      if (tipo === 'rect') {
+        coronaLabel.textContent = 'Fresado R5 CNC';
+      } else {
+        coronaLabel.textContent = 'Corona ' + tipo + ' mm';
+      }
+    });
+  });
+
+  // Micro-interacción: Cámara estándar / profunda
+  const btnStd = document.getElementById('btn-camara-std');
+  const btnProf = document.getElementById('btn-camara-prof');
+
+  btnStd.addEventListener('click', () => {
+    btnStd.className = 'py-unit-xs rounded-DEFAULT bg-primary text-on-primary font-label-caps text-[11px] font-bold text-center';
+    btnProf.className = 'py-unit-xs rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[11px] font-semibold text-center';
+    camTag.textContent = '50mm';
+    camVal.textContent = '50 mm';
+  });
+
+  btnProf.addEventListener('click', () => {
+    btnProf.className = 'py-unit-xs rounded-DEFAULT bg-primary text-on-primary font-label-caps text-[11px] font-bold text-center';
+    btnStd.className = 'py-unit-xs rounded-DEFAULT bg-surface-container-highest text-on-surface font-label-caps text-[11px] font-semibold text-center';
+    camTag.textContent = '70mm';
+    camVal.textContent = '70 mm';
+  });
+
+  // Feedback botones de exportación
+  const btnCNC = document.getElementById('btn-export-cnc');
+  btnCNC.addEventListener('click', () => {
+    const originalText = btnCNC.innerHTML;
+    btnCNC.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Calculando Mecanizado G-Code...</span>';
+    setTimeout(() => {
+      btnCNC.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Archivo DXF/G-Code Descargado</span>';
+      setTimeout(() => { btnCNC.innerHTML = originalText; }, 2500);
+    }, 700);
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.3)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-unit-xs grid grid-cols-5 items-center"><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="planos" href="plano_2d_fijaci_n_y_regulaci_n_de_frente.html"><span class="material-symbols-outlined text-[22px]">architecture</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Planos</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="despiece" href="despiece_detallado_de_cajones.html"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Despiece</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="placas" href="optimizador_de_corte_real.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Placas</span></a><a aria-current="page" class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs transition-colors text-primary-container font-semibold" data-path="presupuesto" href="presupuesto_real.html"><span class="material-symbols-outlined text-[22px]">calculate</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Presupuesto</span></a><a class="min-h-touch-target-min flex flex-col items-center justify-center gap-unit-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="ideas-ia" href="proximamente.html"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-caps text-[10px] tracking-tight uppercase">Ideas IA</span></a></div></nav><script src="../core/store.js"></script></body></html>
